@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
-<meta name="date" content="2016-08-28">
+<meta name="date" content="2016-08-29">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -161,7 +161,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-manip.html"><a href="5-manip.html"><i class="fa fa-check"></i><b>5</b> Manipulating Data</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-manip.html"><a href="5-manip.html#five-main-verbs---the-fmv"><i class="fa fa-check"></i><b>5.1</b> Five Main Verbs - The FMV</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code id="select">select</code></a></li>
+<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code>select</code></a></li>
 <li class="chapter" data-level="5.1.2" data-path="5-manip.html"><a href="5-manip.html#filter-observations-using-filter"><i class="fa fa-check"></i><b>5.1.2</b> Filter observations using <code id="filter">filter</code></a></li>
 <li class="chapter" data-level="5.1.3" data-path="5-manip.html"><a href="5-manip.html#summarize-variables-using-summarize"><i class="fa fa-check"></i><b>5.1.3</b> Summarize variables using <code>summarize</code></a></li>
 <li class="chapter" data-level="5.1.4" data-path="5-manip.html"><a href="5-manip.html#create-new-variableschange-old-variables-using-mutate"><i class="fa fa-check"></i><b>5.1.4</b> Create new variables/change old variables using <code>mutate</code></a></li>
@@ -288,7 +288,12 @@ Figure 4.1: Strip Plot of Hourly Temperature Recordings from NYC in 2013
 </ul>
 <p>The names of the variables will be entered into the <code>aes</code> function as arguments where <code>aes</code> stands for “aesthetics”.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp))</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-15-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-15-1.png" alt="ggplot backdrop" width="\textwidth" />
+<p class="caption">
+Figure 4.2: ggplot backdrop
+</p>
+</div>
 <p>The plot given above is not a histogram, but the output does show us a bit of what is going on with <code>ggplot(data = weather, mapping = aes(x = temp))</code>. It is producing a backdrop onto which we will “paint” elements.</p>
 <p>We next proceed by adding a layer—hence, the use of the <code>+</code> symbol—to the plot to produce a histogram. (Note also here that we don’t have to specify the <code>data =</code> and <code>mapping =</code> text in our function calls. This is covered in more detail in Chapter 5 of the “Getting Used to R, RStudio, and R Markdown” book <span class="citation">(Ismay <a href="#ref-usedtor2016">2016</a>)</span>).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) +
@@ -298,7 +303,7 @@ Figure 4.1: Strip Plot of Hourly Temperature Recordings from NYC in 2013
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
 <img src="ismay_kim_files/figure-html/unnamed-chunk-16-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
 <p class="caption">
-Figure 4.2: Histogram of Hourly Temperature Recordings from NYC in 2013
+Figure 4.3: Histogram of Hourly Temperature Recordings from NYC in 2013
 </p>
 </div>
 <p>We have the power to specify how many bins we would like to put the data into as an argument in the <code>geom_histogram</code> function. By default, this is chosen to be 30 somewhat arbitrarily and we have received a warning above our plot that this was done. We also notice here that another warning about 1 missing value is given. This value is omitted from the plot. This warning is ignored for future customizations of the plot.</p>
@@ -308,7 +313,7 @@ Figure 4.2: Histogram of Hourly Temperature Recordings from NYC in 2013
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
 <img src="ismay_kim_files/figure-html/unnamed-chunk-17-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins" width="\textwidth" />
 <p class="caption">
-Figure 4.3: Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins
+Figure 4.4: Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins
 </p>
 </div>
 <p>We can tweak the plot a little more by specifying the width of the bins (instead of how many bins to divide the variable into) by using the <code>binwidth</code> argument in the <code>geom_histogram</code> function. We can also add some color to the plot by invoking the <code>fill</code> and <code>color</code> arguments. A listing of all of the built-in colors to R by name and color is available <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">here</a>.</p>
@@ -317,7 +322,7 @@ Figure 4.3: Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bin
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
 <img src="ismay_kim_files/figure-html/unnamed-chunk-18-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10" width="\textwidth" />
 <p class="caption">
-Figure 4.4: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10
+Figure 4.5: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10
 </p>
 </div>
 <hr />
@@ -374,7 +379,12 @@ Figure 4.4: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwid
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;firebrick&quot;</span>) +
 <span class="st">  </span><span class="kw">facet_wrap</span>(~month)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-23-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:facethistogram"></span>
+<img src="ismay_kim_files/figure-html/facethistogram-1.png" alt="Faceted histogram" width="\textwidth" />
+<p class="caption">
+Figure 4.6: Faceted histogram
+</p>
+</div>
 <p>As we might expect, the temperature tends to increase as summer approaches and then decrease as winter approaches.</p>
 <hr />
 <div class="learncheck">
@@ -393,11 +403,21 @@ Figure 4.4: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwid
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
 <pre><code>## Warning: Continuous x aesthetic -- did you forget aes(group=...)?</code></pre>
 <pre><code>## Warning: Removed 1 rows containing non-finite values (stat_boxplot).</code></pre>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-24-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:badbox"></span>
+<img src="ismay_kim_files/figure-html/badbox-1.png" alt="Invalid boxplot specification" width="\textwidth" />
+<p class="caption">
+Figure 4.7: Invalid boxplot specification
+</p>
+</div>
 <p>Note the first warning that is given here. (The second one corresponds to missing values in the dataframe and it is turned off on subsequent plots.) This plot does not look like what we were expecting. We were expecting to see the distribution of temperatures for each month (so 12 different boxplots). This gives us the overall boxplot without any other groupings. We can get around this by introducing a new function for our <code>x</code> variable.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(month), <span class="dt">y =</span> temp)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-25-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:monthtempbox"></span>
+<img src="ismay_kim_files/figure-html/monthtempbox-1.png" alt="Month by temp boxplot" width="\textwidth" />
+<p class="caption">
+Figure 4.8: Month by temp boxplot
+</p>
+</div>
 <p>We have introduced a new function called <code>factor()</code> here. One of the things this function does is to convert a numeric value like <code>month</code> (1, 2, …, 12) into a categorical variable. The “box” part of this plot represents the 25<sup>th</sup> percentile, the median (50<sup>th</sup> percentile), and the 75<sup>th</sup> percentile. The dots correspond to <strong>outliers</strong>. (The specific formulation for these outliers is discussed in Appendix B - Chapter <a href="12-appendix2.html#appendix2">12</a>.) The lines show how the data varies that is not in the center 50% defined by the first and third quantiles. Longer lines correspond to more variability and shorter lines correspond to less variability.</p>
 <hr />
 <div class="learncheck">
@@ -422,10 +442,10 @@ Figure 4.4: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwid
 <p>Frequently, the best way to visualize these different counts (also known as <strong>frequencies</strong>) is via a barplot. Consider the distribution of airlines that flew out of New York City in 2013. This can be plotted by invoking the <code>geom_bar</code> function in <code>ggplot2</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier)) +
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-26-1.png" alt="Number of flights departing NYC in 2013 by airline" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:flightsbar"></span>
+<img src="ismay_kim_files/figure-html/flightsbar-1.png" alt="Number of flights departing NYC in 2013 by airline" width="\textwidth" />
 <p class="caption">
-Figure 4.5: Number of flights departing NYC in 2013 by airline
+Figure 4.9: Number of flights departing NYC in 2013 by airline
 </p>
 </div>
 <p>Recall the <code>airlines</code> dataset discussed in Chapter <a href="3-tidy.html#tidy">3</a>.</p>
@@ -493,9 +513,19 @@ flights_table</code></pre></div>
 <li>what the third largest carrier is in terms of departing flights, and</li>
 <li>how many carriers have fewer flights than United Airlines (<code>UA</code>)?</li>
 </ul>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-29-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:carrierpie"></span>
+<img src="ismay_kim_files/figure-html/carrierpie-1.png" alt="The dreaded pie chart" width="\textwidth" />
+<p class="caption">
+Figure 4.10: The dreaded pie chart
+</p>
+</div>
 <p>While it is quite easy to look back at the barplot to get the answer to these questions, it’s quite difficult to get the answers correct when looking at the pie graph. Barplots can always present the information in a way that is easier for the eye to determine relative position. There may be one exception from Nathan Yau at <a href="https://flowingdata.com/2008/09/19/pie-i-have-eaten-and-pie-i-have-not-eaten/" title="Pie I Have Eaten and Pie I Have Not Eaten">FlowingData.com</a> but we will leave this for the reader to decide:</p>
-<p><img src="images/Pie-I-have-Eaten.jpg" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="images/Pie-I-have-Eaten.jpg" alt="The only good pie chart" width="\textwidth" />
+<p class="caption">
+Figure 4.11: The only good pie chart
+</p>
+</div>
 <hr />
 <div class="learncheck">
 <p>
@@ -515,10 +545,10 @@ flights_namedports &lt;-<span class="st"> </span><span class="kw">inner_join</sp
 <p>After running <code>View(flights_namedports)</code>, we see that <code>name</code> now corresponds to the name of the airport as referenced by the <code>origin</code> variable. We will now plot <code>carrier</code> as the horizontal variable. When we specify <code>geom_bar</code>, it will specify <code>count</code> as being the vertical variable. A new addition here is <code>fill = name</code>. Look over what was produced from the plot to get an idea of what this argument gives.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) +
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-32-1.png" alt="Stacked barplot comparing the number of flights by carrier and airport" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-27-1.png" alt="Stacked barplot comparing the number of flights by carrier and airport" width="\textwidth" />
 <p class="caption">
-Figure 4.6: Stacked barplot comparing the number of flights by carrier and airport
+Figure 4.12: Stacked barplot comparing the number of flights by carrier and airport
 </p>
 </div>
 <p>This plot is what is known as a <strong>stacked barplot</strong>. While simple to make, it often leads to many problems.</p>
@@ -533,10 +563,10 @@ Figure 4.6: Stacked barplot comparing the number of flights by carrier and airpo
 <p>Another variation on the <strong>stacked barplot</strong> is the <strong>side-by-side barplot</strong>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) +
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-33-1.png" alt="Side-by-side barplot comparing the number of flights by carrier and airport" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-28-1.png" alt="Side-by-side barplot comparing the number of flights by carrier and airport" width="\textwidth" />
 <p class="caption">
-Figure 4.7: Side-by-side barplot comparing the number of flights by carrier and airport
+Figure 4.13: Side-by-side barplot comparing the number of flights by carrier and airport
 </p>
 </div>
 <hr />
@@ -552,10 +582,10 @@ Figure 4.7: Side-by-side barplot comparing the number of flights by carrier and 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) +
 <span class="st">  </span><span class="kw">geom_bar</span>() +
 <span class="st">  </span><span class="kw">facet_grid</span>(name ~<span class="st"> </span>.)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-34-1.png" alt="Faceted barplot comparing the number of flights by carrier and airport" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-29-1.png" alt="Faceted barplot comparing the number of flights by carrier and airport" width="\textwidth" />
 <p class="caption">
-Figure 4.8: Faceted barplot comparing the number of flights by carrier and airport
+Figure 4.14: Faceted barplot comparing the number of flights by carrier and airport
 </p>
 </div>
 <p>Note how the <code>facet_grid</code> function arguments are written here. We are wanting the names of the airports vertically and the <code>carrier</code> listed horizontally. As you may have guessed, this argument and other <em>formulas</em> of this sort in R are in <code>y ~ x</code> order. We will see more examples of this in Chapter <a href="9-regress.html#regress">9</a>.</p>
@@ -584,7 +614,7 @@ Figure 4.8: Faceted barplot comparing the number of flights by carrier and airpo
 <div class="figure" style="text-align: center"><span id="fig:noalpha"></span>
 <img src="ismay_kim_files/figure-html/noalpha-1.png" alt="Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013" width="\textwidth" />
 <p class="caption">
-Figure 4.9: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013
+Figure 4.15: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013
 </p>
 </div>
 <p>We see that a positive relationship exists between <code>dep_delay</code> and <code>arr_delay</code>: as departure delays increase, arrival delays tend to also increase. We also note that the majority of points fall near the point (0, 0) here. There is a large mass of points clustered there.</p>
@@ -608,7 +638,12 @@ Figure 4.9: Arrival Delays vs Departure Delays for Alaska Airlines flights from 
 <p>One way of relieving this issue of <strong>over-plotting</strong> is to <strong>jitter</strong> the points a bit. In other words, we are going to add just a bit of random noise to the points to better see them and remove some of the over-plotting. You can think of “jittering” as shaking the points a bit on the plot. Instead of using <code>geom_point</code>, we use <code>geom_jitter</code> to perform this shaking and specify around how much jitter to add with the <code>width</code> and <code>height</code> arguments. This corresponds to how hard you’d like to shake the plot in units corresponding to those for both the horizontal and vertical variables (minutes here).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(alaska_flights, <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="dv">30</span>, <span class="dt">height =</span> <span class="dv">30</span>)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-36-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-31-1.png" alt="Jittered delay scatterplot" width="\textwidth" />
+<p class="caption">
+Figure 4.16: Jittered delay scatterplot
+</p>
+</div>
 <p>This has helps us a little bit in getting a sense for the over-plotting, but with a relatively large dataset like this one (714 flights), it is often useful to change the transparency of the points as seen in the next section.</p>
 </div>
 <div id="setting-transparency" class="section level3">
@@ -619,7 +654,7 @@ Figure 4.9: Arrival Delays vs Departure Delays for Alaska Airlines flights from 
 <div class="figure" style="text-align: center"><span id="fig:alpha"></span>
 <img src="ismay_kim_files/figure-html/alpha-1.png" alt="Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013 - alpha=0.2" width="\textwidth" />
 <p class="caption">
-Figure 4.10: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013 - alpha=0.2
+Figure 4.17: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013 - alpha=0.2
 </p>
 </div>
 <p>We can also specify the <code>alpha</code> argument in <code>geom_jitter</code>:</p>
@@ -628,7 +663,7 @@ Figure 4.10: Arrival Delays vs Departure Delays for Alaska Airlines flights from
 <div class="figure" style="text-align: center"><span id="fig:jitteralpha"></span>
 <img src="ismay_kim_files/figure-html/jitteralpha-1.png" alt="Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013 - jitter and alpha added" width="\textwidth" />
 <p class="caption">
-Figure 4.11: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013 - jitter and alpha added
+Figure 4.18: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013 - jitter and alpha added
 </p>
 </div>
 <hr />
@@ -641,12 +676,14 @@ Figure 4.11: Arrival Delays vs Departure Delays for Alaska Airlines flights from
 <ul>
 <li>What further information does it give you that a regular scatter-plot cannot?</li>
 </ul>
-<p><strong>(LC4.31)</strong> After viewing the <a href="4-viz.html#fig:alpha">4.10</a> above, give a range of arrival times and departure times that occur most frequently?</p>
+<p><strong>(LC4.31)</strong> After viewing the <a href="4-viz.html#fig:alpha">4.17</a> above, give a range of arrival times and departure times that occur most frequently?</p>
 <ul>
-<li>How has that region changed compared to when you observed the same plot without the <code>alpha = 0.2</code> set in <a href="4-viz.html#fig:noalpha">4.9</a>?</li>
+<li>How has that region changed compared to when you observed the same plot without the <code>alpha = 0.2</code> set in <a href="4-viz.html#fig:noalpha">4.15</a>?</li>
 </ul>
 <hr />
-<p><strong>Maybe include a shading of the points by another variable example here for multivariate thinking?</strong></p>
+<!--
+**Maybe include a shading of the points by another variable example here for multivariate thinking?**
+-->
 </div>
 <div id="summary-3" class="section level3">
 <h3><span class="header-section-number">4.5.3</span> Summary</h3>
@@ -660,7 +697,12 @@ Figure 4.11: Arrival Delays vs Departure Delays for Alaska Airlines flights from
 <p>We are interested in exploring the arrival delays by day throughout the year of 2013 from outgoing flights from New York City. If we plotted all of these values, we obtain the following scatter-plot:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(flights, <span class="kw">aes</span>(<span class="dt">x =</span> time_hour, <span class="dt">y =</span> arr_delay)) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-37-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-32-1.png" alt="Hard to read scatterplot" width="\textwidth" />
+<p class="caption">
+Figure 4.19: Hard to read scatterplot
+</p>
+</div>
 <p>We see that this plot is difficult to understand based on the sheer number of points plotted. We see some outlier points with more than 500 minutes of arrival delay, but even some jittering and transparency is not going to help us here.</p>
 <p>Instead of plotting all of the values for each hour for all flights, it might make sense to plot the average value for each day in terms of arrival delays. Of course, we also need to address which average we should use: mean or median. With there being some outliers here, we have chosen to use the median arrival delay (since the mean is heavily influence by outliers).</p>
 <p>You may think that this is a difficult task but the <code>group_by</code> and <code>summarize</code> functions make this a breeze. You’ll see more examples using these two functions in Chapter <a href="5-manip.html#manip">5</a>. Here we will create a new variable, which corresponds to the month and day combined, from the <code>time_hour</code> column using the <code>mutate</code> function and create a new dataframe called <code>flights_day</code>. Notice from running <code>View(flights_day)</code> that the new variable added called <code>date</code> appears on the far right of the dataset.</p>
@@ -690,7 +732,7 @@ flights_summarized</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:lineflights"></span>
 <img src="ismay_kim_files/figure-html/lineflights-1.png" alt="Line-graph of median arrival delay for flights leaving NYC in 2013 versus day of the year" width="\textwidth" />
 <p class="caption">
-Figure 4.12: Line-graph of median arrival delay for flights leaving NYC in 2013 versus day of the year
+Figure 4.20: Line-graph of median arrival delay for flights leaving NYC in 2013 versus day of the year
 </p>
 </div>
 <hr />
@@ -701,8 +743,8 @@ Figure 4.12: Line-graph of median arrival delay for flights leaving NYC in 2013 
 </div>
 <p><strong>(LC4.32)</strong> Why should line-graphs be avoided when there is not a clear ordering of the horizontal axis?</p>
 <p><strong>(LC4.33)</strong> Why are line-graphs frequently used when time is the explanatory variable?</p>
-<p><strong>(LC4.34)</strong> Why did we use the <code>flights_summarized</code> dataframe to produce the line-graph in Figure <a href="4-viz.html#fig:lineflights">4.12</a> instead of <code>flights</code> or <code>flights_day</code>?</p>
-<p><strong>(LC4.35)</strong> Are the largest median arrival delays where you expected them to occur on the line-graph above in Figure <a href="#lineflights"><strong>??</strong></a>? Why or why not?</p>
+<p><strong>(LC4.34)</strong> Why did we use the <code>flights_summarized</code> dataframe to produce the line-graph in Figure <a href="4-viz.html#fig:lineflights">4.20</a> instead of <code>flights</code> or <code>flights_day</code>?</p>
+<p><strong>(LC4.35)</strong> Are the largest median arrival delays where you expected them to occur on the line-graph above in Figure <a href="4-viz.html#fig:lineflights">4.20</a>? Why or why not?</p>
 <hr />
 <div id="summary-4" class="section level3">
 <h3><span class="header-section-number">4.6.1</span> Summary</h3>

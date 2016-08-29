@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
-<meta name="date" content="2016-08-28">
+<meta name="date" content="2016-08-29">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -161,7 +161,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-manip.html"><a href="5-manip.html"><i class="fa fa-check"></i><b>5</b> Manipulating Data</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-manip.html"><a href="5-manip.html#five-main-verbs---the-fmv"><i class="fa fa-check"></i><b>5.1</b> Five Main Verbs - The FMV</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code id="select">select</code></a></li>
+<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code>select</code></a></li>
 <li class="chapter" data-level="5.1.2" data-path="5-manip.html"><a href="5-manip.html#filter-observations-using-filter"><i class="fa fa-check"></i><b>5.1.2</b> Filter observations using <code id="filter">filter</code></a></li>
 <li class="chapter" data-level="5.1.3" data-path="5-manip.html"><a href="5-manip.html#summarize-variables-using-summarize"><i class="fa fa-check"></i><b>5.1.3</b> Summarize variables using <code>summarize</code></a></li>
 <li class="chapter" data-level="5.1.4" data-path="5-manip.html"><a href="5-manip.html#create-new-variableschange-old-variables-using-mutate"><i class="fa fa-check"></i><b>5.1.4</b> Create new variables/change old variables using <code>mutate</code></a></li>
@@ -274,7 +274,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>Just as we had the FNG (The Five Named Graphs in Chapter <a href="4-viz.html#viz">4</a> using <code>ggplot2</code>), we have the FMV here (The Five Main Verbs in <code>dplyr</code>):</p>
 <div id="select-variables-using-select" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Select variables using <code id="select">select</code></h3>
+<h3><span class="header-section-number">5.1.1</span> Select variables using <code>select</code></h3>
 <div class="figure" style="text-align: center"><span id="fig:selectfig"></span>
 <img src="images/select.png" alt="Select diagram from Data Wrangling with dplyr and tidyr cheatsheet" width="\textwidth" />
 <p class="caption">
@@ -440,7 +440,7 @@ portland_flights</code></pre></div>
 <p>Note the second equals sign here. You are almost guaranteed to make the mistake at least one of only including one equals sign. Let’s see what happens when we make this error:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">portland_flights &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, <span class="dt">dest =</span> <span class="st">&quot;PDX&quot;</span>)</code></pre></div>
 <pre><code>Error: filter() takes unnamed arguments. Do you need `==`?</code></pre>
-<p>We see that there were 1354 flights from New York City to Portland in 2013. Let’s combine this with what we saw in Subsection <a href="5-manip.html#select"><strong>??</strong></a> to ensure that Portland flights were selected:</p>
+<p>We see that there were 1354 flights from New York City to Portland in 2013. Let’s combine this with what we saw in Subsection 5.1.1 to ensure that Portland flights were selected:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">reordered_flights &lt;-<span class="st"> </span><span class="kw">select</span>(flights, dest, <span class="kw">everything</span>())
 pdx_flights &lt;-<span class="st"> </span><span class="kw">filter</span>(reordered_flights, dest ==<span class="st"> &quot;PDX&quot;</span>)
 pdx_flights</code></pre></div>
@@ -658,7 +658,12 @@ gain_summary</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">ggplot</span>(flights_plus, <span class="kw">aes</span>(<span class="dt">x =</span> gain)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-63-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-58"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-58-1.png" alt="Histogram of gain variable" width="\textwidth" />
+<p class="caption">
+Figure 5.7: Histogram of gain variable
+</p>
+</div>
 <p>We can also create multiple columns at once and even refer to columns that were just created in a new column. Hadley produces one such example in Chapter 5 of “R for Data Science” <span class="citation">(Grolemund and Wickham <a href="#ref-rds2016">2016</a>)</span>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_plus2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(flights,
   <span class="dt">gain =</span> arr_delay -<span class="st"> </span>dep_delay,
@@ -810,7 +815,7 @@ freq_dest</code></pre></div>
 ## 8    FLL       12055
 ## 9    MIA       11728
 ## 10   DCA        9705</code></pre>
-<p>Recall from Chapter @(viz) that we read the pipe operator as “and then”. So here we take the <code>freq_dest</code> data frame <strong>AND THEN</strong> we determine the top 10 values of <code>num_flights</code> <strong>AND THEN</strong> we arrange these top 10 flights according to a descending numbers of flights (from highest to lowest).</p>
+<p>Recall from Chapter <a href="4-viz.html#viz">4</a> that we read the pipe operator as “and then”. So here we take the <code>freq_dest</code> data frame <strong>AND THEN</strong> we determine the top 10 values of <code>num_flights</code> <strong>AND THEN</strong> we arrange these top 10 flights according to a descending numbers of flights (from highest to lowest).</p>
 <p>We can go one stop further and tie together the <code>group_by</code> and <code>summarize</code> functions we used to find the most frequent flights:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ten_freq_dests &lt;-<span class="st"> </span>flights %&gt;%
 <span class="st">  </span><span class="kw">group_by</span>(dest) %&gt;%
@@ -823,7 +828,7 @@ freq_dest</code></pre></div>
 <strong><em>Learning check</em></strong>
 </p>
 </div>
-<p><strong>(LC5.12)</strong> Recreate each of the chunks of code above Subsection <a href="5-manip.html#arrange"><strong>??</strong></a> in this chapter using the <code>%&gt;%</code> operator. Note that sometimes you can combine multiple subsequent chunks of code together. Do so whenever possible.</p>
+<p><strong>(LC5.12)</strong> Recreate each of the chunks of code above Subsection 5.1.5 in this chapter using the <code>%&gt;%</code> operator. Note that sometimes you can combine multiple subsequent chunks of code together. Do so whenever possible.</p>
 <p><strong>(LC5.13)</strong> What benefits can you see to using the pipe instead of the other way of doing things as you saw throughout this chapter? Give specific examples.</p>
 <p><strong>(LC5.14)</strong> Write out exactly how the <code>ten_freq_dests</code> data set was created using the “and then” verbiage.</p>
 <hr />
@@ -844,7 +849,7 @@ freq_dest</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:reldiagram"></span>
 <img src="images/relational-nycflights.png" alt="Data relationships in nycflights13 from R for Data Science" width="\textwidth" />
 <p class="caption">
-Figure 5.7: Data relationships in nycflights13 from R for Data Science
+Figure 5.8: Data relationships in nycflights13 from R for Data Science
 </p>
 </div>
 <p>We see from <code>View(airports)</code> that <code>airports</code> contains a lot of other information about 1396. We are only really interested here in the <code>faa</code> and <code>name</code> columns. Let’s use the <code>select</code> function to only use those variables:</p>
@@ -873,7 +878,7 @@ named_freq_dests</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ijdiagram"></span>
 <img src="images/join-inner.png" alt="Diagram of inner join from R for Data Science" width="\textwidth" />
 <p class="caption">
-Figure 5.8: Diagram of inner join from R for Data Science
+Figure 5.9: Diagram of inner join from R for Data Science
 </p>
 </div>
 <p>There are more complex joins available, but the <code>inner_join</code> will solve nearly all (if not all) of the problems you’ll face in our experience.</p>

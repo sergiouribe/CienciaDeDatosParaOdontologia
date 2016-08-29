@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
-<meta name="date" content="2016-08-28">
+<meta name="date" content="2016-08-29">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -161,7 +161,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-manip.html"><a href="5-manip.html"><i class="fa fa-check"></i><b>5</b> Manipulating Data</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-manip.html"><a href="5-manip.html#five-main-verbs---the-fmv"><i class="fa fa-check"></i><b>5.1</b> Five Main Verbs - The FMV</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code id="select">select</code></a></li>
+<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code>select</code></a></li>
 <li class="chapter" data-level="5.1.2" data-path="5-manip.html"><a href="5-manip.html#filter-observations-using-filter"><i class="fa fa-check"></i><b>5.1.2</b> Filter observations using <code id="filter">filter</code></a></li>
 <li class="chapter" data-level="5.1.3" data-path="5-manip.html"><a href="5-manip.html#summarize-variables-using-summarize"><i class="fa fa-check"></i><b>5.1.3</b> Summarize variables using <code>summarize</code></a></li>
 <li class="chapter" data-level="5.1.4" data-path="5-manip.html"><a href="5-manip.html#create-new-variableschange-old-variables-using-mutate"><i class="fa fa-check"></i><b>5.1.4</b> Create new variables/change old variables using <code>mutate</code></a></li>
@@ -425,7 +425,7 @@ airlines</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
 joined_flights &lt;-<span class="st"> </span><span class="kw">inner_join</span>(<span class="dt">x =</span> flights, <span class="dt">y =</span> airlines, <span class="dt">by =</span> <span class="st">&quot;carrier&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">View</span>(joined_flights)</code></pre></div>
-<p>If we <code>View</code> this dataset, we see a new variable has been created called (We will see in Subsection <a href="5-manip.html#select"><strong>??</strong></a> ways to change <code>name</code> to a more descriptive variable name.)</p>
+<p>If we <code>View</code> this dataset, we see a new variable has been created called (We will see in Subsection 5.1.1 ways to change <code>name</code> to a more descriptive variable name.)</p>
 <p>More discussion about joining dataframes together will be given in Chapter <a href="5-manip.html#manip">5</a>. We will see there that the names of the columns to be linked need not match as they did here with <code>&quot;carrier&quot;</code>.</p>
 <hr />
 <hr />

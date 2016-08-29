@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
-<meta name="date" content="2016-08-28">
+<meta name="date" content="2016-08-29">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -161,7 +161,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-manip.html"><a href="5-manip.html"><i class="fa fa-check"></i><b>5</b> Manipulating Data</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-manip.html"><a href="5-manip.html#five-main-verbs---the-fmv"><i class="fa fa-check"></i><b>5.1</b> Five Main Verbs - The FMV</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code id="select">select</code></a></li>
+<li class="chapter" data-level="5.1.1" data-path="5-manip.html"><a href="5-manip.html#select-variables-using-select"><i class="fa fa-check"></i><b>5.1.1</b> Select variables using <code>select</code></a></li>
 <li class="chapter" data-level="5.1.2" data-path="5-manip.html"><a href="5-manip.html#filter-observations-using-filter"><i class="fa fa-check"></i><b>5.1.2</b> Filter observations using <code id="filter">filter</code></a></li>
 <li class="chapter" data-level="5.1.3" data-path="5-manip.html"><a href="5-manip.html#summarize-variables-using-summarize"><i class="fa fa-check"></i><b>5.1.3</b> Summarize variables using <code>summarize</code></a></li>
 <li class="chapter" data-level="5.1.4" data-path="5-manip.html"><a href="5-manip.html#create-new-variableschange-old-variables-using-mutate"><i class="fa fa-check"></i><b>5.1.4</b> Create new variables/change old variables using <code>mutate</code></a></li>
@@ -390,12 +390,22 @@ movies_trimmed</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 movies_trimmed %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> genre, <span class="dt">y =</span> rating)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-102-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-97"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-97-1.png" alt="Rating vs genre in the population" width="\textwidth" />
+<p class="caption">
+Figure 7.2: Rating vs genre in the population
+</p>
+</div>
 <p>We can see that the middle 50% of ratings for <code>&quot;Action&quot;</code> movies is more spread out than that of <code>&quot;Romance&quot;</code> movies in the population. <code>Romance</code> has outliers at both the top and bottoms of the scale though. We are initially interested in comparing the mean <code>rating</code> across these two groups so a faceted histogram may also be useful:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">movies_trimmed %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> rating)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;dodgerblue&quot;</span>) +
 <span class="st">  </span><span class="kw">facet_wrap</span>(~genre)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-103-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-98"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-98-1.png" alt="Faceted histogram of genre vs rating" width="\textwidth" />
+<p class="caption">
+Figure 7.3: Faceted histogram of genre vs rating
+</p>
+</div>
 <p><strong>Important note:</strong> Remember that we hardly ever have access to the population values as we do here. This example and the <code>nycflights13</code> data set were used to create a common flow from chapter to chapter. In nearly all circumstances, we’ll be needing to use only a sample of the population to try to infer conclusions about the unknown population parameter values. These examples do show a nice relationship between statistics (where data is usually small and more focused on experimental settings) and data science (where data is frequently large and collected without experimental conditions). We’ll learn more about observational studies and experiments in Chapter <a href="9-regress.html#regress">9</a>.</p>
 </div>
 <div id="sampling---randomization" class="section level3">
@@ -419,11 +429,21 @@ movies_genre_sample &lt;-<span class="st"> </span>movies_trimmed %&gt;%<span cla
 <p>We can now observe the distributions of our two sample ratings for both groups. Remember that these plots should be rough approximations of our population distributions.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">movies_genre_sample %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> genre, <span class="dt">y =</span> rating)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-105-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-100"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-100-1.png" alt="Genre vs rating for our sample" width="\textwidth" />
+<p class="caption">
+Figure 7.4: Genre vs rating for our sample
+</p>
+</div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">movies_genre_sample %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> rating)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;dodgerblue&quot;</span>) +
 <span class="st">  </span><span class="kw">facet_wrap</span>(~genre)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-106-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-101"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-101-1.png" alt="Genre vs rating for our sample as faceted histogram" width="\textwidth" />
+<p class="caption">
+Figure 7.5: Genre vs rating for our sample as faceted histogram
+</p>
+</div>
 <hr />
 <div class="learncheck">
 <p>
@@ -501,17 +521,32 @@ shuffled_ratings &lt;-<span class="st"> </span>movies_trimmed %&gt;%
 <p>We can now plot the distribution of these simulated differences in means:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rand_distn %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-112-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-107"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-107-1.png" alt="Simulated differences in means histogram" width="\textwidth" />
+<p class="caption">
+Figure 7.6: Simulated differences in means histogram
+</p>
+</div>
 <p>Remember that we are interested in seeing where our observed sample mean difference of 0.8294118 falls on this null distribution. We are interested in simply a difference here so “more extreme” corresponds to values in both tails on the distribution. Let’s shade our null distribution to show a visual representation of our <span class="math inline">\(p\)</span>-value:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rand_distn %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diffmean, <span class="dt">fill =</span> (<span class="kw">abs</span>(diffmean) &gt;=<span class="st"> </span>obs_diff))) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-113-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-108"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-108-1.png" alt="Shaded histogram to show p-value" width="\textwidth" />
+<p class="caption">
+Figure 7.7: Shaded histogram to show p-value
+</p>
+</div>
 <p>You may initially think there is an error here, but remember that the observed difference in means was 0.8294118. It falls far outside the range of simulated differences. We can add a vertical line to represent both it and its negative (since this is a two-tailed test) instead:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rand_distn %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">100</span>) +
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> obs_diff, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) +
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> -obs_diff, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>)</code></pre></div>
-<p><img src="ismay_kim_files/figure-html/unnamed-chunk-114-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-109"></span>
+<img src="ismay_kim_files/figure-html/unnamed-chunk-109-1.png" alt="Histogram with vertical lines corresponding to observed statistic" width="\textwidth" />
+<p class="caption">
+Figure 7.8: Histogram with vertical lines corresponding to observed statistic
+</p>
+</div>
 <p>Based on this plot, we have evidence supporting the conclusion that the mean rating for romance movies is different from that of action movies. (It doesn’t really matter what significance level was chosen in this case. Think about why.) The next important idea is to better understand just how much higher of a mean rating can we expect the romance movies to have compared to that of action movies. This can be addressed by creating a 95% confidence interval as we will explore in Chapter <a href="8-ci.html#ci">8</a>.</p>
 <hr />
 <div class="learncheck">
