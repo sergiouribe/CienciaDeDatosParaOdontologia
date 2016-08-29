@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="Getting away from the traditional introductory statistics curriculum, more focused on reproducible research and modern data analysis techniques and tools" />
   
 
-<meta name="author" content="Chester Ismay and Albert Y. Kim">
+<meta name="author" content="Chester Ismay">
 
 <meta name="date" content="2016-08-29">
 
@@ -391,7 +391,7 @@ movies_trimmed</code></pre></div>
 movies_trimmed %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> genre, <span class="dt">y =</span> rating)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-97"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-97-1.png" alt="Rating vs genre in the population" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-97-1.png" alt="Rating vs genre in the population" width="\textwidth" />
 <p class="caption">
 Figure 7.2: Rating vs genre in the population
 </p>
@@ -401,7 +401,7 @@ Figure 7.2: Rating vs genre in the population
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;dodgerblue&quot;</span>) +
 <span class="st">  </span><span class="kw">facet_wrap</span>(~genre)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-98"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-98-1.png" alt="Faceted histogram of genre vs rating" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-98-1.png" alt="Faceted histogram of genre vs rating" width="\textwidth" />
 <p class="caption">
 Figure 7.3: Faceted histogram of genre vs rating
 </p>
@@ -430,7 +430,7 @@ movies_genre_sample &lt;-<span class="st"> </span>movies_trimmed %&gt;%<span cla
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">movies_genre_sample %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> genre, <span class="dt">y =</span> rating)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-100"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-100-1.png" alt="Genre vs rating for our sample" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-100-1.png" alt="Genre vs rating for our sample" width="\textwidth" />
 <p class="caption">
 Figure 7.4: Genre vs rating for our sample
 </p>
@@ -439,7 +439,7 @@ Figure 7.4: Genre vs rating for our sample
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;dodgerblue&quot;</span>) +
 <span class="st">  </span><span class="kw">facet_wrap</span>(~genre)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-101"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-101-1.png" alt="Genre vs rating for our sample as faceted histogram" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-101-1.png" alt="Genre vs rating for our sample as faceted histogram" width="\textwidth" />
 <p class="caption">
 Figure 7.5: Genre vs rating for our sample as faceted histogram
 </p>
@@ -522,7 +522,7 @@ shuffled_ratings &lt;-<span class="st"> </span>movies_trimmed %&gt;%
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rand_distn %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-107"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-107-1.png" alt="Simulated differences in means histogram" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-107-1.png" alt="Simulated differences in means histogram" width="\textwidth" />
 <p class="caption">
 Figure 7.6: Simulated differences in means histogram
 </p>
@@ -531,7 +531,7 @@ Figure 7.6: Simulated differences in means histogram
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rand_distn %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diffmean, <span class="dt">fill =</span> (<span class="kw">abs</span>(diffmean) &gt;=<span class="st"> </span>obs_diff))) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-108"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-108-1.png" alt="Shaded histogram to show p-value" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-108-1.png" alt="Shaded histogram to show p-value" width="\textwidth" />
 <p class="caption">
 Figure 7.7: Shaded histogram to show p-value
 </p>
@@ -542,7 +542,7 @@ Figure 7.7: Shaded histogram to show p-value
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> obs_diff, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) +
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> -obs_diff, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-109"></span>
-<img src="ismay_kim_files/figure-html/unnamed-chunk-109-1.png" alt="Histogram with vertical lines corresponding to observed statistic" width="\textwidth" />
+<img src="ismay_files/figure-html/unnamed-chunk-109-1.png" alt="Histogram with vertical lines corresponding to observed statistic" width="\textwidth" />
 <p class="caption">
 Figure 7.8: Histogram with vertical lines corresponding to observed statistic
 </p>
@@ -620,7 +620,7 @@ gitbook.start({
 "link": "https://github.com/ismayc/moderndive/edit/master/07-hypo_tests.Rmd",
 "text": null
 },
-"download": ["ismay_kim.pdf"],
+"download": ["ismay.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
