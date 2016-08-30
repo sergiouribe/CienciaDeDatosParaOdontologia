@@ -8,7 +8,7 @@
   <title>A MODERN DIVE into Data with R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Getting away from the traditional introductory statistics curriculum, more focused on reproducible research and modern data analysis techniques and tools">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.1.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="A MODERN DIVE into Data with R" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-08-29">
+<meta name="date" content="2016-08-30">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -451,7 +451,7 @@ Figure 4.9: Number of flights departing NYC in 2013 by airline
 <p>Recall the <code>airlines</code> dataset discussed in Chapter <a href="3-tidy.html#tidy">3</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(airlines)
 airlines</code></pre></div>
-<pre><code>## # A tibble: 16 x 2
+<pre><code>## # A tibble: 16 × 2
 ##    carrier                        name
 ##      &lt;chr&gt;                       &lt;chr&gt;
 ## 1       9E           Endeavor Air Inc.
@@ -474,7 +474,7 @@ airlines</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
 flights_table &lt;-<span class="st"> </span><span class="kw">count</span>(<span class="dt">x =</span> flights, <span class="dt">vars =</span> carrier)
 flights_table</code></pre></div>
-<pre><code>## # A tibble: 16 x 2
+<pre><code>## # A tibble: 16 × 2
 ##     vars     n
 ##    &lt;chr&gt; &lt;int&gt;
 ## 1     9E 18460
@@ -710,7 +710,7 @@ Figure 4.19: Hard to read scatterplot
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_summarized &lt;-<span class="st"> </span>flights_day %&gt;%<span class="st"> </span><span class="kw">group_by</span>(date) %&gt;%
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median_arr_delay =</span> <span class="kw">median</span>(arr_delay, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))
 flights_summarized</code></pre></div>
-<pre><code>## # A tibble: 365 x 2
+<pre><code>## # A tibble: 365 × 2
 ##          date median_arr_delay
 ##        &lt;date&gt;            &lt;dbl&gt;
 ## 1  2013-01-01                3
@@ -858,7 +858,7 @@ gitbook.start({
 "link": "https://github.com/ismayc/moderndive/edit/master/04-visualizing_data.Rmd",
 "text": null
 },
-"download": null,
+"download": ["ismay.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
