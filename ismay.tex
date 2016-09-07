@@ -106,11 +106,7 @@
 % title / author / date
 \title{\Large{A MODERN DIVE into Data with R}}
 \author{Chester Ismay}
-<<<<<<< HEAD
 \date{2016-09-07}
-=======
-\date{2016-09-02}
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -229,11 +225,7 @@ there.
 \textbf{Book was last updated:}
 
 \begin{verbatim}
-<<<<<<< HEAD
 ## [1] "By Chester on Wednesday, September 07, 2016 12:03:08 PDT"
-=======
-## [1] "By cismay on Friday, September 02, 2016 11:18:02 PDT"
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 \end{verbatim}
 
 \section{Colophon}\label{colophon}
@@ -287,11 +279,7 @@ magrittr &  & 1.5 & 2014-11-22 & CRAN (R 3.3.0)\\
 \addlinespace
 markdown &  & 0.7.7 & 2015-04-22 & CRAN (R 3.3.0)\\
 MASS &  & 7.3-45 & 2016-04-21 & CRAN (R 3.3.1)\\
-<<<<<<< HEAD
 Matrix &  & 1.2-6 & 2016-05-02 & CRAN (R 3.3.1)\\
-=======
-Matrix &  & 1.2-7 & 2016-08-28 & CRAN (R 3.3.0)\\
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 mime &  & 0.5 & 2016-07-07 & CRAN (R 3.3.0)\\
 mosaic &  & 0.14.4 & 2016-07-29 & CRAN (R 3.3.0)\\
 \addlinespace
@@ -310,11 +298,7 @@ rmarkdown &  & 1.0.9002 & 2016-08-31 & Github (rstudio/rmarkdown@2674682)\\
 scales &  & 0.4.0 & 2016-02-26 & CRAN (R 3.3.0)\\
 stringi &  & 1.1.1 & 2016-05-27 & CRAN (R 3.3.0)\\
 stringr &  & 1.1.0 & 2016-08-19 & CRAN (R 3.3.0)\\
-<<<<<<< HEAD
 tibble &  & 1.1 & 2016-07-04 & CRAN (R 3.3.0)\\
-=======
-tibble &  & 1.2 & 2016-08-26 & CRAN (R 3.3.0)\\
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 tidyr &  & 0.6.0 & 2016-08-12 & CRAN (R 3.3.0)\\
 \addlinespace
 xts &  & 0.9-7 & 2014-01-02 & CRAN (R 3.3.0)\\
@@ -1645,7 +1629,7 @@ Recall the \texttt{airlines} dataset discussed in Chapter \ref{tidy}.
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 16 × 2
+## # A tibble: 16 x 2
 ##    carrier                        name
 ##      <chr>                       <chr>
 ## 1       9E           Endeavor Air Inc.
@@ -1681,11 +1665,7 @@ in the \texttt{dplyr} package on the \texttt{carrier} variable in
 \end{Shaded}
 
 \begin{verbatim}
-<<<<<<< HEAD
 ## # A tibble: 16 x 2
-=======
-## # A tibble: 16 × 2
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 ##     vars     n
 ##    <chr> <int>
 ## 1     9E 18460
@@ -2206,7 +2186,7 @@ running \texttt{View(flights\_day)} that the new variable added called
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 365 × 2
+## # A tibble: 365 x 2
 ##          date median_arr_delay
 ##        <date>            <dbl>
 ## 1  2013-01-01                3
@@ -2514,7 +2494,7 @@ by listing them out:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 336,776 × 4
+## # A tibble: 336,776 x 4
 ##    month   day dep_time sched_dep_time
 ##    <int> <int>    <int>          <int>
 ## 1      1     1      517            515
@@ -2540,7 +2520,7 @@ Or we could specify a ranges of columns:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 336,776 × 4
+## # A tibble: 336,776 x 4
 ##    month   day arr_time sched_arr_time
 ##    <int> <int>    <int>          <int>
 ## 1      1     1      830            819
@@ -2589,7 +2569,7 @@ those conditions:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 336,776 × 3
+## # A tibble: 336,776 x 3
 ##    arr_time arr_delay air_time
 ##       <int>     <dbl>    <dbl>
 ## 1       830        11      227
@@ -2613,7 +2593,7 @@ those conditions:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 336,776 × 2
+## # A tibble: 336,776 x 2
 ##    dep_delay arr_delay
 ##        <dbl>     <dbl>
 ## 1          2        11
@@ -2637,7 +2617,7 @@ those conditions:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 336,776 × 6
+## # A tibble: 336,776 x 6
 ##    dep_time sched_dep_time arr_time sched_arr_time air_time
 ##       <int>          <int>    <int>          <int>    <dbl>
 ## 1       517            515      830            819      227
@@ -2650,7 +2630,7 @@ those conditions:
 ## 8       557            600      709            723       53
 ## 9       557            600      838            846      140
 ## 10      558            600      753            745      138
-## # ... with 336,766 more rows, and 1 more variables: time_hour <dttm>
+## # ... with 336,766 more rows, and 1 more variables: time_hour <time>
 \end{verbatim}
 
 Another useful function is \texttt{rename}, which as you may suspect
@@ -2734,7 +2714,7 @@ Portland, Oregon is \texttt{"PDX"}:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1,354 × 18
+## # A tibble: 1,354 x 18
 ##    month   day dep_time sched_dep_time dep_delay arr_time
 ##    <int> <int>    <int>          <int>     <dbl>    <int>
 ## 1      1     1     1739           1740        -1     2051
@@ -2750,7 +2730,7 @@ Portland, Oregon is \texttt{"PDX"}:
 ## # ... with 1,344 more rows, and 12 more variables:
 ## #   sched_arr_time <int>, arr_delay <dbl>, carrier <chr>, flight <int>,
 ## #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
-## #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
+## #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <time>
 \end{verbatim}
 
 Note the second equals sign here. You are almost guaranteed to make the
@@ -2780,7 +2760,7 @@ that Portland flights were selected:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1,354 × 18
+## # A tibble: 1,354 x 18
 ##     dest month   day dep_time sched_dep_time dep_delay arr_time
 ##    <chr> <int> <int>    <int>          <int>     <dbl>    <int>
 ## 1    PDX     1     1     1739           1740        -1     2051
@@ -2796,7 +2776,7 @@ that Portland flights were selected:
 ## # ... with 1,344 more rows, and 11 more variables:
 ## #   sched_arr_time <int>, arr_delay <dbl>, carrier <chr>, flight <int>,
 ## #   tailnum <chr>, origin <chr>, air_time <dbl>, distance <dbl>,
-## #   hour <dbl>, minute <dbl>, time_hour <dttm>
+## #   hour <dbl>, minute <dbl>, time_hour <time>
 \end{verbatim}
 
 We see that Portland flights were selected here. You could also run
@@ -2860,7 +2840,7 @@ Northern Hemisphere summer months of June, July, and August.
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 249,781 × 18
+## # A tibble: 249,781 x 18
 ##    month   day dep_time sched_dep_time dep_delay arr_time
 ##    <int> <int>    <int>          <int>     <dbl>    <int>
 ## 1      1     1      517            515         2      830
@@ -2876,7 +2856,7 @@ Northern Hemisphere summer months of June, July, and August.
 ## # ... with 249,771 more rows, and 12 more variables:
 ## #   sched_arr_time <int>, arr_delay <dbl>, carrier <chr>, flight <int>,
 ## #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
-## #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
+## #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <time>
 \end{verbatim}
 
 To check that we are correct here we can use the \texttt{count} function
@@ -2890,11 +2870,7 @@ frame to ensure June, July, and August are not selected:
 \end{Shaded}
 
 \begin{verbatim}
-<<<<<<< HEAD
 ## # A tibble: 9 x 2
-=======
-## # A tibble: 9 × 2
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 ##   month     n
 ##   <int> <int>
 ## 1     1 27004
@@ -2919,11 +2895,7 @@ the following to get the same result:
 \end{Shaded}
 
 \begin{verbatim}
-<<<<<<< HEAD
 ## # A tibble: 9 x 2
-=======
-## # A tibble: 9 × 2
->>>>>>> 040065100a1726b33c3886bfe918c1e42eb4e4d7
 ##   month     n
 ##   <int> <int>
 ## 1     1 27004
@@ -2982,7 +2954,7 @@ step using the \texttt{summarize} function in \texttt{dplyr}:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 2
+## # A tibble: 1 x 2
 ##    mean std_dev
 ##   <dbl>   <dbl>
 ## 1    NA      NA
@@ -3004,7 +2976,7 @@ for the \texttt{na.rm} parameter:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 2
+## # A tibble: 1 x 2
 ##       mean  std_dev
 ##      <dbl>    <dbl>
 ## 1 55.20351 17.78212
@@ -3062,7 +3034,7 @@ amazed at just how simple this is:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 12 × 3
+## # A tibble: 12 x 3
 ##    month     mean   std_dev
 ##    <dbl>    <dbl>     <dbl>
 ## 1      1 35.64127 10.185459
@@ -3099,7 +3071,7 @@ York City:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 3 × 2
+## # A tibble: 3 x 2
 ##   origin  count
 ##    <chr>  <int>
 ## 1    EWR 120835
@@ -3176,7 +3148,7 @@ even plot it in the form of a histogram:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 8
+## # A tibble: 1 x 8
 ##     min    q1 median    q3   max      mean       sd missing
 ##   <dbl> <dbl>  <dbl> <dbl> <dbl>     <dbl>    <dbl>   <int>
 ## 1  -109   -17     -7     3   196 -5.659779 18.04365    9430
@@ -3262,7 +3234,7 @@ destination airports from New York City in 2013:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 105 × 2
+## # A tibble: 105 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    ABQ         254
@@ -3290,7 +3262,7 @@ format. We are interested in finding those airports that appear most:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 105 × 2
+## # A tibble: 105 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    LEX           1
@@ -3317,7 +3289,7 @@ to be descending instead of ascending we use the \texttt{desc} function:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 105 × 2
+## # A tibble: 105 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    ORD       17283
@@ -3344,7 +3316,7 @@ airports here:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 10 × 2
+## # A tibble: 10 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    ATL       17215
@@ -3368,7 +3340,7 @@ We'll still need to arrange this by \texttt{num\_flights} though:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 10 × 2
+## # A tibble: 10 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    ORD       17283
@@ -3430,7 +3402,7 @@ bit to help with this:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 10 × 2
+## # A tibble: 10 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    ORD       17283
@@ -3459,7 +3431,7 @@ called the pipe (\texttt{\%\textgreater{}\%}):
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 10 × 2
+## # A tibble: 10 x 2
 ##     dest num_flights
 ##    <chr>       <int>
 ## 1    ORD       17283
@@ -3594,7 +3566,7 @@ subsequent column \texttt{name} as \texttt{airport\_name}:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 10 × 3
+## # A tibble: 10 x 3
 ##     dest num_flights                       airport_name
 ##    <chr>       <int>                              <chr>
 ## 1    ORD       17283                 Chicago Ohare Intl
@@ -4065,7 +4037,7 @@ proportion of successes, also known as the \textbf{null distribution}.
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 11 × 2
+## # A tibble: 11 x 2
 ##    heads count
 ##    <dbl> <int>
 ## 1      0     7
@@ -4212,7 +4184,7 @@ Let's walk through each step of this calculation:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 115 × 4
+## # A tibble: 115 x 4
 ##        n heads tails  prop
 ##    <dbl> <dbl> <dbl> <dbl>
 ## 1     10     9     1   0.9
@@ -4449,7 +4421,7 @@ to use the mean of our sample \texttt{rating} from the
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 1
+## # A tibble: 1 x 1
 ##    mean
 ##   <dbl>
 ## 1 6.034
@@ -4528,7 +4500,7 @@ calculate the mean of \texttt{ratings} in our bootstrapped sample:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 1
+## # A tibble: 1 x 1
 ##    mean
 ##   <dbl>
 ## 1 6.144
@@ -4646,7 +4618,7 @@ bootstrapped confidence interval here contain the actual mean value?
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 1
+## # A tibble: 1 x 1
 ##      mean
 ##     <dbl>
 ## 1 5.93285
@@ -4987,7 +4959,7 @@ would like:
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 58,788 × 5
+## # A tibble: 58,788 x 5
 ##                       title  year rating Action Romance
 ##                       <chr> <int>  <dbl>  <int>   <int>
 ## 1                         $  1971    6.4      0       0
@@ -5218,7 +5190,7 @@ standard deviation as well conditioned on the two levels.
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 2 × 3
+## # A tibble: 2 x 3
 ##     genre     mean  std_dev
 ##     <chr>    <dbl>    <dbl>
 ## 1  Action 5.197059 1.464837
@@ -5570,10 +5542,10 @@ null/randomization distribution we just found with our hypothesis test.
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 1 × 1
-##   `sd(diffmean)`
-##            <dbl>
-## 1     0.03208171
+## # A tibble: 1 x 1
+##   sd(diffmean)
+##          <dbl>
+## 1   0.03208171
 \end{verbatim}
 
 Remembering that we can use the general formula of
