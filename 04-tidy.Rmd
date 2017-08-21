@@ -23,7 +23,7 @@ knit_engines$set(asis = function(options) {
 })
 
 # This controls which LC solutions to show. Options for solutions_shown: "ALL"
-# (to show all solutions), or subsets of c('3-1', '3-2','3-3'), including the
+# (to show all solutions), or subsets of c('4-4', '4-5'), including the
 # null vector c('') to show no solutions.
 solutions_shown <- c("")
 show_solutions <- function(section){
@@ -220,6 +220,28 @@ a tidy data frame and assign the name of `dem_tidy` to the resulting long-format
 
 **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**  Read in the life expectancy data stored at http://ismayc.github.io/le_mess.csv and convert it to a tidy data frame. 
 
+```{asis lc4-4solutions, include=show_solutions('4-4')}
+**Learning Check Solutions**  
+
+**`r paste0("(LC", chap, ".", (lc - 1), ")")`** `dem_tidy <- gather(data = dem_score, key = year, value = democracy_score, - country)`
+
+**`r paste0("(LC", chap, ".", (lc), ")")`**
+`life_expectancy <- read_csv('http://ismayc.github.io/le_mess.csv')
+life_ex_tidy <- gather(data = life_expectancy, key = year, 
+value = life_expectancy, -country)`
+
+
+```
+
+``` {r, include=show_solutions('4-4'), echo=show_solutions('4-4')}
+dem_tidy <- gather(data = dem_score, key = year, value = democracy_score, - country)
+
+life_expectancy <- read_csv('http://ismayc.github.io/le_mess.csv')
+life_ex_tidy <- gather(data = life_expectancy, key = year, 
+value = life_expectancy, -country)
+```
+
+
 ```{block, type='learncheck', purl=FALSE}
 ```
 
@@ -275,7 +297,7 @@ While it is not an absolute rule, for organizational purposes it considered good
 **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`** Provide the names of variables in a data frame with at least three variables in which one of them is an identification variable and the other two are not.  In other words, create your own tidy dataset that matches these conditions.
 
 
-```{asis lc3-3c-solutions, include=show_solutions('3-3')}
+```{asis lc4-5-solutions, include=show_solutions('4-5')}
 **Learning Check Solutions**  
 **`r paste0("(LC", chap, ".", (lc - 1), ")")`** See `?airports` help file
 
@@ -355,7 +377,7 @@ In Chapter \@ref(wrangling), we'll further explore data in tidy format by groupi
 
 ### Script of R code
 
-```{r include=FALSE, eval=FALSE, purl=FALSE}
+```{r include=FALSE, eval=TRUE, purl=FALSE}
 knitr::purl("04-tidy.Rmd", "docs/scripts/04-tidy.R")
 ```
 

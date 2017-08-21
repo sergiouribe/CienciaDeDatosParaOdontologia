@@ -195,7 +195,7 @@ The shape of this resulting distribution may look familiar to you.  It resembles
 
 It's always important at this point to interpret the results of this confidence interval calculation.  In this context, we can say something like the following:
 
-> Based on the sample data and bootstrapping techniques, we can be 95% confident that the true mean rating of **ALL** IMDB ratings is between `r ciq_mean_rating$lower` and `r ciq_mean_rating$upper`.
+> Based on the sample data and bootstrapping techniques, we can be 95% "confident" that the true mean rating of **ALL** IMDB ratings is between `r ciq_mean_rating$lower` and `r ciq_mean_rating$upper`.
 
 This statement may seem a little confusing to you.  Another way to think about this is that this confidence interval was constructed using the sample data by a procedure that is **95% reliable** in that of 100 generated confidence intervals based on 100 different random samples, we expect on average that 95 of them will capture the true unknown parameter. This also means that we will get invalid results 5% of the time.  Just as we had a trade-off with $\alpha$ and $\beta$ with hypothesis tests, we have a similar trade-off here with setting the confidence level.
 
@@ -225,7 +225,7 @@ To compute this type of confidence interval, we only need to make a slight modif
 (cise_mean_rating <- confint(trials, level = 0.95, method = "stderr"))
 ```
 
-> Based on the sample data and bootstrapping techniques, we can be 95% confident that the true mean rating of ALL IMDB ratings is between `r cise_mean_rating$lower` and `r cise_mean_rating$upper`.
+> Based on the sample data and bootstrapping techniques, we can be 95% "confident" that the true mean rating of ALL IMDB ratings is between `r cise_mean_rating$lower` and `r cise_mean_rating$upper`.
 
 
 ```{block lc7-4, type='learncheck', purl=FALSE}
@@ -361,7 +361,7 @@ We will see in Chapter \@ref(regression) many of the same ideas we have seen wit
 
 ### Script of R code
 
-```{r include=FALSE, eval=FALSE, purl=FALSE}
+```{r include=FALSE, eval=TRUE, purl=FALSE}
 knitr::purl("09-ci.Rmd", "docs/scripts/09-ci.R")
 ```
 

@@ -1084,7 +1084,7 @@ This chapter examined the basics of hypothesis testing with terminology and also
 
 ### Script of R code
 
-```{r include=FALSE, eval=FALSE, purl=FALSE}
+```{r include=FALSE, eval=TRUE, purl=FALSE}
 knitr::purl("08-hypo.Rmd", "docs/scripts/08-hypo.R")
 ```
 

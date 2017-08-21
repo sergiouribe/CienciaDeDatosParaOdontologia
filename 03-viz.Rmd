@@ -27,8 +27,8 @@ knit_engines$set(asis = function(options) {
 })
 
 # This controls which LC solutions to show. Options for solutions_shown: "ALL"
-# (to show all solutions), or subsets of c('4-3', '4-4',
-# '4-5','4-6','4-7','4-8'), including the null vector c('') to show no
+# (to show all solutions), or subsets of c('3-2', '3-3',
+# '3-4','3-5','3-6','3-7', 3-8), including the null vector c('') to show no
 # solutions.
 solutions_shown <- ""
 show_solutions <- function(section){
@@ -294,12 +294,12 @@ ggplot(data = all_alaska_flights, mapping = aes(x = dep_delay, y = arr_delay))
 
 ```{asis lc-scatterplots-solutions, include=show_solutions('4-3')}
 **Learning Check Solutions**  
-**4.2**: What are some practical reasons why `dep_delay` and `arr_delay` have a positive relationship? *The later a plane departs, typically the later it will arrive.*  
-**4.3** An example in the `weather` dataset is `visibility`, which measure visibility in miles. As visibility increases, we would expect departure delays to decrease. 
+**`r paste0("(LC", chap, ".", (lc - 3), ")")`**: What are some practical reasons why `dep_delay` and `arr_delay` have a positive relationship? *The later a plane departs, typically the later it will arrive.*  
+**`r paste0("(LC", chap, ".", (lc - 2), ")")`** An example in the `weather` dataset is `visibility`, which measure visibility in miles. As visibility increases, we would expect departure delays to decrease. 
 
-**4.4**: What does (0, 0) correspond to from the point of view of a passenger on an Alaskan flight?  Why do you believe there is a cluster of points near (0, 0)? *The point (0,0) means no delay in departure and arrival. From the passenger's point of view, this means the flight was on time. It seems most flights are at least close to being on time.*  
+**`r paste0("(LC", chap, ".", (lc - 1), ")")`**: What does (0, 0) correspond to from the point of view of a passenger on an Alaskan flight?  Why do you believe there is a cluster of points near (0, 0)? *The point (0,0) means no delay in departure and arrival. From the passenger's point of view, this means the flight was on time. It seems most flights are at least close to being on time.*  
 
-**4.6**: Create a similar plot, but one showing the relationship between departure time and departure delay. What hypotheses do you have about the patterns you see? *We now put `dep_time` as the `x`-aesthetic and `dep_delay` as the `y`-aesthetic*  
+**`r paste0("(LC", chap, ".", (lc), ")")`**: Create a similar plot, but one showing the relationship between departure time and departure delay. What hypotheses do you have about the patterns you see? *We now put `dep_time` as the `x`-aesthetic and `dep_delay` as the `y`-aesthetic*  
 ```
 
 ``` {r, include=show_solutions('4-3'), echo=show_solutions('4-3')}
@@ -349,9 +349,9 @@ You may have noticed that in the code to create Figure \@ref(fig:jitter) have al
 
 ```{asis lc-overplotting-solutions, include=show_solutions('4-3')}
 **Learning Check Solutions**  
-**4.7**: Why is setting the `alpha` argument value useful with scatterplots? What further information does it give you that a regular scatterplot cannot? *It thins out the points so we address over-plotting. But more importantly it hints at the (statistical) **density** and **distribution** of the points: where are the points concentrated, where do they occur. We will see more about densities and distributions in Chapter 6 when we switch gears to statistical topics.*
+**`r paste0("(LC", chap, ".", (lc - 1), ")")`**: Why is setting the `alpha` argument value useful with scatterplots? What further information does it give you that a regular scatterplot cannot? *It thins out the points so we address over-plotting. But more importantly it hints at the (statistical) **density** and **distribution** of the points: where are the points concentrated, where do they occur. We will see more about densities and distributions in Chapter 6 when we switch gears to statistical topics.*
   
-**4.8**: After viewing the Figure \@ref(fig:alpha) above, give a range of arrival times and departure times that occur most frequently?  How has that region changed compared to when you observed the same plot without the `alpha = 0.2` set in Figure \@ref(fig:noalpha)? *The lower plot suggests that most Alaska flights from NYC depart between 12 minutes early and on time and arrive between 50 minutes early and on time.*  
+**`r paste0("(LC", chap, ".", (lc), ")")`**: After viewing the Figure \@ref(fig:alpha) above, give a range of arrival times and departure times that occur most frequently?  How has that region changed compared to when you observed the same plot without the `alpha = 0.2` set in Figure \@ref(fig:noalpha)? *The lower plot suggests that most Alaska flights from NYC depart between 12 minutes early and on time and arrive between 50 minutes early and on time.*  
 
 ```
 
@@ -404,8 +404,8 @@ This is similar to the previous use of the `filter` command in Section \@ref(sca
 
 ```{asis lc-early_january_weather-solutions, include=show_solutions('4-4')}
 **Learning Check Solutions**  
-**LC4.9**: Take a look at both the `weather` and `early_january_weather` data frames by running `View(weather)` and `View(early_january_weather)` in the console. In what respect do these data frames differ? *The rows of `early_january_weather` are a subset of `weather`.*  
-**LC4.10**: The `weather` data is recorded hourly. Why does the `time_hour` variable correctly identify the hour of the measurement whereas the `hour` variable does not? *Because to uniquely identify an hour, we need the `year`/`month`/`day`/`hour` sequence, whereas there are only 24 possible `hour`'s. Note that in the case of `weather`, there is a timezone bug: the `time_hour` variable is off by 5 hours from the `year`/`month`/`day`/`hour` sequence, since the Eastern Time Zone is 5 hours off UTC.*  
+**LC `r paste0("(LC", chap, ".", (lc - 1), ")")`**: Take a look at both the `weather` and `early_january_weather` data frames by running `View(weather)` and `View(early_january_weather)` in the console. In what respect do these data frames differ? *The rows of `early_january_weather` are a subset of `weather`.*  
+**LC`r paste0("(LC", chap, ".", (lc), ")")`**: The `weather` data is recorded hourly. Why does the `time_hour` variable correctly identify the hour of the measurement whereas the `hour` variable does not? *Because to uniquely identify an hour, we need the `year`/`month`/`day`/`hour` sequence, whereas there are only 24 possible `hour`'s. Note that in the case of `weather`, there is a timezone bug: the `time_hour` variable is off by 5 hours from the `year`/`month`/`day`/`hour` sequence, since the Eastern Time Zone is 5 hours off UTC.*  
 ```
 
 ```{block, type='learncheck', purl=FALSE}
@@ -443,9 +443,9 @@ Much as with the `ggplot()` call in Chapter \@ref(geompoint), we describe the co
 
 ```{asis lc-linegraph-solutions, include=show_solutions('4-4')}
 **Learning Check Solutions**  
-**LC4.11**: Why should linegraphs be avoided when there is not a clear ordering of the horizontal axis? *Because lines suggest connectedness and ordering.*  
-**LC4.12**: Why are linegraphs frequently used when time is the explanatory variable? *Because time is sequential: subsequent observations are closely related to each other.*  
-**LC4.13**: Plot a time series of a variable other than `temp` for Newark Airport in the first 15 days of January 2013. *Humidity is a good one to look at, since this very closely related to the cycles of a day.*  
+**LC `r paste0("(LC", chap, ".", (lc - 2), ")")`**: Why should linegraphs be avoided when there is not a clear ordering of the horizontal axis? *Because lines suggest connectedness and ordering.*  
+**LC `r paste0("(LC", chap, ".", (lc - 1), ")")`**: Why are linegraphs frequently used when time is the explanatory variable? *Because time is sequential: subsequent observations are closely related to each other.*  
+**LC `r paste0("(LC", chap, ".", (lc), ")")`**: Plot a time series of a variable other than `temp` for Newark Airport in the first 15 days of January 2013. *Humidity is a good one to look at, since this very closely related to the cycles of a day.*  
 ```
 
 ```{r, include=show_solutions('4-4'), echo=show_solutions('4-4')}
@@ -536,13 +536,13 @@ ggplot(data = weather, mapping = aes(x = temp)) +
 
 ```{asis lc-histogram-solutions, include=show_solutions('4-5')}
 **Learning Check Solutions**  
-**LC 4.14: What does changing the number of bins from 30 to 60 tell us about the distribution of temperatures?** The distribution doesn't change much. But by refining the bid width, we see that the temperature data has a high degree of accuracy. What do I mean by accuracy? Looking at the `temp` variabile by `View(weather)`, we see that the precision of each temperature recording is 2 decimal places.
+**LC `r paste0("(LC", chap, ".", (lc - 3), ")")`: What does changing the number of bins from 30 to 60 tell us about the distribution of temperatures?** The distribution doesn't change much. But by refining the bid width, we see that the temperature data has a high degree of accuracy. What do I mean by accuracy? Looking at the `temp` variabile by `View(weather)`, we see that the precision of each temperature recording is 2 decimal places.
 
-**LC 4.15: Would you classify the distribution of temperatures as symmetric or skewed?** It is rather symmetric, i.e. there are no __long tails__ on only one side of the distribution
+**LC `r paste0("(LC", chap, ".", (lc - 2), ")")`: Would you classify the distribution of temperatures as symmetric or skewed?** It is rather symmetric, i.e. there are no __long tails__ on only one side of the distribution
 
-**LC 4.16: What would you guess is the "center" value in this distribution?  Whydid you make that choice?** The center is around 55&deg;F. By running the `summary()` command, we see that the mean and median are very similar. In fact, when the distribution is symmetric the mean equals the median.
+**LC `r paste0("(LC", chap, ".", (lc - 1), ")")`: What would you guess is the "center" value in this distribution?  Why did you make that choice?** The center is around `r mean(weather$temp, na.rm=TRUE)`&deg;F. By running the `summary()` command, we see that the mean and median are very similar. In fact, when the distribution is symmetric the mean equals the median.
 
-**4.17: Is this data spread out greatly from the center or is it close? Why?**
+**`r paste0("(LC", chap, ".", (lc), ")")`: Is this data spread out greatly from the center or is it close? Why?**
 
 This can only be answered relatively speaking! Let's pick things to be relative to Seattle, WA temperatures:
 
@@ -623,7 +623,7 @@ Having histograms split by day would not be great:
 * We don't really care about day-to-day fluctuation in weather so much, but maybe more week-to-week variation. We'd like to focus on seasonal trends.
 
 **`r paste0("(LC", chap, ".", (lc), ")")`: Does the `temp` variable in the `weather` dataset have a lot of variability? Why do you say that?**
-Again, like in LC 4.17, this is a relative question. I would say yes, because in New York City, you have 4 clear seasons with different weather. Whereas in Seattle WA and Portland OR, you have two seasons: summer and rain!
+Again, like in LC `r paste0("(LC", chap, ".", (lc-4), ")")`, this is a relative question. I would say yes, because in New York City, you have 4 clear seasons with different weather. Whereas in Seattle WA and Portland OR, you have two seasons: summer and rain!
 
 ```
 
@@ -1073,7 +1073,7 @@ In addition, we've created a mind map to help you remember which types of plots 
 
 ### Script of R code
 
-```{r include=FALSE, eval=FALSE, purl=FALSE}
+```{r include=FALSE, eval=TRUE, purl=FALSE}
 knitr::purl("03-viz.Rmd", "docs/scripts/03-viz.R")
 ```
 

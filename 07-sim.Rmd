@@ -535,7 +535,7 @@ This chapter has served as an introduction into inferential techniques that will
 
 ### Script of R code
 
-```{r include=FALSE, eval=FALSE, purl=FALSE}
+```{r include=FALSE, eval=TRUE, purl=FALSE}
 knitr::purl("07-sim.Rmd", "docs/scripts/07-sim.R")
 ```
 
