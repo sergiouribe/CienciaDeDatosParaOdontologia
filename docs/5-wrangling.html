@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-02">
+<meta name="date" content="2017-08-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -118,18 +118,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
-<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.1.4</b> Final note for students</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#important-note"><i class="fa fa-check"></i><b>1.1</b> Important Note</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.2</b> Introduction for students</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.2.1</b> What you will learn from this book</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.2.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.2.3</b> Reproducible research</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.2.4</b> Final note for students</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.3</b> Introduction for instructors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.3.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.4.1</b> Colophon</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.5.1</b> Colophon</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a><ul>
@@ -495,8 +496,8 @@ Figure 5.1: Filter diagram from Data Wrangling with dplyr and tidyr cheatsheet
 </p>
 </div>
 <p>The <code>filter</code> function here works much like the “Filter” option in Microsoft Excel; it allows you to specify criteria about values of a variable in your dataset and then chooses only those rows that match that criteria. We begin by focusing only on flights from New York City to Portland, Oregon. The <code>dest</code> code (or airport code) for Portland, Oregon is <code>&quot;PDX&quot;</code>. Run the following and look at the resulting spreadsheet to ensure that only flights heading to Portland are chosen here:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">portland_flights &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(dest ==<span class="st"> &quot;PDX&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">portland_flights &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(dest <span class="op">==</span><span class="st"> &quot;PDX&quot;</span>)
 <span class="kw">View</span>(portland_flights)</code></pre></div>
 <p>Note the following:</p>
 <ul>
@@ -522,13 +523,13 @@ Figure 5.1: Filter diagram from Data Wrangling with dplyr and tidyr cheatsheet
 <li><code>!=</code> corresponds to “not equal to”</li>
 </ul>
 <p>To see many of these in action, let’s select all flights that left JFK airport heading to Burlington, Vermont (<code>&quot;BTV&quot;</code>) or Seattle, Washington (<code>&quot;SEA&quot;</code>) in the months of October, November, or December. Run the following</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">btv_sea_flights_fall &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(origin ==<span class="st"> &quot;JFK&quot;</span>, (dest ==<span class="st"> &quot;BTV&quot;</span> |<span class="st"> </span>dest ==<span class="st"> &quot;SEA&quot;</span>), month &gt;=<span class="st"> </span><span class="dv">10</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">btv_sea_flights_fall &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(origin <span class="op">==</span><span class="st"> &quot;JFK&quot;</span>, (dest <span class="op">==</span><span class="st"> &quot;BTV&quot;</span> <span class="op">|</span><span class="st"> </span>dest <span class="op">==</span><span class="st"> &quot;SEA&quot;</span>), month <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>)
 <span class="kw">View</span>(btv_sea_flights_fall)</code></pre></div>
 <p>Note: even though colloquially speaking one might say “all flights leaving Burlington, Vermont <em>and</em> Seattle, Washington,” in terms of computer logical operations, we really mean “all flights leaving Burlington, Vermont <em>or</em> Seattle, Washington.” For a given row in the data, <code>dest</code> can be “BTV”, “SEA”, or something else, but not “BTV” and “SEA” at the same time.</p>
 <p>Another example uses the <code>!</code> to pick rows that <em>don’t</em> match a condition. The <code>!</code> can be read as “not”. Here we are selecting rows corresponding to flights that didn’t go to Burlington, VT or Seattle, WA.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">not_BTV_SEA &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(!(dest ==<span class="st"> &quot;BTV&quot;</span> |<span class="st"> </span>dest ==<span class="st"> &quot;SEA&quot;</span>))
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">not_BTV_SEA &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>(dest <span class="op">==</span><span class="st"> &quot;BTV&quot;</span> <span class="op">|</span><span class="st"> </span>dest <span class="op">==</span><span class="st"> &quot;SEA&quot;</span>))
 <span class="kw">View</span>(not_BTV_SEA)</code></pre></div>
 <p>As a final note we point out that <code>filter()</code> should often be the first verb you’ll apply to your data. This cleans your dataset to only those rows you care about, or put differently, it narrows down the scope to just the observations your care about.</p>
 <div class="learncheck">
@@ -557,7 +558,7 @@ Figure 5.3: Another summarize diagram from Data Wrangling with dplyr and tidyr c
 </p>
 </div>
 <p>We can calculate the standard deviation and mean of the temperature variable <code>temp</code> in the <code>weather</code> data frame of <code>nycflights13</code> in one step using the <code>summarize</code> (or equivalently using the UK spelling <code>summarise</code>) function in <code>dplyr</code> (See Appendix <a href="A-appendixA.html#appendixA">A</a>):</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_temp &lt;-<span class="st"> </span>weather %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_temp &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(temp), <span class="dt">std_dev =</span> <span class="kw">sd</span>(temp))
 <span class="kw">kable</span>(summary_temp)</code></pre></div>
 <table>
@@ -578,7 +579,7 @@ Figure 5.3: Another summarize diagram from Data Wrangling with dplyr and tidyr c
 <p>But why are the values returned <code>NA</code>? This stands for “not available or not applicable” and is how R encodes <em>missing values</em>; if in a data frame for a particular row and column no value exists, <code>NA</code> is stored instead. Furthermore, by default any time you try to summarize a number of values (using <code>mean()</code> and <code>sd()</code> for example) that has one or more missing values, then <code>NA</code> is returned.</p>
 <p>Values can missing missing for many reasons. Perhaps the data was collected but someone forgot to enter it? Perhaps the data was not collected at all because it was too difficult? Perhaps there was an erroneous value that someone entered that has been correct to read as missing? You’ll often encounter issues with missing values.</p>
 <p>You can summarize all non-missing values by setting the <code>na.rm</code> argument to TRUE (<code>rm</code> is short for “remove”). This will remove any <code>NA</code> missing values and only return the summary value for all non-missing values. So the code below computes the mean and standard deviation of all non-missing values. Notice how the <code>na.rm=TRUE</code> are set as arguments to the <code>mean()</code> and <code>sd()</code> functions, and not to the <code>summarize()</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_temp &lt;-<span class="st"> </span>weather %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_temp &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">std_dev =</span> <span class="kw">sd</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))
 <span class="kw">kable</span>(summary_temp)</code></pre></div>
 <table>
@@ -619,8 +620,8 @@ If we'd like to access either of these values directly we can use the `$` to spe
 <p><strong>(LC5.2)</strong> Say a doctor is studying the effect of smoking on lung cancer for a large number of patients who have records measured at five year intervals. She notices that a large number of patients have missing data points because the patient has died, so she chooses to ignore these patients in his analysis. What is wrong with this doctor’s approach?</p>
 <p><strong>(LC5.3)</strong> Modify the above <code>summarize</code> function to create <code>summary_temp</code> to also use the <code>n()</code> summary function: <code>summarize(count = n())</code>. What does the returned value correspond to?</p>
 <p><strong>(LC5.4)</strong> Why doesn’t the following code work? Run the code line by line instead of all at once, and then look at the data. In other words, run <code>summary_temp &lt;- weather %&gt;% summarize(mean = mean(temp, na.rm = TRUE))</code> first.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_temp &lt;-<span class="st"> </span>weather %&gt;%<span class="st">   </span>
-<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_temp &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st">   </span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">std_dev =</span> <span class="kw">sd</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</code></pre></div>
 <div class="learncheck">
 
@@ -642,8 +643,8 @@ Figure 5.4: Group by and summarize diagram from Data Wrangling with dplyr and ti
 <li>collapsed over month.</li>
 </ol>
 <p>Run the following code (recall the discussion of the <code>kable()</code> function from the <code>knitr</code> package in Subsection <a href="2-getting-started.html#explore-dataframes">2.4.3</a>):</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_monthly_temp &lt;-<span class="st"> </span>weather %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(month) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">summary_monthly_temp &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(month) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), 
             <span class="dt">std_dev =</span> <span class="kw">sd</span>(temp, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))
 <span class="kw">kable</span>(summary_monthly_temp)</code></pre></div>
@@ -722,8 +723,8 @@ Figure 5.4: Group by and summarize diagram from Data Wrangling with dplyr and ti
 <p>It is important to note that <code>group_by</code> doesn’t change the data frame. It sets <em>meta-data</em> (data about the data), specifically the group structure of the data. It is only after we apply the <code>summarize</code> function that the data frame changes.</p>
 <p>If we would like to remove this group structure meta-data, we can pipe the resulting data frame into the <code>ungroup()</code> function. For example, say the group structure meta-data is set to be by month via <code>group_by(month)</code>, all future summarizations will be reported on a month-by-month basis. If however, we would like to no longer have this and have all summarizations be for all data in a single group (in this case over the entire year of 2013), then pipe the data frame in question through and <code>ungroup()</code> to remove this.</p>
 <p>We now revisit the <code>n()</code> counting summary function we introduced in the previous section. For example, suppose we’d like to get a sense for how many flights departed each of the three airports in New York City:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_origin &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(origin) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_origin &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(origin) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">count =</span> <span class="kw">n</span>())
 <span class="kw">kable</span>(by_origin)</code></pre></div>
 <table>
@@ -750,8 +751,8 @@ Figure 5.4: Group by and summarize diagram from Data Wrangling with dplyr and ti
 </table>
 <p>We see that Newark (<code>&quot;EWR&quot;</code>) had the most flights departing in 2013 followed by <code>&quot;JFK&quot;</code> and lastly by LaGuardia (<code>&quot;LGA&quot;</code>). Note there is a subtle but important difference between <code>sum()</code> and <code>n()</code>. While <code>sum()</code> simply adds up a large set of numbers, the latter counts the number of times each of many different values occur.</p>
 <p>You are not limited to grouping by one variable! Say you wanted to know the number of flights leaving each of the three New York City airports <em>for each month</em>, we can also group by a second variable <code>month</code>: <code>group_by(origin, month)</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_monthly_origin &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(origin, month) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_monthly_origin &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(origin, month) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">count =</span> <span class="kw">n</span>())
 <span class="kw">kable</span>(by_monthly_origin)</code></pre></div>
 <table>
@@ -946,8 +947,8 @@ Figure 5.4: Group by and summarize diagram from Data Wrangling with dplyr and ti
 </tbody>
 </table>
 <p>Alternatively, you can use the shortcut <code>count()</code> function in <code>dplyr</code> to get the same result:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_monthly_origin2 &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span>dplyr::<span class="kw">count</span>(origin, month)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_monthly_origin2 &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">count</span>(origin, month)
 <span class="kw">kable</span>(by_monthly_origin2)</code></pre></div>
 <table>
 <thead>
@@ -1163,11 +1164,11 @@ Figure 5.5: Mutate diagram from Data Wrangling with dplyr and tidyr cheatsheet
 </p>
 </div>
 <p>When looking at the <code>flights</code> dataset, there are some clear additional variables that could be calculated based on the values of variables already in the dataset. Passengers are often frustrated when their flights departs late, but change their mood a bit if pilots can make up some time during the flight to get them to their destination close to when they expected to land. This is commonly referred to as “gain” and we will create this variable using the <code>mutate</code> function. Note that we have also overwritten the <code>flights</code> data frame with what it was before as well as an additional variable <code>gain</code> here, or put differently, the <code>mutate()</code> command outputs a new data frame which then gets saved over the original <code>flights</code> data frame.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">gain =</span> dep_delay -<span class="st"> </span>arr_delay)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">gain =</span> dep_delay <span class="op">-</span><span class="st"> </span>arr_delay)</code></pre></div>
 <p>Why did we overwrite <code>flights</code> instead of assigning the resulting data frame to a new object, like <code>flights_with_gain</code>? As a rough rule of thumb, as long as you are not losing information that you might need later, it’s acceptable practice to overwrite data frames. However, if you overwrite existing variables and/or change the observational units, recovering the original information might prove difficult. In this case, it might make sense to create a new data object.</p>
 <p>Let’s look at summary measures of this <code>gain</code> variable and even plot it in the form of a histogram:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gain_summary &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gain_summary &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(
     <span class="dt">min =</span> <span class="kw">min</span>(gain, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
     <span class="dt">q1 =</span> <span class="kw">quantile</span>(gain, <span class="fl">0.25</span>, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
@@ -1206,20 +1207,20 @@ Figure 5.5: Mutate diagram from Data Wrangling with dplyr and tidyr cheatsheet
 </tbody>
 </table>
 <p>We’ve recreated the <code>summary</code> function we saw in Chapter <a href="3-viz.html#viz">3</a> here using the <code>summarize</code> function in <code>dplyr</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> gain)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> gain)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-107"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-107-1.png" alt="Histogram of gain variable" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-106"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-106-1.png" alt="Histogram of gain variable" width="\textwidth" />
 <p class="caption">
 Figure 5.6: Histogram of gain variable
 </p>
 </div>
 <p>We can also create multiple columns at once and even refer to columns that were just created in a new column. Hadley and Garrett produce one such example in Chapter 5 of “R for Data Science” <span class="citation">(Grolemund and Wickham 2016)</span>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">mutate</span>(
-    <span class="dt">gain =</span> dep_delay -<span class="st"> </span>arr_delay,
-    <span class="dt">hours =</span> air_time /<span class="st"> </span><span class="dv">60</span>,
-    <span class="dt">gain_per_hour =</span> gain /<span class="st"> </span>hours
+    <span class="dt">gain =</span> dep_delay <span class="op">-</span><span class="st"> </span>arr_delay,
+    <span class="dt">hours =</span> air_time <span class="op">/</span><span class="st"> </span><span class="dv">60</span>,
+    <span class="dt">gain_per_hour =</span> gain <span class="op">/</span><span class="st"> </span>hours
   )</code></pre></div>
 <div class="learncheck">
 <p>
@@ -1237,8 +1238,8 @@ Figure 5.6: Histogram of gain variable
 <h3><span class="header-section-number">5.2.5</span> 5MV#5: Reorder the data frame using arrange</h3>
 <p>One of the most common things people working with data would like to do is sort the data frames by a specific variable in a column. Have you ever been asked to calculate a median by hand? This requires you to put the data in order from smallest to highest in value. The <code>dplyr</code> package has a function called <code>arrange</code> that we will use to sort/reorder our data according to the values of the specified variable. This is often used after we have used the <code>group_by</code> and <code>summarize</code> functions as we will see.</p>
 <p>Let’s suppose we were interested in determining the most frequent destination airports from New York City in 2013:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">freq_dest &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(dest) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">freq_dest &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">num_flights =</span> <span class="kw">n</span>())
 freq_dest</code></pre></div>
 <pre><code># A tibble: 105 x 2
@@ -1256,7 +1257,7 @@ freq_dest</code></pre></div>
 10   BHM         297
 # ... with 95 more rows</code></pre>
 <p>You’ll see that by default the values of <code>dest</code> are displayed in alphabetical order here. We are interested in finding those airports that appear most:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">freq_dest %&gt;%<span class="st"> </span><span class="kw">arrange</span>(num_flights)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">freq_dest <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(num_flights)</code></pre></div>
 <pre><code># A tibble: 105 x 2
     dest num_flights
    &lt;chr&gt;       &lt;int&gt;
@@ -1272,7 +1273,7 @@ freq_dest</code></pre></div>
 10   BZN          36
 # ... with 95 more rows</code></pre>
 <p>This is actually giving us the opposite of what we are looking for. It tells us the least frequent destination airports first. To switch the ordering to be descending instead of ascending we use the <code>desc</code> (<code>desc</code>ending) function:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">freq_dest %&gt;%<span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">freq_dest <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights))</code></pre></div>
 <pre><code># A tibble: 105 x 2
     dest num_flights
    &lt;chr&gt;       &lt;int&gt;
@@ -1306,7 +1307,7 @@ Figure 5.7: Data relationships in nycflights13 from R for Data Science
 <div id="joining-by-key-variables" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Joining by key variables</h3>
 <p>In both <code>flights</code> and <code>airlines</code>, the key variable we want to join/merge/match the two data frames with has the same name in both datasets: <code>carriers</code>. We make use of the <code>inner_join()</code> function to join by the variable <code>carrier</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_joined &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_joined &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">inner_join</span>(airlines, <span class="dt">by =</span> <span class="st">&quot;carrier&quot;</span>)
 <span class="kw">View</span>(flights)
 <span class="kw">View</span>(flights_joined)</code></pre></div>
@@ -1336,14 +1337,14 @@ Figure 5.8: Diagram of inner join from R for Data Science
 <li><code>flights</code> the airport code is in the variable <code>origin</code></li>
 </ul>
 <p>So to join these two datasets, our <code>inner_join</code> operation involves a <code>by</code> argument that accounts for the different names:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">inner_join</span>(airports, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;dest&quot;</span> =<span class="st"> &quot;faa&quot;</span>))</code></pre></div>
 <p>Let’s construct the sequence of commands that computes the number of flights from NYC to each destination, but also includes information about each destination airport:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">named_dests &lt;-<span class="st"> </span>flights %&gt;%
-<span class="st">  </span><span class="kw">group_by</span>(dest) %&gt;%
-<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">num_flights =</span> <span class="kw">n</span>()) %&gt;%
-<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights)) %&gt;%
-<span class="st">  </span><span class="kw">inner_join</span>(airports, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;dest&quot;</span> =<span class="st"> &quot;faa&quot;</span>)) %&gt;%
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">named_dests &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">num_flights =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">inner_join</span>(airports, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;dest&quot;</span> =<span class="st"> &quot;faa&quot;</span>)) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">rename</span>(<span class="dt">airport_name =</span> name)
 <span class="kw">View</span>(named_dests)</code></pre></div>
 <p>In case you didn’t know, <code>&quot;ORD&quot;</code> is the airport code of Chicago O’Hare airport and <code>&quot;FLL&quot;</code> is the main airport in Fort Lauderdale, Florida, which we can now see in our <code>named_freq_dests</code> data frame.</p>
@@ -1375,36 +1376,36 @@ Figure 5.9: Select diagram from Data Wrangling with dplyr and tidyr cheatsheet
 <p>We’ve seen that the <code>flights</code> data frame in the <code>nycflights13</code> package contains many different variables. The <code>names</code> function gives a listing of all the columns in a data frame; in our case you would run <code>names(flights)</code>. You can also identify these variables by running the <code>glimpse</code> function in the <code>dplyr</code> package:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(flights)</code></pre></div>
 <p>However, say you only want to consider two of these variables, say <code>carrier</code> and <code>flight</code>. You can <code>select</code> these:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(carrier, flight)</code></pre></div>
 <p>Another one of these variables is <code>year</code>. If you remember the original description of the <code>flights</code> data frame (or by running <code>?flights</code>), you’ll remember that this data correspond to flights in 2013 departing New York City. The <code>year</code> variable isn’t really a variable here in that it doesn’t vary… <code>flights</code> actually comes from a larger dataset that covers many years. We may want to remove the <code>year</code> variable from our dataset since it won’t be helpful for analysis in this case. We can deselect <code>year</code> by using the <code>-</code> sign:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_no_year &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">select</span>(-year)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_no_year &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>year)
 <span class="kw">names</span>(flights_no_year)</code></pre></div>
 <p>Or we could specify a ranges of columns:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flight_arr_times &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">select</span>(month:day, arr_time:sched_arr_time)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flight_arr_times &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(month<span class="op">:</span>day, arr_time<span class="op">:</span>sched_arr_time)
 flight_arr_times</code></pre></div>
 <p>The <code>select</code> function can also be used to reorder columns in combination with the <code>everything</code> helper function. Let’s suppose we’d like the <code>hour</code>, <code>minute</code>, and <code>time_hour</code> variables, which appear at the end of the <code>flights</code> dataset, to actually appear immediately after the <code>day</code> variable:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_reorder &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">select</span>(month:day, hour:time_hour, <span class="kw">everything</span>())
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_reorder &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(month<span class="op">:</span>day, hour<span class="op">:</span>time_hour, <span class="kw">everything</span>())
 <span class="kw">names</span>(flights_reorder)</code></pre></div>
 <p>in this case <code>everything()</code> picks up all remaining variables. Lastly, the helper functions <code>starts_with</code>, <code>ends_with</code>, and <code>contains</code> can be used to choose column names that match those conditions:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_begin_a &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_begin_a &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(<span class="kw">starts_with</span>(<span class="st">&quot;a&quot;</span>))
 flights_begin_a</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_delays &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_delays &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(<span class="kw">ends_with</span>(<span class="st">&quot;delay&quot;</span>))
 flights_delays</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_time &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_time &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;time&quot;</span>))
 flights_time</code></pre></div>
 </div>
 <div id="rename" class="section level3">
 <h3><span class="header-section-number">5.4.2</span> Rename variables using rename</h3>
 <p>Another useful function is <code>rename</code>, which as you may suspect renames one column to another name. Suppose we wanted <code>dep_time</code> and <code>arr_time</code> to be <code>departure_time</code> and <code>arrival_time</code> instead in the <code>flights_time</code> data frame:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_time_new &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;time&quot;</span>)) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_time_new &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;time&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">rename</span>(<span class="dt">departure_time =</span> dep_time,
          <span class="dt">arrival_time =</span> arr_time)
 <span class="kw">names</span>(flights_time)</code></pre></div>
@@ -1415,18 +1416,18 @@ flights_time</code></pre></div>
 <div id="find-the-top-number-of-values-using-top_n" class="section level3">
 <h3><span class="header-section-number">5.4.3</span> Find the top number of values using top_n</h3>
 <p>We can also use the <code>top_n</code> function which automatically tells us the most frequent <code>num_flights</code>. We specify the top 10 airports here:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">named_dests %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">named_dests <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">top_n</span>(<span class="dt">n =</span> <span class="dv">10</span>, <span class="dt">wt =</span> num_flights)</code></pre></div>
 <p>We’ll still need to arrange this by <code>num_flights</code> though:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">named_dests  %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">top_n</span>(<span class="dt">n =</span> <span class="dv">10</span>, <span class="dt">wt =</span> num_flights) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">named_dests  <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">top_n</span>(<span class="dt">n =</span> <span class="dv">10</span>, <span class="dt">wt =</span> num_flights) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights))</code></pre></div>
 <p><strong>Note:</strong> Remember that I didn’t pull the <code>n</code> and <code>wt</code> arguments out of thin air. They can be found by using the <code>?</code> function on <code>top_n</code>.</p>
 <p>We can go one stop further and tie together the <code>group_by</code> and <code>summarize</code> functions we used to find the most frequent flights:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ten_freq_dests &lt;-<span class="st"> </span>flights %&gt;%
-<span class="st">  </span><span class="kw">group_by</span>(dest) %&gt;%
-<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">num_flights =</span> <span class="kw">n</span>()) %&gt;%
-<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights)) %&gt;%
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ten_freq_dests &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">num_flights =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num_flights)) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">top_n</span>(<span class="dt">n =</span> <span class="dv">10</span>) 
 <span class="kw">View</span>(ten_freq_dests)</code></pre></div>
 <div class="learncheck">

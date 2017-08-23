@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-02">
+<meta name="date" content="2017-08-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -118,18 +118,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
-<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.1.4</b> Final note for students</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#important-note"><i class="fa fa-check"></i><b>1.1</b> Important Note</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.2</b> Introduction for students</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.2.1</b> What you will learn from this book</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.2.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.2.3</b> Reproducible research</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.2.4</b> Final note for students</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.3</b> Introduction for instructors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.3.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.4.1</b> Colophon</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.5.1</b> Colophon</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a><ul>
@@ -530,7 +531,7 @@ Figure 7.1: A bowl of Indian chicken and vegetable soup
 <h2><span class="header-section-number">7.2</span> Visualizing sampling</h2>
 <p>Let’s explore how sampling and these other terms relate to working with data and data visualization. Here we introduce the <code>okcupiddata</code> R package <span class="citation">(Kim and Escobedo-Land 2016)</span>. Note that permission to use this data to create the R package was explicitly granted by OkCupid. More information about this package is available <a href="https://github.com/rudeboybert/okcupiddata">here</a>. The <code>profiles</code> data frame in this R data package contains data about 59,946 OkCupid users who were living within 25 miles of San Francisco, had active profiles on June 26, 2012, were online in the previous year, and had at least one picture in their profile. We will be focusing on the <code>height</code> variable, which corresponds to a self-reported height for each individual on their profile. Note that this is measured in inches.</p>
 <p>Let’s take a look at the distribution of <code>height</code> using a histogram and <code>ggplot2</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> profiles, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> profiles, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/height-hist-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We see here that this being self-reported data has led to the data being a little messy.</p>
@@ -544,19 +545,19 @@ Figure 7.1: A bowl of Indian chicken and vegetable soup
 
 </div>
 <p>To clean up the data a bit, let’s focus on just looking at heights between 55 inches and 85 inches. Remember that the <code>filter</code> function in <code>dplyr</code> allows us to focus on a subset of rows. The specific subset of rows we are interested in corresponds to the argument to the <code>filter</code> function. We will create a new data frame called <code>profiles_subset</code> that contains all rows with heights between 55 and 85 inclusive.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_subset &lt;-<span class="st"> </span>profiles %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">between</span>(height, <span class="dv">55</span>, <span class="dv">85</span>))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_subset &lt;-<span class="st"> </span>profiles <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">between</span>(height, <span class="dv">55</span>, <span class="dv">85</span>))</code></pre></div>
 <p>Next, let’s produce the same histogram as above but using the <code>profiles_subset</code> data frame instead.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_subset, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_subset, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/height-hist2-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can think of this data as representing the <em>population</em> of interest. Let’s now take a random sample of size 100 from this population and look to see if this sample represents the overall shape of the population. In other words, we are going to use data visualization as our guide to understand the <em>representativeness</em> of the sample selected.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
-profiles_sample1 &lt;-<span class="st"> </span>profiles_subset %&gt;%<span class="st"> </span>
+profiles_sample1 &lt;-<span class="st"> </span>profiles_subset <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <p>The <code>set.seed</code> function is used to ensure that all users get the same random sample when they run the code above. It is a way of interfacing with the pseudo-random number generation scheme that R uses to generate “random” numbers. If that command was not run, you’d obtain a different random sample than someone else if you ran the code above for the first time.</p>
-<p>We have introduced the <code>resample</code> function from the <code>mosaic</code> package here <span class="citation">(Pruim, Kaplan, and Horton 2017)</span>. This function can be used for both sampling with and without replacement. Here we have chosen to sample without replacement. In other words, after the first row is chosen from the <code>profiles_subset</code> data frame at random it is kept out of the further 99 samples. Let’s now visualize the 100 values of the <code>height</code> variable in the <code>profiles_sample1</code> data frame. To keep this visualization on the same horizontal scale as our original population presented in <code>profiles_subset</code> we can use the <code>coord_cartesian</code> function along with the <code>c</code> function to specify the limits on the horizontal axis.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_sample1, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>) +
+<p>We have introduced the <code>resample</code> function from the <code>mosaic</code> package here <span class="citation">(Pruim, Kaplan, and Horton 2016)</span>. This function can be used for both sampling with and without replacement. Here we have chosen to sample without replacement. In other words, after the first row is chosen from the <code>profiles_subset</code> data frame at random it is kept out of the further 99 samples. Let’s now visualize the 100 values of the <code>height</code> variable in the <code>profiles_sample1</code> data frame. To keep this visualization on the same horizontal scale as our original population presented in <code>profiles_subset</code> we can use the <code>coord_cartesian</code> function along with the <code>c</code> function to specify the limits on the horizontal axis.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_sample1, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">coord_cartesian</span>(<span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">55</span>, <span class="dv">85</span>))</code></pre></div>
 <p><img src="ismaykim_files/figure-html/plot-sample1-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div class="learncheck">
@@ -569,31 +570,31 @@ profiles_sample1 &lt;-<span class="st"> </span>profiles_subset %&gt;%<span class
 
 </div>
 <p>We now repeat this process of sampling to look to see how another random sample of <code>height</code> compares to the original population distribution.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample2 &lt;-<span class="st"> </span>profiles_subset %&gt;%<span class="st"> </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>)
-<span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_sample2, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;yellow&quot;</span>) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample2 &lt;-<span class="st"> </span>profiles_subset <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>)
+<span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_sample2, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;yellow&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">coord_cartesian</span>(<span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">55</span>, <span class="dv">85</span>))</code></pre></div>
 <p><img src="ismaykim_files/figure-html/sample-profiles2-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>Remember that a sample can never truly quantify all of the properties of a population since it contains less data and, thus, less information. We can use the overall shape as a good guess as to the representativeness of the sample in regards to the population though. We see that the above two random samples of size 100 have roughly the same shape as the original population <code>height</code> data. Let’s next explore what is known as a convenience sample and how its distribution compares to the population distribution.</p>
 <p>A <strong>convenience sample</strong> is a sample that is chosen conveniently by the person selecting the sample. While certainly less work, convenience samples are generally not representative of the population since they will exclude some (usually large) portion of the population. Let’s look at values of <code>height</code> in our <code>profiles_subset</code> population that are larger than 6 feet tall (72 inches) and have that be the sample we choose.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample3 &lt;-<span class="st"> </span>profiles_subset %&gt;%<span class="st"> </span><span class="kw">filter</span>(height &gt;=<span class="st"> </span><span class="dv">72</span>)
-<span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_sample3, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample3 &lt;-<span class="st"> </span>profiles_subset <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(height <span class="op">&gt;=</span><span class="st"> </span><span class="dv">72</span>)
+<span class="kw">ggplot</span>(<span class="dt">data =</span> profiles_sample3, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> height)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">coord_cartesian</span>(<span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">55</span>, <span class="dv">85</span>))</code></pre></div>
 <p><img src="ismaykim_files/figure-html/sample-profiles3-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>This is a clear example of a sample that is not representative of the population. The population <code>height</code> variable is roughly symmetric, whereas this distribution is right-skewed. Further, since it only selects large heights it has completely excluded the small and middle heights. We have seen here that data visualization provides an excellent tool in judging the representativeness of a sample.</p>
 <div id="sampling-distribution" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> Sampling distribution</h3>
 <p>The representativeness of a sample plays an even larger role than just looking at the shapes of distributions. Let’s suppose we were interested in estimating the mean <code>height</code> of all profiles in the <code>profiles_subset</code> data frame. To do so, we could look at the mean of the <code>height</code> variable in the <code>profiles_sample1</code> data frame:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample1 %&gt;%<span class="st"> </span><span class="kw">summarize</span>(<span class="kw">mean</span>(height))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="kw">mean</span>(height))</code></pre></div>
 <pre><code>  mean(height)
 1        68.45</code></pre>
 <p>But, we could also use <code>profiles_sample2</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample2 %&gt;%<span class="st"> </span><span class="kw">summarize</span>(<span class="kw">mean</span>(height))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="kw">mean</span>(height))</code></pre></div>
 <pre><code>  mean(height)
 1         68.2</code></pre>
 <p>Or maybe even <code>profiles_sample3</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample3 %&gt;%<span class="st"> </span><span class="kw">summarize</span>(<span class="kw">mean</span>(height))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">profiles_sample3 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="kw">mean</span>(height))</code></pre></div>
 <pre><code>  mean(height)
 1        73.38</code></pre>
 <p>We see a clear difference here in looking at the mean of <code>height</code> in <code>profiles_sample3</code> versus <code>profiles_sample1</code> and <code>profiles_sample2</code>. This comes from the bias that is used in choosing only the top heights for <code>profiles_sample3</code>. If we had chosen to use this sample as our only sample, we would be quite a ways off from what the actual mean <code>height</code> in our population of <code>profiles_subset</code> is.</p>
@@ -608,10 +609,10 @@ Figure 7.2: Sampling distribution app at <a href="http://ismay.shinyapps.io/okcu
 <div id="repeated-sampling-via-do" class="section level3">
 <h3><span class="header-section-number">7.2.2</span> Repeated sampling via <code>do</code></h3>
 <p>We have looked at two random samples above, but using <code>mosaic</code> we can repeat this process over and over again with the <code>do</code> function. Below, we repeat this sampling process 5000 times. We can then plot the different values of the sample means to get a sense for what a reasonable range of values for the population parameter mean <code>height</code> is in the <code>profiles_subset</code> data frame.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sample_means &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">5000</span>) *
-<span class="st">    </span>(profiles_subset %&gt;%<span class="st"> </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sample_means &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">5000</span>) <span class="op">*</span>
+<span class="st">    </span>(profiles_subset <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">    </span><span class="kw">summarize</span>(<span class="dt">mean_height =</span> <span class="kw">mean</span>(height)))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> sample_means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_height)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> sample_means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_height)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/do-plot-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>Note how the range of sample mean height values is much more narrow than the original range of <code>height</code> in the <code>profiles_subset</code> data frame. We also see a characteristic shape to this distribution of <code>mean_height</code>: the normal curve. This idea is commonly associated with statistics and you hopefully have a good sense of how this distribution comes about. As before, if you aren’t quite sure of this yet, go back and explore the shiny app above a bit more. We see that many values for the sample mean appear near the center of the distribution and a few values appear out in the tails providing the bell-shaped distribution linked with the normal distribution. You’ll see more examples of this in the chapters to come and in Appendix <a href="B-appendixB.html#appendixB">B</a>.</p>
@@ -667,11 +668,11 @@ Figure 7.2: Sampling distribution app at <a href="http://ismay.shinyapps.io/okcu
 <p>You may be asking yourself how this models a way to test whether the person was just guessing or not. All we are trying to do is see how likely it is to have 9 matches out of 10 if the person was truly guessing. When we say “truly guessing” we are assuming that we have a 50/50 chance of guessing correctly. This can be modeled using a coin flip and then seeing whether we guessed correctly for each of the coin flips. If we guessed correctly, we can think of that as a “success.”</p>
 <p>We often don’t have time to do the physical flipping over and over again and we’d like to be able to do more than just 20 different simulations or so. Luckily, we can use R to simulate this process many times. The <code>mosaic</code> package includes a function called <code>rflip()</code>, which can be used to flip one coin. Well, not exactly. It uses pseudo-random number generation to “flip” a virtual coin. In order for us all to get the same results here, we can set the seed of the pseudo-random number generator. Let’s see an example of this: (Remember to load the <code>mosaic</code> package!)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
-<span class="kw">do</span>(<span class="dv">1</span>) *<span class="st"> </span><span class="kw">rflip</span>(<span class="dv">1</span>)</code></pre></div>
+<span class="kw">do</span>(<span class="dv">1</span>) <span class="op">*</span><span class="st"> </span><span class="kw">rflip</span>(<span class="dv">1</span>)</code></pre></div>
 <pre><code>  n heads tails prop
 1 1     1     0    1</code></pre>
 <p>This shows us the proportion of “successes” in one flip of a coin. The <code>do</code> function in the <code>mosaic</code> package will be useful and you can begin to understand what it does with another example.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">do</span>(<span class="dv">13</span>) *<span class="st"> </span><span class="kw">rflip</span>(<span class="dv">10</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">do</span>(<span class="dv">13</span>) <span class="op">*</span><span class="st"> </span><span class="kw">rflip</span>(<span class="dv">10</span>)</code></pre></div>
 <pre><code>    n heads tails prop
 1  10     4     6  0.4
 2  10     5     5  0.5
@@ -688,9 +689,9 @@ Figure 7.2: Sampling distribution app at <a href="http://ismay.shinyapps.io/okcu
 13 10     4     6  0.4</code></pre>
 <p>We’ve now done a simulation of what actually happened when you flipped a coin ten times. We have 13 different simulations of flipping a coin 10 times. Note here that <code>heads</code> now corresponds to the number of correct guesses and <code>tails</code> corresponds to the number of incorrect guesses. (This can be tricky to understand at first since we’ve done a switch on what the meaning of “heads” and ``tails&quot; are.)</p>
 <p>If you look at the output above for our simulation of 13 student guesses, we can begin to get a sense for what an “expected” sample proportion of successes may be. Around five out of 10 seems to be the most likely value. What does this say about what we actually observed with a success rate of 9/10? To better answer this question, we can simulate 5000 student guesses and then look at the distribution of the simulated sample proportion of successes, also known as the <strong>null distribution</strong>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">simGuesses &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">5000</span>) *<span class="st"> </span><span class="kw">rflip</span>(<span class="dv">10</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">simGuesses %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(heads) %&gt;%
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">simGuesses &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">5000</span>) <span class="op">*</span><span class="st"> </span><span class="kw">rflip</span>(<span class="dv">10</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">simGuesses <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(heads) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">count =</span> <span class="kw">n</span>())</code></pre></div>
 <pre><code># A tibble: 11 x 2
    heads count
@@ -709,19 +710,19 @@ Figure 7.2: Sampling distribution app at <a href="http://ismay.shinyapps.io/okcu
 <p>We can see here that we have created a count of how many of each of the 5000 sets of 10 flips resulted in 0, 1, 2, <span class="math inline">\(\ldots\)</span>, up to 10 heads. Note the use of the <code>group_by</code> and <code>summarize</code> functions from Chapter <a href="5-wrangling.html#wrangling">5</a> here.</p>
 <p>In addition, we can plot the distribution of these simulated <code>heads</code> using the ideas from Chapter <a href="3-viz.html#viz">3</a>. <code>heads</code> is a quantitative variable. Think about which type of plot is most appropriate here before reading further.</p>
 <p>We already have an idea as to an appropriate plot by the data summarization that we did in the chunk above. We’d like to see how many heads occurred in the 5000 sets of 10 flips. In other words, we’d like to see how frequently 9 or more heads occurred in the 10 flips:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> simGuesses, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> heads)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> simGuesses, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> heads)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-167"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-167-1.png" alt="Histogram of number of heads in simulation - needs tweaking" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-164"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-164-1.png" alt="Histogram of number of heads in simulation - needs tweaking" width="\textwidth" />
 <p class="caption">
 Figure 7.3: Histogram of number of heads in simulation - needs tweaking
 </p>
 </div>
 <p>This horizontal axis labels are a little confusing here. What does 2.5 or 7.5 heads mean? In <code>simGuesses</code>, <code>heads</code> is a <code>numerical</code> variable. Thus, <code>ggplot</code> is expecting the values to be on a continuous scale. We can switch the scale to be discrete by invoking the <code>factor</code> function and using <code>geom_bar</code> instead of <code>geom_histogram</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> simGuesses, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(heads))) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> simGuesses, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(heads))) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-168"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-168-1.png" alt="Barplot of number of heads in simulation" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-165"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-165-1.png" alt="Barplot of number of heads in simulation" width="\textwidth" />
 <p class="caption">
 Figure 7.4: Barplot of number of heads in simulation
 </p>

@@ -422,10 +422,6 @@ In Chapter \@ref(sim), we'll begin to build the pieces needed to understand how 
 
 ### Script of R code
 
-```{r include=FALSE, eval=TRUE, purl=FALSE}
-knitr::purl("06-regress.Rmd", "docs/scripts/06-regression.R")
-```
-
 An R script file of all R code used in this chapter is available [here](http://moderndive.com/scripts/06-regression.R).
       
     

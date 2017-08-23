@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-02">
+<meta name="date" content="2017-08-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -118,18 +118,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
-<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.1.4</b> Final note for students</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#important-note"><i class="fa fa-check"></i><b>1.1</b> Important Note</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.2</b> Introduction for students</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.2.1</b> What you will learn from this book</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.2.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.2.3</b> Reproducible research</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.2.4</b> Final note for students</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.3</b> Introduction for instructors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.3.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.4.1</b> Colophon</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.5.1</b> Colophon</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a><ul>
@@ -479,7 +480,7 @@ Figure 4.1: Tidy data graphic from <a href="http://r4ds.had.co.nz/tidy-data.html
 </div>
 <p>For example, say the following table consists of stock prices:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-56">Table 4.1: </span>Stock Prices (Non-Tidy Format)</caption>
+<caption><span id="tab:unnamed-chunk-55">Table 4.1: </span>Stock Prices (Non-Tidy Format)</caption>
 <thead>
 <tr class="header">
 <th align="left">Date</th>
@@ -505,7 +506,7 @@ Figure 4.1: Tidy data graphic from <a href="http://r4ds.had.co.nz/tidy-data.html
 </table>
 <p>Although the data are neatly organized in a spreadsheet-type format, they are not in tidy format since there are three variables of information (Date, Stock Name, and Stock Price) but there are not three columns. In tidy data format each variable should be its own column, as shown below. Notice that both tables present the same information, but in different formats.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-57">Table 4.2: </span>Stock Prices (Tidy Format)</caption>
+<caption><span id="tab:unnamed-chunk-56">Table 4.2: </span>Stock Prices (Tidy Format)</caption>
 <thead>
 <tr class="header">
 <th align="left">Date</th>
@@ -577,8 +578,8 @@ dem_score</code></pre></div>
 <div id="tidying" class="section level2">
 <h2><span class="header-section-number">4.3</span> Converting from wide to long</h2>
 <p>Let’s focus on only the data corresponding to the country of Guatemala.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">guat_dem &lt;-<span class="st"> </span>dem_score %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(country ==<span class="st"> &quot;Guatemala&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">guat_dem &lt;-<span class="st"> </span>dem_score <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(country <span class="op">==</span><span class="st"> &quot;Guatemala&quot;</span>)
 guat_dem</code></pre></div>
 <pre><code># A tibble: 1 x 10
     country `1952` `1957` `1962` `1967` `1972` `1977` `1982` `1987` `1992`
@@ -599,7 +600,7 @@ guat_dem</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">guat_tidy &lt;-<span class="st"> </span><span class="kw">gather</span>(<span class="dt">data =</span> guat_dem, 
                     <span class="dt">key =</span> year,
                     <span class="dt">value =</span> democracy_score,
-                    -<span class="st"> </span>country) 
+                    <span class="op">-</span><span class="st"> </span>country) 
 guat_tidy</code></pre></div>
 <pre><code># A tibble: 9 x 3
     country  year democracy_score
@@ -614,15 +615,15 @@ guat_tidy</code></pre></div>
 8 Guatemala  1987               3
 9 Guatemala  1992               3</code></pre>
 <p>We can now create the plot to show how the democracy score of Guatemala changed from 1952 to 1992 using a linegraph and <code>ggplot2</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> guat_tidy, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> democracy_score)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> guat_tidy, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> democracy_score)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_line</span>()</code></pre></div>
 <pre><code>geom_path: Each group consists of only one observation. Do you need to adjust
 the group aesthetic?</code></pre>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-61-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-60-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <!-- Arg, this is really annoying that gather() doesn't see that these are all numbers.  Do you know a way around this? I usually just go mutate(year = as.numeric(year) but they don't know mutate() yet. -->
 <p>Observe that the <code>year</code> variable in <code>guat_tidy</code> is stored as a character vector since we had to circumvent the naming rules in R by adding backticks around the different year columns in <code>guat_dem</code>. This is leading to <code>ggplot</code> not knowing exactly how to plot a line using a categorical variable. We can fix this by using the <code>parse_number()</code> function in the <code>readr</code> package and then specify the horizontal axis label to be <code>&quot;year&quot;</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> guat_tidy, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">parse_number</span>(year), <span class="dt">y =</span> democracy_score)) +
-<span class="st">  </span><span class="kw">geom_line</span>() +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> guat_tidy, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">parse_number</span>(year), <span class="dt">y =</span> democracy_score)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;year&quot;</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:guatline"></span>
 <img src="ismaykim_files/figure-html/guatline-1.png" alt="Guatemala's democracy score ratings from 1952 to 1992" width="\textwidth" />

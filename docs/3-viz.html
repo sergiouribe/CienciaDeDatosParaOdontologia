@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-02">
+<meta name="date" content="2017-08-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -118,18 +118,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
-<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.1.4</b> Final note for students</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#important-note"><i class="fa fa-check"></i><b>1.1</b> Important Note</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.2</b> Introduction for students</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.2.1</b> What you will learn from this book</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.2.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.2.3</b> Reproducible research</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.2.4</b> Final note for students</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.3</b> Introduction for instructors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.3.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.4.1</b> Colophon</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.5.1</b> Colophon</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a><ul>
@@ -643,8 +644,8 @@ The plot given above is not a histogram, but the output does show us a bit of wh
 <li><code>arr_delay</code>: arrival delay on the vertical “y” axis</li>
 </ol>
 <p>for Alaska Airlines flights leaving NYC in 2013. This requires paring down the <code>flights</code> data frame to a smaller data frame <code>all_alaska_flights</code> consisting of only Alaska Airlines (carrier code “AS”) flights.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">all_alaska_flights &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(carrier ==<span class="st"> &quot;AS&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">all_alaska_flights &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(carrier <span class="op">==</span><span class="st"> &quot;AS&quot;</span>)</code></pre></div>
 <p>This code snippet makes use of functions in the <code>dplyr</code> package for data wrangling to achieve our goal: it takes the <code>flights</code> data frame and <code>filter</code>s it to only return the rows which meet the condition <code>carrier == &quot;AS&quot;</code>. Recall from Section <a href="2-getting-started.html#code">2.2</a> that testing for equality is specified with <code>==</code> and not <code>=</code>. You will see many more examples of <code>==</code> and <code>filter()</code> in Chapter <a href="5-wrangling.html#wrangling">5</a>.</p>
 <div class="learncheck">
 <p>
@@ -658,7 +659,7 @@ The plot given above is not a histogram, but the output does show us a bit of wh
 <div id="geompoint" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Scatterplots via geom_point</h3>
 <p>We proceed to create the scatterplot using the <code>ggplot()</code> function:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> all_alaska_flights, <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) +<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> all_alaska_flights, <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:noalpha"></span>
 <img src="ismaykim_files/figure-html/noalpha-1.png" alt="Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013" width="\textwidth" />
@@ -714,7 +715,7 @@ Figure 3.3: Plot with No Layers
 <li>By jittering the points via <code>geom_jitter()</code></li>
 </ol>
 <p>The first way of relieving over-plotting is by changing the <code>alpha</code> argument in <code>geom_point()</code> which controls the transparency of the points. By default, this value is set to <code>1</code>. We can change this to any value between <code>0</code> and <code>1</code> where <code>0</code> sets the points to be 100% transparent and <code>1</code> sets the points to be 100% opaque. Note how the following function call is identical to the one in Section <a href="3-viz.html#scatterplots">3.3</a>, but with <code>alpha = 0.2</code> added to the <code>geom_point()</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> all_alaska_flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) +<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> all_alaska_flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:alpha"></span>
 <img src="ismaykim_files/figure-html/alpha-1.png" alt="Delay scatterplot with alpha=0.2" width="\textwidth" />
@@ -725,7 +726,7 @@ Figure 3.4: Delay scatterplot with alpha=0.2
 <p>The key feature to note in Figure <a href="3-viz.html#fig:alpha">3.4</a> is that the transparency of the points is cumulative: areas with a high-degree of over-plotting are darker, whereas areas with a lower degree are less dark.</p>
 <p>Note that there is no <code>aes()</code> surrounding <code>alpha = 0.2</code> here. Since we are NOT mapping a variable to an aesthetic but instead are just changing a setting, we don’t need to create a mapping with <code>aes()</code>. In fact, you’ll receive an error if you try to change the second line above to <code>geom_point(aes(alpha = 0.2))</code>.</p>
 <p>The second way of relieving over-plotting is to <em>jitter</em> the points a bit. In other words, we are going to add just a bit of random noise to the points to better see them and remove some of the over-plotting. You can think of “jittering” as shaking the points around a bit on the plot. Instead of using <code>geom_point</code>, we use <code>geom_jitter</code> to perform this shaking. To specify how much jitter to add, we adjust the <code>width</code> and <code>height</code> arguments. This corresponds to how hard you’d like to shake the plot in units corresponding to those for both the horizontal and vertical variables (in this case, minutes).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(all_alaska_flights, <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) +<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(all_alaska_flights, <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="dv">30</span>, <span class="dt">height =</span> <span class="dv">30</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:jitter"></span>
 <img src="ismaykim_files/figure-html/jitter-1.png" alt="Jittered delay scatterplot" width="\textwidth" />
@@ -766,8 +767,8 @@ Maybe include a shading of the points by another variable example here for multi
 <li>Running <code>?weather</code> to bring up the help file.</li>
 </ul>
 <p>We can see that the <code>temp</code> variable corresponds to hourly temperature (in Fahrenheit) recordings at weather stations near airports in New York City. Instead of considering all hours in 2013 for all three airports in NYC, let’s focus on the hourly temperature at Newark airport (<code>origin</code> code “EWR”) for the first 15 days in January 2013. The <code>weather</code> data frame in the <code>nycflights13</code> package contains this data, but we first need to filter it to only include those rows that correspond to Newark in the first 15 days of January.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">early_january_weather &lt;-<span class="st"> </span>weather %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(origin ==<span class="st"> &quot;EWR&quot;</span> &amp;<span class="st"> </span>month ==<span class="st"> </span><span class="dv">1</span> &amp;<span class="st"> </span>day &lt;=<span class="st"> </span><span class="dv">15</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">early_january_weather &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(origin <span class="op">==</span><span class="st"> &quot;EWR&quot;</span> <span class="op">&amp;</span><span class="st"> </span>month <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>day <span class="op">&lt;=</span><span class="st"> </span><span class="dv">15</span>)</code></pre></div>
 <p>This is similar to the previous use of the <code>filter</code> command in Section <a href="3-viz.html#scatterplots">3.3</a>, however we now use the <code>&amp;</code> operator. The above selects only those rows in <code>weather</code> where the originating airport is <code>&quot;EWR&quot;</code> <strong>and</strong> we are in the first month <strong>and</strong> the day is from 1 to 15 inclusive.</p>
 <div class="learncheck">
 <p>
@@ -782,7 +783,7 @@ Maybe include a shading of the points by another variable example here for multi
 <div id="geomline" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> Linegraphs via geom_line</h3>
 <p>We plot a linegraph of hourly temperature using <code>geom_line()</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> early_january_weather, <span class="kw">aes</span>(<span class="dt">x =</span> time_hour, <span class="dt">y =</span> temp)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> early_january_weather, <span class="kw">aes</span>(<span class="dt">x =</span> time_hour, <span class="dt">y =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_line</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:hourlytemp"></span>
 <img src="ismaykim_files/figure-html/hourlytemp-1.png" alt="Hourly Temperature in Newark for January 1-15, 2013" width="\textwidth" />
@@ -836,7 +837,7 @@ Figure 3.7: Plot of Hourly Temperature Recordings from NYC in 2013
 <div id="geomhistogram" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Histograms via geom_histogram</h3>
 <p>What is commonly produced instead of the above plot is a plot known as a <em>histogram</em>. The histogram shows how many elements of a single numerical variable fall in specified <em>bins</em>. In this case, these bins may correspond to between 0-10°F, 10-20°F, etc. We produce a histogram of the hour temperatures at all three NYC airports in 2013:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre></div>
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <pre><code>Warning: Removed 1 rows containing non-finite values (stat_bin).</code></pre>
@@ -863,7 +864,7 @@ Figure 3.8: Histogram of Hourly Temperature Recordings from NYC in 2013
 <li>By adjusting the width of the bins via the <code>binwidth</code> argument</li>
 </ol>
 <p>First, we have the power to specify how many bins we would like to put the data into as an argument in the <code>geom_histogram()</code> function. By default, this is chosen to be 30 somewhat arbitrarily; we have received a warning above our plot that this was done.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">60</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
 <img src="ismaykim_files/figure-html/unnamed-chunk-26-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins" width="\textwidth" />
@@ -873,7 +874,7 @@ Figure 3.9: Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bin
 </div>
 <p>Note the addition of the <code>color</code> argument. If you’d like to be able to more easily differentiate each of the bins, you can specify the color of the outline as done above.</p>
 <p>Second, instead of specifying the number of bins, we can also specify the width of the bins by using the <code>binwidth</code> argument in the <code>geom_histogram</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
 <img src="ismaykim_files/figure-html/unnamed-chunk-27-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10" width="\textwidth" />
@@ -905,9 +906,9 @@ Figure 3.10: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwi
 <h2><span class="header-section-number">3.6</span> Facets</h2>
 <p>Before continuing the 5NG, we briefly introduce a new concept called <em>faceting</em>. Faceting is used when we’d like to create small multiples of the same plot over a different categorical variable. By default, all of the small multiples will have the same vertical axis.</p>
 <p>For example, suppose we were interested in looking at how the temperature histograms we saw in Chapter <a href="3-viz.html#histograms">3.5</a> varied by month. This is what is meant by “the distribution of a variable over another variable”: <code>temp</code> is one variable and <code>month</code> is the other variable. In order to look at histograms of <code>temp</code> for each month, we add a layer <code>facet_wrap(~ month)</code>. You can also specify how many rows you’d like the small multiple plots to be in using <code>nrow</code> or how many columns using <code>ncol</code> inside of <code>facet_wrap</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="kw">aes</span>(<span class="dt">x =</span> temp)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) +
-<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>month, <span class="dt">nrow =</span> <span class="dv">4</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>month, <span class="dt">nrow =</span> <span class="dv">4</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:facethistogram"></span>
 <img src="ismaykim_files/figure-html/facethistogram-1.png" alt="Faceted histogram" width="\textwidth" />
 <p class="caption">
@@ -937,7 +938,7 @@ Figure 3.11: Faceted histogram
 <div id="geomboxplot" class="section level3">
 <h3><span class="header-section-number">3.7.1</span> Boxplots via geom_boxplot</h3>
 <p>Let’s create a boxplot to compare the monthly temperatures as we did above with the faceted histograms.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="kw">aes</span>(<span class="dt">x =</span> month, <span class="dt">y =</span> temp)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="kw">aes</span>(<span class="dt">x =</span> month, <span class="dt">y =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:badbox"></span>
 <img src="ismaykim_files/figure-html/badbox-1.png" alt="Invalid boxplot specification" width="\textwidth" />
@@ -950,7 +951,7 @@ Figure 3.12: Invalid boxplot specification
 2: Removed 1 rows containing non-finite values (stat_boxplot). </code></pre>
 <p>Note the set of warnings that is given here. The second warning corresponds to missing values in the data frame and it is turned off on subsequent plots. Let’s focus on the first warning.</p>
 <p>Observe that this plot does not look like what we were expecting. We were expecting to see the distribution of temperatures for each month (so 12 different boxplots). The first warning is letting us know that we are plotting a continuous, and not categorical variable, on the x-axis. This gives us the overall boxplot without any other groupings. We can get around this by introducing a new function for our <code>x</code> variable:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(month), <span class="dt">y =</span> temp)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(month), <span class="dt">y =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:monthtempbox"></span>
 <img src="ismaykim_files/figure-html/monthtempbox-1.png" alt="Month by temp boxplot" width="\textwidth" />
@@ -990,8 +991,9 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
   <span class="dt">fruit =</span> <span class="kw">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;orange&quot;</span>),
   <span class="dt">number =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">2</span>)
 )</code></pre></div>
-<p>We see both the <code>fruits</code> and <code>fruits_counted</code> data frames represent the same collection of fruit: three apples and two bananas. However, whereas <code>fruits</code> just lists the fruit:</p>
+<p>We see both the <code>fruits</code> and <code>fruits_counted</code> data frames represent the same collection of fruit: three apples and two oranges. However, whereas <code>fruits</code> just lists the fruit:</p>
 <table>
+<caption><span id="tab:unnamed-chunk-40">Table 3.3: </span>Fruits</caption>
 <thead>
 <tr class="header">
 <th align="left">fruit</th>
@@ -1017,7 +1019,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 </table>
 <p><code>fruits_counted</code> has a variable <code>count</code>, where the counts are pre-tabulated.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-41">Table 3.3: </span>Fruits (Pre-Counted)</caption>
+<caption><span id="tab:unnamed-chunk-41">Table 3.4: </span>Fruits (Pre-Counted)</caption>
 <thead>
 <tr class="header">
 <th align="left">fruit</th>
@@ -1036,7 +1038,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 </tbody>
 </table>
 <p>Compare the barcharts in Figures <a href="3-viz.html#fig:geombar">3.14</a> and <a href="3-viz.html#fig:geomcol">3.15</a>, which are identical, but are based on two different data frames:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> fruits, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> fruit)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> fruits, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> fruit)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geombar"></span>
 <img src="ismaykim_files/figure-html/geombar-1.png" alt="Barplot when counts are not pre-tabulated" width="\textwidth" />
@@ -1044,7 +1046,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 Figure 3.14: Barplot when counts are not pre-tabulated
 </p>
 </div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> fruits_counted, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> fruit, <span class="dt">y =</span> number)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> fruits_counted, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> fruit, <span class="dt">y =</span> number)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_col</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geomcol"></span>
 <img src="ismaykim_files/figure-html/geomcol-1.png" alt="Barplot when counts are pre-tabulated" width="\textwidth" />
@@ -1061,7 +1063,7 @@ Figure 3.15: Barplot when counts are pre-tabulated
 <div id="barplots-via-geom_bargeom_col" class="section level3">
 <h3><span class="header-section-number">3.8.1</span> Barplots via geom_bar/geom_col</h3>
 <p>Consider the distribution of airlines that flew out of New York City in 2013. Here we explore the number of flights from each airline/<code>carrier</code>. This can be plotted by invoking the <code>geom_bar</code> function in <code>ggplot2</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:flightsbar"></span>
 <img src="ismaykim_files/figure-html/flightsbar-1.png" alt="Number of flights departing NYC in 2013 by airline using geom_bar" width="\textwidth" />
@@ -1146,8 +1148,8 @@ Figure 3.16: Number of flights departing NYC in 2013 by airline using geom_bar
 </tbody>
 </table>
 <p>Going back to our barplot, we see that United Air Lines, JetBlue Airways, and ExpressJet Airlines had the most flights depart New York City in 2013. To get the actual number of flights by each airline we can use the <code>group_by()</code>, <code>summarize()</code>, and <code>n()</code> functions in the <code>dplyr</code> package on the <code>carrier</code> variable in <code>flights</code>, which we will introduce formally in Chapter <a href="5-wrangling.html#wrangling">5</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_table &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(carrier) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_table &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(carrier) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">number =</span> <span class="kw">n</span>())
 <span class="kw">kable</span>(flights_table)</code></pre></div>
 <table>
@@ -1225,7 +1227,7 @@ Figure 3.16: Number of flights departing NYC in 2013 by airline using geom_bar
 </tbody>
 </table>
 <p>In this table, the counts of the carriers are pre-tabulated. To create a barchart using the data frame <code>flights_table</code>, we use <code>geom_col</code> and map the <code>y</code> aesthetic to the variable <code>number</code>. Compare this barplot using <code>geom_col</code> in Figure <a href="3-viz.html#fig:flightscol">3.17</a> with the earlier barplot using <code>geom_bar</code> in Figure <a href="3-viz.html#fig:flightsbar">3.16</a>. They are identical.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_table, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">y =</span> number)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_table, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">y =</span> number)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_col</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:flightscol"></span>
 <img src="ismaykim_files/figure-html/flightscol-1.png" alt="Number of flights departing NYC in 2013 by airline using geom_col" width="\textwidth" />
@@ -1286,10 +1288,10 @@ Figure 3.19: The only good pie chart
 <h3><span class="header-section-number">3.8.3</span> Using barplots to compare two categorical variables</h3>
 <p>Barplots are the go-to way to visualize the frequency of different categories of a categorical variable. They make it easy to order the counts and to compare the frequencies of one group to another. Another use of barplots (unfortunately, sometimes inappropriately and confusingly) is to compare two categorical variables together. Let’s examine the distribution of outgoing flights from NYC by <code>carrier</code> and <code>airport</code>.</p>
 <p>We begin by getting the names of the airports in NYC that were included in the <code>flights</code> data-set. Here, we preview the <code>inner_join()</code> function from Chapter <a href="5-wrangling.html#wrangling">5</a>. This function will join the data frame <code>flights</code> with the data frame <code>airports</code> by matching rows that have the same airport code. However, in <code>flights</code> the airport code is included in the <code>origin</code> variable whereas in <code>airports</code> the airport code is included in the <code>faa</code> variable. We will revisit such examples in Section <a href="5-wrangling.html#joins">5.3</a> on joining data-sets.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_namedports &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_namedports &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">inner_join</span>(airports, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;origin&quot;</span> =<span class="st"> &quot;faa&quot;</span>))</code></pre></div>
 <p>After running <code>View(flights_namedports)</code>, we see that <code>name</code> now corresponds to the name of the airport as referenced by the <code>origin</code> variable. We will now plot <code>carrier</code> as the horizontal variable. When we specify <code>geom_bar</code>, it will specify <code>count</code> as being the vertical variable. A new addition here is <code>fill = name</code>. Look over what was produced from the plot to get an idea of what this argument gives.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-48"></span>
 <img src="ismaykim_files/figure-html/unnamed-chunk-48-1.png" alt="Stacked barplot comparing the number of flights by carrier and airport" width="\textwidth" />
@@ -1312,7 +1314,7 @@ Figure 3.20: Stacked barplot comparing the number of flights by carrier and airp
 
 </div>
 <p>Another variation on the stacked barplot is the <em>side-by-side barplot</em>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-50"></span>
 <img src="ismaykim_files/figure-html/unnamed-chunk-50-1.png" alt="Side-by-side barplot comparing the number of flights by carrier and airport" width="\textwidth" />
@@ -1331,9 +1333,9 @@ Figure 3.21: Side-by-side barplot comparing the number of flights by carrier and
 
 </div>
 <p>Lastly, an often preferred type of barplot is the <em>faceted barplot</em>. We already saw this concept of faceting and small multiples in Section <a href="3-viz.html#facets">3.6</a>. This gives us a nicer way to compare the distributions across both <code>carrier</code> and airport/<code>name</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) +
-<span class="st">  </span><span class="kw">geom_bar</span>() +
-<span class="st">  </span><span class="kw">facet_grid</span>(name ~<span class="st"> </span>.)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_grid</span>(name <span class="op">~</span><span class="st"> </span>.)</code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:facet-bar-vert"></span>
 <img src="ismaykim_files/figure-html/facet-bar-vert-1.png" alt="Faceted barplot comparing the number of flights by carrier and airport" width="\textwidth" />
 <p class="caption">

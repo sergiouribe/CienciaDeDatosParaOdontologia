@@ -1073,10 +1073,6 @@ In addition, we've created a mind map to help you remember which types of plots 
 
 ### Script of R code
 
-```{r include=FALSE, eval=TRUE, purl=FALSE}
-knitr::purl("03-viz.Rmd", "docs/scripts/03-viz.R")
-```
-
 An R script file of all R code used in this chapter is available [here](http://moderndive.com/scripts/03-viz.R).
 
 

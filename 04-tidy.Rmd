@@ -377,9 +377,5 @@ In Chapter \@ref(wrangling), we'll further explore data in tidy format by groupi
 
 ### Script of R code
 
-```{r include=FALSE, eval=TRUE, purl=FALSE}
-knitr::purl("04-tidy.Rmd", "docs/scripts/04-tidy.R")
-```
-
 An R script file of all R code used in this chapter is available [here](http://moderndive.com/scripts/04-viz.R).
 

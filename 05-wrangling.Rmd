@@ -906,10 +906,6 @@ We will focus only on the `dplyr` functions in this book, but you are encouraged
 
 ### Script of R code
 
-```{r include=FALSE, eval=TRUE, purl=FALSE}
-knitr::purl("05-wrangling.Rmd", "docs/scripts/05-wrangling.R")
-```
-
 An R script file of all R code used in this chapter is available [here](http://moderndive.com/scripts/05-manip.R).
 
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-02">
+<meta name="date" content="2017-08-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -118,18 +118,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
-<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.1.4</b> Final note for students</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#important-note"><i class="fa fa-check"></i><b>1.1</b> Important Note</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-for-students"><i class="fa fa-check"></i><b>1.2</b> Introduction for students</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.2.1</b> What you will learn from this book</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#pipeline"><i class="fa fa-check"></i><b>1.2.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#reproducible"><i class="fa fa-check"></i><b>1.2.3</b> Reproducible research</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#final-note-for-students"><i class="fa fa-check"></i><b>1.2.4</b> Final note for students</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intro-instructors"><i class="fa fa-check"></i><b>1.3</b> Introduction for instructors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.3.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.4.1</b> Colophon</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.5.1</b> Colophon</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a><ul>
@@ -486,7 +487,7 @@ Figure B.1: Mind map for Inference
 <span class="co">#  destfile = &quot;data/ageAtMar.csv&quot;,</span>
 <span class="co">#  method = &quot;curl&quot;)</span>
 ageAtMar &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/ageAtMar.csv&quot;</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">age_summ &lt;-<span class="st"> </span>ageAtMar %&gt;%
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">age_summ &lt;-<span class="st"> </span>ageAtMar <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">sample_size =</span> <span class="kw">n</span>(),
     <span class="dt">mean =</span> <span class="kw">mean</span>(age),
     <span class="dt">sd =</span> <span class="kw">sd</span>(age),
@@ -523,7 +524,7 @@ ageAtMar &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span cl
 </tbody>
 </table>
 <p>The histogram below also shows the distribution of <code>age</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ageAtMar %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> age)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ageAtMar <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> age)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">3</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/hist1b-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="guess-about-statistical-significance" class="section level4">
@@ -546,25 +547,25 @@ ageAtMar &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span cl
 </ol>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
 mu0 &lt;-<span class="st"> </span><span class="dv">23</span>
-shift &lt;-<span class="st"> </span>mu0 -<span class="st"> </span>age_summ$mean
-null_distn_one_mean &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span><span class="kw">resample</span>(ageAtMar, <span class="dt">replace =</span> <span class="ot">TRUE</span>) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">age =</span> age +<span class="st"> </span>shift) %&gt;%<span class="st"> </span>
+shift &lt;-<span class="st"> </span>mu0 <span class="op">-</span><span class="st"> </span>age_summ<span class="op">$</span>mean
+null_distn_one_mean &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">resample</span>(ageAtMar, <span class="dt">replace =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">age =</span> age <span class="op">+</span><span class="st"> </span>shift) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean_age =</span> <span class="kw">mean</span>(age))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_one_mean, <span class="kw">aes</span>(<span class="dt">x =</span> mean_age)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_one_mean, <span class="kw">aes</span>(<span class="dt">x =</span> mean_age)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-259-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-253-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can next use this distribution to observe our <span class="math inline">\(p\)</span>-value. Recall this is a right-tailed test so we will be looking for values that are greater than or equal to 23.4402 for our <span class="math inline">\(p\)</span>-value.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">obs_mean &lt;-<span class="st"> </span>age_summ$mean
-<span class="kw">ggplot</span>(null_distn_one_mean, <span class="kw">aes</span>(<span class="dt">x =</span> mean_age)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">obs_mean &lt;-<span class="st"> </span>age_summ<span class="op">$</span>mean
+<span class="kw">ggplot</span>(null_distn_one_mean, <span class="kw">aes</span>(<span class="dt">x =</span> mean_age)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> obs_mean)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-260-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-254-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="calculate-p-value" class="section level5">
 <h5><span class="header-section-number">B.2.4.1.1</span> Calculate <span class="math inline">\(p\)</span>-value</h5>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_one_mean %&gt;%
-<span class="st">  </span><span class="kw">filter</span>( mean_age &gt;=<span class="st"> </span>obs_mean ) %&gt;%
-<span class="st">  </span><span class="kw">nrow</span>() /<span class="st"> </span><span class="kw">nrow</span>(null_distn_one_mean)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_one_mean <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>( mean_age <span class="op">&gt;=</span><span class="st"> </span>obs_mean ) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">nrow</span>() <span class="op">/</span><span class="st"> </span><span class="kw">nrow</span>(null_distn_one_mean)
 pvalue</code></pre></div>
 <pre><code>[1] 0</code></pre>
 <p>So our <span class="math inline">\(p\)</span>-value is 0 and we reject the null hypothesis at the 5% level. You can also see this from the histogram above that we are far into the tail of the null distribution.</p>
@@ -573,13 +574,13 @@ pvalue</code></pre></div>
 <div id="bootstrapping-for-confidence-interval" class="section level4">
 <h4><span class="header-section-number">B.2.4.2</span> Bootstrapping for confidence interval</h4>
 <p>We can also create a confidence interval for the unknown population parameter <span class="math inline">\(\mu\)</span> using our sample data using <em>bootstrapping</em>. Note that we don’t need to shift this distribution since we want the center of our confidence interval to be our point estimate <span class="math inline">\(\bar{x}_{obs} = 23.4402\)</span>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_mean &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span><span class="kw">resample</span>(ageAtMar, <span class="dt">replace =</span> <span class="ot">TRUE</span>) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_mean &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">resample</span>(ageAtMar, <span class="dt">replace =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean_age =</span> <span class="kw">mean</span>(age))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_one_mean, <span class="kw">aes</span>(<span class="dt">x =</span> mean_age)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_one_mean, <span class="kw">aes</span>(<span class="dt">x =</span> mean_age)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-263-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_mean %&gt;%<span class="st"> </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(mean_age, <span class="dt">probs =</span> <span class="fl">0.025</span>),
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-257-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_mean <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(mean_age, <span class="dt">probs =</span> <span class="fl">0.025</span>),
     <span class="dt">upper =</span> <span class="kw">quantile</span>(mean_age, <span class="dt">probs =</span> <span class="fl">0.975</span>))</code></pre></div>
 <pre><code>  lower upper
 1 23.32 23.56</code></pre>
@@ -600,7 +601,7 @@ pvalue</code></pre></div>
 <p>The histogram for the sample above does show some skew.</p></li>
 </ol>
 <p>The Q-Q plot below also shows some skew.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> ageAtMar, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">sample =</span> age)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> ageAtMar, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">sample =</span> age)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_qq</span>()</code></pre></div>
 <p><img src="ismaykim_files/figure-html/qqplotmean-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>The sample size here is quite large though (<span class="math inline">\(n = 5534\)</span>) so both conditions are met.</p>
@@ -613,7 +614,7 @@ pvalue</code></pre></div>
 <div id="observed-test-statistic" class="section level5">
 <h5><span class="header-section-number">B.2.5.2.1</span> Observed test statistic</h5>
 <p>While one could compute this observed test statistic by “hand”, the focus here is on the set-up of the problem and in understanding which formula for the test statistic applies. We can use the <code>t.test</code> function to perform this analysis for us.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(<span class="dt">x =</span> ageAtMar$age, 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(<span class="dt">x =</span> ageAtMar<span class="op">$</span>age, 
        <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>,
        <span class="dt">mu =</span> <span class="dv">23</span>)</code></pre></div>
 <pre><code>
@@ -633,7 +634,7 @@ mean of x
 <div id="compute-p-value" class="section level4">
 <h4><span class="header-section-number">B.2.5.3</span> Compute <span class="math inline">\(p\)</span>-value</h4>
 <p>The <span class="math inline">\(p\)</span>-value—the probability of observing an <span class="math inline">\(t_{obs}\)</span> value of 6.94 or more in our null distribution of a <span class="math inline">\(t\)</span> with 5433 degrees of freedom—is essentially 0. This can also be calculated in R directly:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pt</span>(<span class="fl">6.936</span>, <span class="dt">df =</span> <span class="kw">nrow</span>(ageAtMar) -<span class="st"> </span><span class="dv">1</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pt</span>(<span class="fl">6.936</span>, <span class="dt">df =</span> <span class="kw">nrow</span>(ageAtMar) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <pre><code>[1] 0.000000000002247</code></pre>
 <p>We can also use the <span class="math inline">\(N(0, 1)\)</span> distribution here:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="fl">6.936</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
@@ -646,9 +647,9 @@ mean of x
 <div id="confidence-interval" class="section level4">
 <h4><span class="header-section-number">B.2.5.5</span> Confidence interval</h4>
 <p>The confidence interval reported above with <code>t.test</code> is known as a one-sided confidence interval and gives the lowest value one could expect <span class="math inline">\(\mu\)</span> to be with 95% confidence. We usually want a range of values so we can use <code>alternative = &quot;two.sided&quot;</code> to get the similar values compared to the bootstrapping process:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(<span class="dt">x =</span> ageAtMar$age, 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(<span class="dt">x =</span> ageAtMar<span class="op">$</span>age, 
        <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>,
-       <span class="dt">mu =</span> <span class="dv">23</span>)$conf</code></pre></div>
+       <span class="dt">mu =</span> <span class="dv">23</span>)<span class="op">$</span>conf</code></pre></div>
 <pre><code>[1] 23.32 23.56
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
@@ -698,11 +699,11 @@ attr(,&quot;conf.level&quot;)
 </div>
 <div id="exploring-the-sample-data-1" class="section level3">
 <h3><span class="header-section-number">B.3.3</span> Exploring the sample data</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">elec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;satisfied&quot;</span>, <span class="dv">73</span>), <span class="kw">rep</span>(<span class="st">&quot;unsatisfied&quot;</span>, <span class="dv">27</span>)) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">as_data_frame</span>() %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">elec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;satisfied&quot;</span>, <span class="dv">73</span>), <span class="kw">rep</span>(<span class="st">&quot;unsatisfied&quot;</span>, <span class="dv">27</span>)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">as_data_frame</span>() <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">rename</span>(<span class="st">&quot;satisfy&quot;</span> =<span class="st"> </span>value)</code></pre></div>
 <p>The bar graph below also shows the distribution of <code>satisfy</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> elec, <span class="kw">aes</span>(<span class="dt">x =</span> satisfy)) +<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> elec, <span class="kw">aes</span>(<span class="dt">x =</span> satisfy)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
 <p><img src="ismaykim_files/figure-html/bar-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="guess-about-statistical-significance-1" class="section level4">
@@ -717,23 +718,23 @@ attr(,&quot;conf.level&quot;)
 <h4><span class="header-section-number">B.3.4.1</span> Simulation for hypothesis test</h4>
 <p>In order to look to see if 0.73 is statistically different from 0.8, we need to account for the sample size. We also need to determine a process that replicates how the original sample of size 100 was selected. We can use the idea of an unfair coin to <em>simulate</em> this process. We will simulate flipping an unfair coin (with probability of success 0.8 matching the null hypothesis) 100 times. Then we will keep track of how many heads come up in those 100 flips. Our simulated statistic matches with how we calculated the original statistic <span class="math inline">\(\hat{p}\)</span>: the number of heads (satisfied) out of our total sample of 100. We then repeat this process many times (say 10,000) to create the null distribution looking at the simulated proportions of successes:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
-null_distn_one_prop &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span><span class="kw">rflip</span>(<span class="dv">100</span>, <span class="dt">prob =</span> <span class="fl">0.8</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_one_prop, <span class="kw">aes</span>(<span class="dt">x =</span> prop)) +
+null_distn_one_prop &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span><span class="kw">rflip</span>(<span class="dv">100</span>, <span class="dt">prob =</span> <span class="fl">0.8</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_one_prop, <span class="kw">aes</span>(<span class="dt">x =</span> prop)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-266-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-260-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can next use this distribution to observe our <span class="math inline">\(p\)</span>-value. Recall this is a two-tailed test so we will be looking for values that are 0.8 - 0.73 = 0.07 away from 0.8 in BOTH directions for our <span class="math inline">\(p\)</span>-value:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p_hat &lt;-<span class="st"> </span><span class="dv">73</span>/<span class="dv">100</span>
-dist &lt;-<span class="st"> </span><span class="fl">0.8</span> -<span class="st"> </span>p_hat
-<span class="kw">ggplot</span>(null_distn_one_prop, <span class="kw">aes</span>(<span class="dt">x =</span> prop)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) +
-<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> <span class="fl">0.8</span> +<span class="st"> </span>dist) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p_hat &lt;-<span class="st"> </span><span class="dv">73</span><span class="op">/</span><span class="dv">100</span>
+dist &lt;-<span class="st"> </span><span class="fl">0.8</span> <span class="op">-</span><span class="st"> </span>p_hat
+<span class="kw">ggplot</span>(null_distn_one_prop, <span class="kw">aes</span>(<span class="dt">x =</span> prop)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> <span class="fl">0.8</span> <span class="op">+</span><span class="st"> </span>dist) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> p_hat)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-267-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-261-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="calculate-p-value-1" class="section level5">
 <h5><span class="header-section-number">B.3.4.1.1</span> Calculate <span class="math inline">\(p\)</span>-value</h5>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_one_prop %&gt;%
-<span class="st">  </span><span class="kw">filter</span>( (prop &gt;=<span class="st"> </span><span class="fl">0.8</span> +<span class="st"> </span>dist) |<span class="st"> </span>(prop &lt;=<span class="st"> </span>p_hat) ) %&gt;%
-<span class="st">  </span><span class="kw">nrow</span>() /<span class="st"> </span><span class="kw">nrow</span>(null_distn_one_prop)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_one_prop <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>( (prop <span class="op">&gt;=</span><span class="st"> </span><span class="fl">0.8</span> <span class="op">+</span><span class="st"> </span>dist) <span class="op">|</span><span class="st"> </span>(prop <span class="op">&lt;=</span><span class="st"> </span>p_hat) ) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">nrow</span>() <span class="op">/</span><span class="st"> </span><span class="kw">nrow</span>(null_distn_one_prop)
 pvalue</code></pre></div>
 <pre><code>[1] 0.082</code></pre>
 <p>So our <span class="math inline">\(p\)</span>-value is 0.082 and we fail to reject the null hypothesis at the 5% level.</p>
@@ -749,14 +750,14 @@ pvalue</code></pre></div>
 <li>identifying the 2.5<sup>th</sup> and 97.5<sup>th</sup> percentiles of this distribution (corresponding to the 5% significance level chosen) to find a 95% confidence interval for <span class="math inline">\(\pi\)</span>, and</li>
 <li>interpret this confidence interval in the context of the problem.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_prop &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span>(elec %&gt;%<span class="st"> </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>) )%&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">success_rate =</span> <span class="kw">mean</span>(satisfy ==<span class="st"> &quot;satisfied&quot;</span>))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_prop &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span>(elec <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">resample</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>) )<span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">success_rate =</span> <span class="kw">mean</span>(satisfy <span class="op">==</span><span class="st"> &quot;satisfied&quot;</span>))</code></pre></div>
 <p>Just as we use the <code>mean</code> function for calculating the mean over a numerical variable, we can also use it to compute the proportion of successes for a categorical variable where we specify what we are calling a “success” after the <code>==</code>. (Think about the formula for calculating a mean and how R handles logical statements such as <code>satisfy == &quot;satisfied&quot;</code> for why this must be true.)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_one_prop, <span class="kw">aes</span>(<span class="dt">x =</span> success_rate)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_one_prop, <span class="kw">aes</span>(<span class="dt">x =</span> success_rate)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-270-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_prop %&gt;%<span class="st"> </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(success_rate, <span class="dt">probs =</span> <span class="fl">0.025</span>),
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-264-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_one_prop <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(success_rate, <span class="dt">probs =</span> <span class="fl">0.025</span>),
     <span class="dt">upper =</span> <span class="kw">quantile</span>(success_rate, <span class="dt">probs =</span> <span class="fl">0.975</span>))</code></pre></div>
 <pre><code>  lower upper
 1  0.64  0.82</code></pre>
@@ -788,19 +789,19 @@ pvalue</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p_hat &lt;-<span class="st"> </span><span class="fl">0.73</span>
 p0 &lt;-<span class="st"> </span><span class="fl">0.8</span>
 n &lt;-<span class="st"> </span><span class="dv">100</span>
-(z_obs &lt;-<span class="st"> </span>(p_hat -<span class="st"> </span>p0) /<span class="st"> </span><span class="kw">sqrt</span>( (p0 *<span class="st"> </span>(<span class="dv">1</span> -<span class="st"> </span>p0)) /<span class="st"> </span>n))</code></pre></div>
+(z_obs &lt;-<span class="st"> </span>(p_hat <span class="op">-</span><span class="st"> </span>p0) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>( (p0 <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p0)) <span class="op">/</span><span class="st"> </span>n))</code></pre></div>
 <pre><code>[1] -1.75</code></pre>
 <p>We see here that the <span class="math inline">\(z_{obs}\)</span> value is around -1.75. Our observed sample proportion of 0.73 is 1.75 standard errors below the hypothesized parameter value of 0.8.</p>
 </div>
 </div>
 <div id="compute-p-value-1" class="section level4">
 <h4><span class="header-section-number">B.3.5.3</span> Compute <span class="math inline">\(p\)</span>-value</h4>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> *<span class="st"> </span><span class="kw">pnorm</span>(z_obs)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">pnorm</span>(z_obs)</code></pre></div>
 <pre><code>[1] 0.08012</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value—the probability of observing an <span class="math inline">\(z_{obs}\)</span> value of -1.75 or more extreme (in both directions) in our null distribution—is around 8%.</p>
 <p>Note that we could also do this test directly using the <code>prop.test</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stats::<span class="kw">prop.test</span>(<span class="dt">x =</span> <span class="kw">table</span>(elec$satisfy),
-       <span class="dt">n =</span> <span class="kw">length</span>(elec$satisfy),
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stats<span class="op">::</span><span class="kw">prop.test</span>(<span class="dt">x =</span> <span class="kw">table</span>(elec<span class="op">$</span>satisfy),
+       <span class="dt">n =</span> <span class="kw">length</span>(elec<span class="op">$</span>satisfy),
        <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>,
        <span class="dt">p =</span> <span class="fl">0.8</span>,
        <span class="dt">correct =</span> <span class="ot">FALSE</span>)</code></pre></div>
@@ -871,17 +872,17 @@ sample estimates:
 <span class="co">#              destfile = &quot;data/offshore.csv&quot;, </span>
 <span class="co">#              method = &quot;curl&quot;)</span>
 offshore &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/offshore.csv&quot;</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(offshore$college_grad, offshore$response)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(offshore<span class="op">$</span>college_grad, offshore<span class="op">$</span>response)</code></pre></div>
 <pre><code>     
       no opinion opinion
   no         131     258
   yes        104     334</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">off_summ &lt;-<span class="st"> </span>offshore %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(college_grad) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">prop_no_opinion =</span> <span class="kw">mean</span>(response ==<span class="st"> &quot;no opinion&quot;</span>),
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">off_summ &lt;-<span class="st"> </span>offshore <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(college_grad) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">prop_no_opinion =</span> <span class="kw">mean</span>(response <span class="op">==</span><span class="st"> &quot;no opinion&quot;</span>),
     <span class="dt">sample_size =</span> <span class="kw">n</span>())</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(offshore, <span class="kw">aes</span>(<span class="dt">x =</span> college_grad, <span class="dt">fill =</span> response)) +
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(offshore, <span class="kw">aes</span>(<span class="dt">x =</span> college_grad, <span class="dt">fill =</span> response)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">coord_flip</span>()</code></pre></div>
 <p><img src="ismaykim_files/figure-html/stacked_bar-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="guess-about-statistical-significance-2" class="section level4">
@@ -895,40 +896,40 @@ offshore &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span cl
 <div id="collecting-summary-info" class="section level4">
 <h4><span class="header-section-number">B.4.4.1</span> Collecting summary info</h4>
 <p>Next we will assign some key values to variable names in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">phat_nograd &lt;-<span class="st"> </span>off_summ$prop_no_opinion[<span class="dv">1</span>]
-phat_grad &lt;-<span class="st"> </span>off_summ$prop_no_opinion[<span class="dv">2</span>]
-obs_diff &lt;-<span class="st"> </span>phat_grad -<span class="st"> </span>phat_nograd
-n_nograd &lt;-<span class="st"> </span>off_summ$sample_size[<span class="dv">1</span>]
-n_grad &lt;-<span class="st"> </span>off_summ$sample_size[<span class="dv">2</span>]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">phat_nograd &lt;-<span class="st"> </span>off_summ<span class="op">$</span>prop_no_opinion[<span class="dv">1</span>]
+phat_grad &lt;-<span class="st"> </span>off_summ<span class="op">$</span>prop_no_opinion[<span class="dv">2</span>]
+obs_diff &lt;-<span class="st"> </span>phat_grad <span class="op">-</span><span class="st"> </span>phat_nograd
+n_nograd &lt;-<span class="st"> </span>off_summ<span class="op">$</span>sample_size[<span class="dv">1</span>]
+n_grad &lt;-<span class="st"> </span>off_summ<span class="op">$</span>sample_size[<span class="dv">2</span>]</code></pre></div>
 </div>
 <div id="randomization-for-hypothesis-test" class="section level4">
 <h4><span class="header-section-number">B.4.4.2</span> Randomization for hypothesis test</h4>
 <p>In order to look to see if the observed sample proportion of no opinion for college graduates of 0.3368 is statistically different than that for graduates of 0.2374, we need to account for the sample sizes. Note that this is the same as looking to see if <span class="math inline">\(\hat{p}_{grad} - \hat{p}_{nograd}\)</span> is statistically different than 0. We also need to determine a process that replicates how the original group sizes of 389 and 438 were selected.</p>
 <p>We can use the idea of <em>randomization testing</em> (also known as <em>permutation testing</em>) to simulate the population from which the sample came (with two groups of different sizes) and then generate samples using <em>shuffling</em> from that simulated population to account for sampling variability.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
-many_shuffles &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span>(offshore %&gt;%
-<span class="st">     </span><span class="kw">mutate</span>(<span class="dt">college_grad =</span> <span class="kw">shuffle</span>(college_grad)) %&gt;%<span class="st"> </span>
-<span class="st">     </span><span class="kw">group_by</span>(college_grad) %&gt;%
-<span class="st">     </span><span class="kw">summarize</span>(<span class="dt">prop_no_opinion =</span> <span class="kw">mean</span>(response ==<span class="st"> &quot;no opinion&quot;</span>))
+many_shuffles &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span>(offshore <span class="op">%&gt;%</span>
+<span class="st">     </span><span class="kw">mutate</span>(<span class="dt">college_grad =</span> <span class="kw">shuffle</span>(college_grad)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">     </span><span class="kw">group_by</span>(college_grad) <span class="op">%&gt;%</span>
+<span class="st">     </span><span class="kw">summarize</span>(<span class="dt">prop_no_opinion =</span> <span class="kw">mean</span>(response <span class="op">==</span><span class="st"> &quot;no opinion&quot;</span>))
    )
-null_distn_two_props &lt;-<span class="st"> </span>many_shuffles %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(.index) %&gt;%
+null_distn_two_props &lt;-<span class="st"> </span>many_shuffles <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(.index) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">diffprop =</span> <span class="kw">diff</span>(prop_no_opinion))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_props, <span class="kw">aes</span>(<span class="dt">x =</span> diffprop)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_props, <span class="kw">aes</span>(<span class="dt">x =</span> diffprop)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">25</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-274-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-268-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can next use this distribution to observe our <span class="math inline">\(p\)</span>-value. Recall this is a two-tailed test so we will be looking for values that are greater than or equal to -0.0993 or less than or equal to 0.0993 for our <span class="math inline">\(p\)</span>-value.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_props, <span class="kw">aes</span>(<span class="dt">x =</span> diffprop)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) +
-<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> obs_diff) +
-<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> -obs_diff)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-275-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_props, <span class="kw">aes</span>(<span class="dt">x =</span> diffprop)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> obs_diff) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> <span class="op">-</span>obs_diff)</code></pre></div>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-269-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="calculate-p-value-2" class="section level5">
 <h5><span class="header-section-number">B.4.4.2.1</span> Calculate <span class="math inline">\(p\)</span>-value</h5>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_two_props %&gt;%
-<span class="st">  </span><span class="kw">filter</span>( (diffprop &lt;=<span class="st"> </span>obs_diff) |<span class="st"> </span>(diffprop &gt;=<span class="st"> </span>-obs_diff) ) %&gt;%
-<span class="st">  </span><span class="kw">nrow</span>() /<span class="st"> </span><span class="kw">nrow</span>(null_distn_two_props)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_two_props <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>( (diffprop <span class="op">&lt;=</span><span class="st"> </span>obs_diff) <span class="op">|</span><span class="st"> </span>(diffprop <span class="op">&gt;=</span><span class="st"> </span><span class="op">-</span>obs_diff) ) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">nrow</span>() <span class="op">/</span><span class="st"> </span><span class="kw">nrow</span>(null_distn_two_props)
 pvalue</code></pre></div>
 <pre><code>[1] 0.0021</code></pre>
 <p>So our <span class="math inline">\(p\)</span>-value is 0.0021 and we reject the null hypothesis at the 5% level. You can also see this from the histogram above that we are far into the tails of the null distribution.</p>
@@ -937,20 +938,20 @@ pvalue</code></pre></div>
 <div id="bootstrapping-for-confidence-interval-2" class="section level4">
 <h4><span class="header-section-number">B.4.4.3</span> Bootstrapping for confidence interval</h4>
 <p>We can also create a confidence interval for the unknown population parameter <span class="math inline">\(\pi_{college} - \pi_{no\_college}\)</span> using our sample data with <em>bootstrapping</em>. Here we will bootstrap each of the groups with replacement instead of shuffling. This is done using the <code>groups</code> argument in the <code>resample</code> function to fix the size of each group to be the same as the original group sizes of 389 for non-college graduates and 438 for college graduates.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_props &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *
-<span class="st">  </span>offshore %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">resample</span>(<span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">groups =</span> college_grad) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(college_grad) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">prop_no_opinion =</span> <span class="kw">mean</span>(response ==<span class="st"> &quot;no opinion&quot;</span>))
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_props &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span>
+<span class="st">  </span>offshore <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">resample</span>(<span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">groups =</span> college_grad) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(college_grad) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">prop_no_opinion =</span> <span class="kw">mean</span>(response <span class="op">==</span><span class="st"> &quot;no opinion&quot;</span>))
 
 <span class="co"># Next, we calculate the difference in sample proportions for each of the 10,000 replications:</span>
-boot_distn_two_props &lt;-<span class="st"> </span>boot_props %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(.index) %&gt;%<span class="st"> </span>
+boot_distn_two_props &lt;-<span class="st"> </span>boot_props <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(.index) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">diffprop =</span> <span class="kw">diff</span>(prop_no_opinion))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_two_props, <span class="kw">aes</span>(<span class="dt">x =</span> diffprop)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_two_props, <span class="kw">aes</span>(<span class="dt">x =</span> diffprop)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-278-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ci_boot &lt;-<span class="st"> </span>boot_distn_two_props %&gt;%<span class="st"> </span>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-272-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ci_boot &lt;-<span class="st"> </span>boot_distn_two_props <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(diffprop, <span class="dt">probs =</span> <span class="fl">0.025</span>),
     <span class="dt">upper =</span> <span class="kw">quantile</span>(diffprop, <span class="dt">probs =</span> <span class="fl">0.975</span>))
 ci_boot</code></pre></div>
@@ -988,7 +989,7 @@ ci_boot</code></pre></div>
 <div id="observed-test-statistic-2" class="section level4">
 <h4><span class="header-section-number">B.4.7.1</span> Observed test statistic</h4>
 <p>While one could compute this observed test statistic by “hand”, the focus here is on the set-up of the problem and in understanding which formula for the test statistic applies. We can use the <code>prop.test</code> function to perform this analysis for us.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stats::<span class="kw">prop.test</span>(<span class="dt">x =</span> <span class="kw">table</span>(offshore$college_grad, offshore$response),
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stats<span class="op">::</span><span class="kw">prop.test</span>(<span class="dt">x =</span> <span class="kw">table</span>(offshore<span class="op">$</span>college_grad, offshore<span class="op">$</span>response),
        <span class="dt">n =</span> <span class="kw">nrow</span>(offshore),
        <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>,
        <span class="dt">correct =</span> <span class="ot">FALSE</span>)</code></pre></div>
@@ -1006,7 +1007,7 @@ prop 1 prop 2
 0.3368 0.2374 </code></pre>
 <p><code>prop.test</code> does a <span class="math inline">\(\chi^2\)</span> test here but this matches up exactly with what we would expect from the test statistic above since <span class="math inline">\(Z^2 = \chi^2\)</span> so <span class="math inline">\(\sqrt{9.99} = 3.16 = z_{obs}\)</span>: The <span class="math inline">\(p\)</span>-values are the same because we are focusing on a two-tailed test. The observed difference in sample proportions is 3.16 standard deviations larger than 0.</p>
 <p>The <span class="math inline">\(p\)</span>-value—the probability of observing a <span class="math inline">\(Z\)</span> value of 3.16 or more extreme in our null distribution—is 0.0016. This can also be calculated in R directly:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> *<span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">3.16</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">3.16</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <pre><code>[1] 0.001578</code></pre>
 <p>The 95% confidence interval is also stated above in the <code>prop.test</code> results.</p>
 </div>
@@ -1059,7 +1060,7 @@ prop 1 prop 2
 </div>
 <div id="exploring-the-sample-data-3" class="section level3">
 <h3><span class="header-section-number">B.5.3</span> Exploring the sample data</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">inc_summ &lt;-<span class="st"> </span>cleSac %&gt;%<span class="st"> </span><span class="kw">group_by</span>(metro_area) %&gt;%
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">inc_summ &lt;-<span class="st"> </span>cleSac <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(metro_area) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">sample_size =</span> <span class="kw">n</span>(),
     <span class="dt">mean =</span> <span class="kw">mean</span>(income),
     <span class="dt">sd =</span> <span class="kw">sd</span>(income),
@@ -1109,8 +1110,8 @@ prop 1 prop 2
 </tbody>
 </table>
 <p>The boxplot below also shows the mean for each group highlighted by the red dots.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(cleSac, <span class="kw">aes</span>(<span class="dt">x =</span> metro_area, <span class="dt">y =</span> income)) +
-<span class="st">  </span><span class="kw">geom_boxplot</span>() +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(cleSac, <span class="kw">aes</span>(<span class="dt">x =</span> metro_area, <span class="dt">y =</span> income)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun.y =</span> <span class="st">&quot;mean&quot;</span>, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/boxplot-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="guess-about-statistical-significance-3" class="section level4">
@@ -1124,40 +1125,40 @@ prop 1 prop 2
 <div id="collecting-summary-info-1" class="section level4">
 <h4><span class="header-section-number">B.5.4.1</span> Collecting summary info</h4>
 <p>Next we will assign some key values to variable names in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">xbar_cle &lt;-<span class="st"> </span>inc_summ$mean[<span class="dv">1</span>]
-xbar_sac &lt;-<span class="st"> </span>inc_summ$mean[<span class="dv">2</span>]
-obs_diff &lt;-<span class="st"> </span>xbar_sac -<span class="st"> </span>xbar_cle
-n_cle &lt;-<span class="st"> </span>inc_summ$sample_size[<span class="dv">1</span>]
-n_sac &lt;-<span class="st"> </span>inc_summ$sample_size[<span class="dv">2</span>]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">xbar_cle &lt;-<span class="st"> </span>inc_summ<span class="op">$</span>mean[<span class="dv">1</span>]
+xbar_sac &lt;-<span class="st"> </span>inc_summ<span class="op">$</span>mean[<span class="dv">2</span>]
+obs_diff &lt;-<span class="st"> </span>xbar_sac <span class="op">-</span><span class="st"> </span>xbar_cle
+n_cle &lt;-<span class="st"> </span>inc_summ<span class="op">$</span>sample_size[<span class="dv">1</span>]
+n_sac &lt;-<span class="st"> </span>inc_summ<span class="op">$</span>sample_size[<span class="dv">2</span>]</code></pre></div>
 </div>
 <div id="randomization-for-hypothesis-test-1" class="section level4">
 <h4><span class="header-section-number">B.5.4.2</span> Randomization for hypothesis test</h4>
 <p>In order to look to see if the observed sample mean for Sacramento of 27467.066 is statistically different than that for Cleveland of 32427.5429, we need to account for the sample sizes. Note that this is the same as looking to see if <span class="math inline">\(\bar{x}_{sac} - \bar{x}_{cle}\)</span> is statistically different than 0. We also need to determine a process that replicates how the original group sizes of 212 and 175 were selected.</p>
 <p>We can use the idea of <em>randomization testing</em> (also known as <em>permutation testing</em>) to simulate the population from which the sample came (with two groups of different sizes) and then generate samples using <em>shuffling</em> from that simulated population to account for sampling variability.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
-many_shuffles &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span>(cleSac %&gt;%
-<span class="st">     </span><span class="kw">mutate</span>(<span class="dt">metro_area =</span> <span class="kw">shuffle</span>(metro_area)) %&gt;%<span class="st"> </span>
-<span class="st">     </span><span class="kw">group_by</span>(metro_area) %&gt;%
+many_shuffles &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span>(cleSac <span class="op">%&gt;%</span>
+<span class="st">     </span><span class="kw">mutate</span>(<span class="dt">metro_area =</span> <span class="kw">shuffle</span>(metro_area)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">     </span><span class="kw">group_by</span>(metro_area) <span class="op">%&gt;%</span>
 <span class="st">     </span><span class="kw">summarize</span>(<span class="dt">mean_inc =</span> <span class="kw">mean</span>(income))
    )
-null_distn_two_means &lt;-<span class="st"> </span>many_shuffles %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(.index) %&gt;%
+null_distn_two_means &lt;-<span class="st"> </span>many_shuffles <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(.index) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">diffmean =</span> <span class="kw">diff</span>(mean_inc))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_means, <span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_means, <span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-281-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-275-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can next use this distribution to observe our <span class="math inline">\(p\)</span>-value. Recall this is a two-tailed test so we will be looking for values that are greater than or equal to 4960.4768 or less than or equal to -4960.4768 for our <span class="math inline">\(p\)</span>-value.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_means, <span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) +
-<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> obs_diff) +
-<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> -obs_diff)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-282-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_two_means, <span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> obs_diff) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> <span class="op">-</span>obs_diff)</code></pre></div>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-276-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="calculate-p-value-3" class="section level5">
 <h5><span class="header-section-number">B.5.4.2.1</span> Calculate <span class="math inline">\(p\)</span>-value</h5>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_two_means %&gt;%
-<span class="st">  </span><span class="kw">filter</span>( (diffmean &gt;=<span class="st"> </span>obs_diff) |<span class="st"> </span>(diffmean &lt;=<span class="st"> </span>-obs_diff) ) %&gt;%
-<span class="st">  </span><span class="kw">nrow</span>() /<span class="st"> </span><span class="kw">nrow</span>(null_distn_two_means)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_two_means <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>( (diffmean <span class="op">&gt;=</span><span class="st"> </span>obs_diff) <span class="op">|</span><span class="st"> </span>(diffmean <span class="op">&lt;=</span><span class="st"> </span><span class="op">-</span>obs_diff) ) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">nrow</span>() <span class="op">/</span><span class="st"> </span><span class="kw">nrow</span>(null_distn_two_means)
 pvalue</code></pre></div>
 <pre><code>[1] 0.1211</code></pre>
 <p>So our <span class="math inline">\(p\)</span>-value is 0.1211 and we fail to reject the null hypothesis at the 5% level. You can also see this from the histogram above that we are not very far into the tail of the null distribution.</p>
@@ -1166,20 +1167,20 @@ pvalue</code></pre></div>
 <div id="bootstrapping-for-confidence-interval-3" class="section level4">
 <h4><span class="header-section-number">B.5.4.3</span> Bootstrapping for confidence interval</h4>
 <p>We can also create a confidence interval for the unknown population parameter <span class="math inline">\(\mu_{sac} - \mu_{cle}\)</span> using our sample data with <em>bootstrapping</em>. Here we will bootstrap each of the groups with replacement instead of shuffling. This is done using the <code>groups</code> argument in the <code>resample</code> function to fix the size of each group to be the same as the original group sizes of 175 for Sacramento and 212 for Cleveland.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_means &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *
-<span class="st">  </span>cleSac %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">resample</span>(<span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">groups =</span> metro_area) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(metro_area) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_means &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span>
+<span class="st">  </span>cleSac <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">resample</span>(<span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">groups =</span> metro_area) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(metro_area) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean_inc =</span> <span class="kw">mean</span>(income))
 
 <span class="co"># Next, we calculate the difference in sample means for each of the 10,000 replications:</span>
-boot_distn_two_means &lt;-<span class="st"> </span>boot_means %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(.index) %&gt;%<span class="st"> </span>
+boot_distn_two_means &lt;-<span class="st"> </span>boot_means <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(.index) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">diffmean =</span> <span class="kw">diff</span>(mean_inc))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_two_means, <span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_two_means, <span class="kw">aes</span>(<span class="dt">x =</span> diffmean)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-285-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ci_boot &lt;-<span class="st"> </span>boot_distn_two_means %&gt;%<span class="st"> </span>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-279-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ci_boot &lt;-<span class="st"> </span>boot_distn_two_means <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(diffmean, <span class="dt">probs =</span> <span class="fl">0.025</span>),
     <span class="dt">upper =</span> <span class="kw">quantile</span>(diffmean, <span class="dt">probs =</span> <span class="fl">0.975</span>))
 ci_boot</code></pre></div>
@@ -1203,9 +1204,9 @@ ci_boot</code></pre></div>
 <p>This <code>metro_area</code> variable is met since the cases are randomly selected from each city.</p></li>
 <li><p><em>Approximately normal</em>: The distribution of the response for each group should be normal or the sample sizes should be at least 30.</p></li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(cleSac, <span class="kw">aes</span>(<span class="dt">x =</span> income)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">20000</span>) +
-<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>metro_area)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(cleSac, <span class="kw">aes</span>(<span class="dt">x =</span> income)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">20000</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>metro_area)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/hist-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <pre><code>We have some reason to doubt the normality assumption here since both the histograms show deviation from a normal model fitting the data well for each group.  The sample sizes for each group are greater than 100 though so the assumptions should still apply.</code></pre>
 <ol start="3" style="list-style-type: decimal">
@@ -1221,9 +1222,9 @@ ci_boot</code></pre></div>
 <div id="observed-test-statistic-3" class="section level4">
 <h4><span class="header-section-number">B.5.6.1</span> Observed test statistic</h4>
 <p>Note that we could also do (ALMOST) this test directly using the <code>t.test</code> function. The <code>x</code> and <code>y</code> arguments are expected to both be numeric vectors here so we’ll need to appropriately filter our datasets.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cleveland &lt;-<span class="st"> </span>cleSac %&gt;%<span class="st"> </span><span class="kw">filter</span>(metro_area ==<span class="st"> &quot;Cleveland_ OH&quot;</span>)
-sacramento &lt;-<span class="st"> </span>cleSac %&gt;%<span class="st"> </span><span class="kw">filter</span>(metro_area !=<span class="st"> &quot;Cleveland_ OH&quot;</span>)
-<span class="kw">t.test</span>(<span class="dt">y =</span> cleveland$income, <span class="dt">x =</span> sacramento$income,
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cleveland &lt;-<span class="st"> </span>cleSac <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(metro_area <span class="op">==</span><span class="st"> &quot;Cleveland_ OH&quot;</span>)
+sacramento &lt;-<span class="st"> </span>cleSac <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(metro_area <span class="op">!=</span><span class="st"> &quot;Cleveland_ OH&quot;</span>)
+<span class="kw">t.test</span>(<span class="dt">y =</span> cleveland<span class="op">$</span>income, <span class="dt">x =</span> sacramento<span class="op">$</span>income,
        <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>)</code></pre></div>
 <pre><code>
     Welch Two Sample t-test
@@ -1247,10 +1248,10 @@ We can use the `inference` function in the `oilabs` package to perform this anal
 <div id="compute-p-value-2" class="section level3">
 <h3><span class="header-section-number">B.5.7</span> Compute <span class="math inline">\(p\)</span>-value</h3>
 <p>The <span class="math inline">\(p\)</span>-value—the probability of observing an <span class="math inline">\(t_{174}\)</span> value of -1.501 or more extreme (in both directions) in our null distribution—is 0.13. This can also be calculated in R directly:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> *<span class="st"> </span><span class="kw">pt</span>(-<span class="fl">1.501</span>, <span class="dt">df =</span> <span class="kw">min</span>(<span class="dv">212</span> -<span class="st"> </span><span class="dv">1</span>, <span class="dv">175</span> -<span class="st"> </span><span class="dv">1</span>), <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">pt</span>(<span class="op">-</span><span class="fl">1.501</span>, <span class="dt">df =</span> <span class="kw">min</span>(<span class="dv">212</span> <span class="op">-</span><span class="st"> </span><span class="dv">1</span>, <span class="dv">175</span> <span class="op">-</span><span class="st"> </span><span class="dv">1</span>), <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <pre><code>[1] 0.1352</code></pre>
 <p>We can also approximate by using the standard normal curve:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> *<span class="st"> </span><span class="kw">pnorm</span>(-<span class="fl">1.501</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">1.501</span>)</code></pre></div>
 <pre><code>[1] 0.1334</code></pre>
 <p>Note that the 95 percent confidence interval given above matches well with the one calculated using bootstrapping.</p>
 </div>
@@ -1300,10 +1301,10 @@ We can use the `inference` function in the `oilabs` package to perform this anal
 <span class="co">#              method = &quot;curl&quot;)</span>
 zinc_tidy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/zinc_tidy.csv&quot;</span>)</code></pre></div>
 <p>We want to look at the differences in <code>surface - bottom</code> for each location:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">zinc_diff &lt;-<span class="st"> </span>zinc_tidy %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(loc_id) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">zinc_diff &lt;-<span class="st"> </span>zinc_tidy <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(loc_id) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">pair_diff =</span> <span class="kw">diff</span>(concentration))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">zinc_summ &lt;-<span class="st"> </span>zinc_diff %&gt;%
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">zinc_summ &lt;-<span class="st"> </span>zinc_diff <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">sample_size =</span> <span class="kw">n</span>(),
     <span class="dt">mean =</span> <span class="kw">mean</span>(pair_diff),
     <span class="dt">sd =</span> <span class="kw">sd</span>(pair_diff),
@@ -1340,7 +1341,7 @@ zinc_tidy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span c
 </tbody>
 </table>
 <p>The histogram below also shows the distribution of <code>pair_diff</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(zinc_diff, <span class="kw">aes</span>(<span class="dt">x =</span> pair_diff)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(zinc_diff, <span class="kw">aes</span>(<span class="dt">x =</span> pair_diff)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.04</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
 <p><img src="ismaykim_files/figure-html/hist1a-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="guess-about-statistical-significance-4" class="section level4">
@@ -1354,36 +1355,36 @@ zinc_tidy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span c
 <div id="collecting-summary-info-2" class="section level4">
 <h4><span class="header-section-number">B.6.3.1</span> Collecting summary info</h4>
 <p>Next we will assign some key values to variable names in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">obs_diff &lt;-<span class="st"> </span>zinc_summ$mean
-n_pairs &lt;-<span class="st"> </span>zinc_summ$sample_size</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">obs_diff &lt;-<span class="st"> </span>zinc_summ<span class="op">$</span>mean
+n_pairs &lt;-<span class="st"> </span>zinc_summ<span class="op">$</span>sample_size</code></pre></div>
 </div>
 <div id="randomization-for-hypothesis-test-2" class="section level4">
 <h4><span class="header-section-number">B.6.3.2</span> Randomization for hypothesis test</h4>
 <p>In order to look to see if the observed sample mean difference <span class="math inline">\(\bar{x}_{diff} = -0.0804\)</span> is statistically less than 0, we need to account for the number of pairs. We also need to determine a process that replicates how the paired data was selected in a way similar to how we calculated our original difference in sample means.</p>
 <p>We can use the idea of <em>randomization testing</em> (also known as <em>permutation testing</em>) to simulate the population from which the sample came and then generate samples using <em>shuffling</em> from that simulated population to account for sampling variability. In this case, we will shuffle along each paired location. So values that were on the bottom of location 1 may now be switched to be on the surface or vice versa.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">2017</span>)
-many_shuffles &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span>(zinc_tidy %&gt;%
-<span class="st">     </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="kw">shuffle</span>(location, <span class="dt">groups =</span> loc_id)) %&gt;%<span class="st"> </span>
-<span class="st">     </span><span class="kw">group_by</span>(loc_id) %&gt;%<span class="st"> </span>
+many_shuffles &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span>(zinc_tidy <span class="op">%&gt;%</span>
+<span class="st">     </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="kw">shuffle</span>(location, <span class="dt">groups =</span> loc_id)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">     </span><span class="kw">group_by</span>(loc_id) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">     </span><span class="kw">summarize</span>(<span class="dt">pair_diff =</span> <span class="kw">diff</span>(concentration))
    )
-null_distn_paired_means &lt;-<span class="st"> </span>many_shuffles %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(.index) %&gt;%
+null_distn_paired_means &lt;-<span class="st"> </span>many_shuffles <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(.index) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean_diff =</span> <span class="kw">mean</span>(pair_diff))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_paired_means, <span class="kw">aes</span>(<span class="dt">x =</span> mean_diff)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_paired_means, <span class="kw">aes</span>(<span class="dt">x =</span> mean_diff)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-289-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-283-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can next use this distribution to observe our <span class="math inline">\(p\)</span>-value. Recall this is a left-tailed test so we will be looking for values that are less than or equal to -0.0804 for our <span class="math inline">\(p\)</span>-value.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_paired_means, <span class="kw">aes</span>(<span class="dt">x =</span> mean_diff)) +
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(null_distn_paired_means, <span class="kw">aes</span>(<span class="dt">x =</span> mean_diff)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xintercept =</span> obs_diff)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-290-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-284-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="calculate-p-value-4" class="section level5">
 <h5><span class="header-section-number">B.6.3.2.1</span> Calculate <span class="math inline">\(p\)</span>-value</h5>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_paired_means %&gt;%
-<span class="st">  </span><span class="kw">filter</span>(mean_diff &lt;=<span class="st"> </span>obs_diff) %&gt;%
-<span class="st">  </span><span class="kw">nrow</span>() /<span class="st"> </span><span class="kw">nrow</span>(null_distn_paired_means)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pvalue &lt;-<span class="st"> </span>null_distn_paired_means <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(mean_diff <span class="op">&lt;=</span><span class="st"> </span>obs_diff) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">nrow</span>() <span class="op">/</span><span class="st"> </span><span class="kw">nrow</span>(null_distn_paired_means)
 pvalue</code></pre></div>
 <pre><code>[1] 1</code></pre>
 <p>So our <span class="math inline">\(p\)</span>-value is essentially 1 and we reject the null hypothesis at the 5% level. You can also see this from the histogram above that we are far into the left tail of the null distribution.</p>
@@ -1392,13 +1393,13 @@ pvalue</code></pre></div>
 <div id="bootstrapping-for-confidence-interval-4" class="section level4">
 <h4><span class="header-section-number">B.6.3.3</span> Bootstrapping for confidence interval</h4>
 <p>We can also create a confidence interval for the unknown population parameter <span class="math inline">\(\mu_{diff}\)</span> using our sample data (the calculated differences) with <em>bootstrapping</em>. This is similar to the bootstrapping done in a one sample mean case, except now our data is differences instead of raw numerical data.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_paired_means &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) *<span class="st"> </span>
-<span class="st">  </span><span class="kw">resample</span>(zinc_diff, <span class="dt">replace =</span> <span class="ot">TRUE</span>) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_paired_means &lt;-<span class="st"> </span><span class="kw">do</span>(<span class="dv">10000</span>) <span class="op">*</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">resample</span>(zinc_diff, <span class="dt">replace =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean_diff =</span> <span class="kw">mean</span>(pair_diff))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_paired_means, <span class="kw">aes</span>(<span class="dt">x =</span> mean_diff)) +
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(boot_distn_paired_means, <span class="kw">aes</span>(<span class="dt">x =</span> mean_diff)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-293-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_paired_means %&gt;%<span class="st"> </span>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-287-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boot_distn_paired_means <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">lower =</span> <span class="kw">quantile</span>(mean_diff, <span class="dt">probs =</span> <span class="fl">0.025</span>),
     <span class="dt">upper =</span> <span class="kw">quantile</span>(mean_diff, <span class="dt">probs =</span> <span class="fl">0.975</span>))</code></pre></div>
 <pre><code>    lower   upper
@@ -1431,7 +1432,7 @@ pvalue</code></pre></div>
 <div id="observed-test-statistic-4" class="section level5">
 <h5><span class="header-section-number">B.6.4.2.1</span> Observed test statistic</h5>
 <p>While one could compute this observed test statistic by “hand”, the focus here is on the set-up of the problem and in understanding which formula for the test statistic applies. We can use the <code>t.test</code> function on the differences to perform this analysis for us.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stats::<span class="kw">t.test</span>(<span class="dt">x =</span> zinc_diff$pair_diff, 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stats<span class="op">::</span><span class="kw">t.test</span>(<span class="dt">x =</span> zinc_diff<span class="op">$</span>pair_diff, 
        <span class="dt">alternative =</span> <span class="st">&quot;less&quot;</span>,
        <span class="dt">mu =</span> <span class="dv">0</span>)</code></pre></div>
 <pre><code>
@@ -1451,7 +1452,7 @@ mean of x
 <div id="compute-p-value-3" class="section level4">
 <h4><span class="header-section-number">B.6.4.3</span> Compute <span class="math inline">\(p\)</span>-value</h4>
 <p>The <span class="math inline">\(p\)</span>-value—the probability of observing a <span class="math inline">\(t_{obs}\)</span> value of -5 or less in our null distribution of a <span class="math inline">\(t\)</span> with 9 degrees of freedom—is 0.0004. This can also be calculated in R directly:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pt</span>(-<span class="dv">5</span>, <span class="dt">df =</span> <span class="kw">nrow</span>(zinc_diff) -<span class="st"> </span><span class="dv">1</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pt</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dt">df =</span> <span class="kw">nrow</span>(zinc_diff) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <pre><code>[1] 0.0003695</code></pre>
 </div>
 <div id="state-conclusion-4" class="section level4">
