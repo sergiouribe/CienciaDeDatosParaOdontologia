@@ -1,4 +1,4 @@
-# ModernDive <img src="images/hex_blue_text.png" align="right" width=100 />
+# ModernDive <img src="images/hex_blue_text.png" align="right" width=150 />
 
 Welcome to the GitHub repository page for **ModernDive: An Introduction to 
 Statistical and Data Sciences via R** available at [ModernDive.com](http://moderndive.com/). 
