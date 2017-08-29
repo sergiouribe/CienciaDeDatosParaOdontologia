@@ -1,4 +1,6 @@
 --- 
+#title: "`r knitr::include_graphics('logos/wide_format.png')`"
+#title: <img src='logos/wide_format.png' alt="ModernDive">
 title: "ModernDive"
 subtitle: "An Introduction to Statistical and Data Sciences via R"
 author: "Chester Ismay and Albert Y. Kim"
@@ -74,7 +76,7 @@ if(FALSE){
   # Note order matters here:
   chapter_titles <- c("getting-started", "viz", "tidy", "wrangling", 
                       "regression", "sim", "hypo", "ci")
-  chapter_numbers <- stringr::str_pad(2:(length(chapter_titles)+1), 2, "left", pad="0")
+  chapter_numbers <- stringr::str_pad(2:(length(chapter_titles) + 1), 2, "left", pad = "0")
   for(i in 1:length(chapter_numbers)){
     Rmd_file <- stringr::str_c(chapter_numbers[i], "-", chapter_titles[i], ".Rmd")
     R_file <- stringr::str_c("docs/scripts/", chapter_numbers[i], "-", chapter_titles[i], ".R")
@@ -87,6 +89,8 @@ if(FALSE){
 # Introduction {#intro}
 
 ---
+
+<!--
 
 ## Important Note
 

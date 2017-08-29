@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ModernDive</title>
   <meta name="description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses.">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="ModernDive" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-23">
+<meta name="date" content="2017-08-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -433,6 +433,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<html>
+<img src='logos/wide_format.png' alt="ModernDive">
+
+</html>
 <div id="viz" class="section level1">
 <h1><span class="header-section-number">3</span> Data Visualization via ggplot2</h1>
 <p>We begin the development of your data science toolbox with data visualization. By visualizing our data, we will be able to gain valuable insights from our data that we couldn’t initially see from just looking at the raw data in spreadsheet form. We will use the <code>ggplot2</code> package as it provides an easy way to customize your plots and is rooted in the data visualization theory known as <em>The Grammar of Graphics</em> <span class="citation">(Wilkinson 2005)</span>.</p>
@@ -993,7 +997,6 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 )</code></pre></div>
 <p>We see both the <code>fruits</code> and <code>fruits_counted</code> data frames represent the same collection of fruit: three apples and two oranges. However, whereas <code>fruits</code> just lists the fruit:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-40">Table 3.3: </span>Fruits</caption>
 <thead>
 <tr class="header">
 <th align="left">fruit</th>
@@ -1019,7 +1022,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 </table>
 <p><code>fruits_counted</code> has a variable <code>count</code>, where the counts are pre-tabulated.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-41">Table 3.4: </span>Fruits (Pre-Counted)</caption>
+<caption><span id="tab:unnamed-chunk-41">Table 3.3: </span>Fruits (Pre-Counted)</caption>
 <thead>
 <tr class="header">
 <th align="left">fruit</th>
@@ -1418,7 +1421,7 @@ Figure 3.23: Mind map for Data Visualization
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
