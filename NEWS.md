@@ -1,5 +1,7 @@
 # ModernDive 0.2.0.9000
 
+- Added wide-logo to top of each chapter and `logos` folder
+
 Development version; a work in progress. Some planned updates:
 
 * **Chapter 6: Data Modeling using Regression via `broom`**
