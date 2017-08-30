@@ -1,8 +1,8 @@
 --- 
 #title: "`r knitr::include_graphics('logos/wide_format.png')`"
 #title: <img src='logos/wide_format.png' alt="ModernDive">
-title: "ModernDive"
-subtitle: "An Introduction to Statistical and Data Sciences via R"
+#title: "ModernDive"
+title: "An Introduction to Statistical and Data Sciences via R"
 author: "Chester Ismay and Albert Y. Kim"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 site: bookdown::bookdown_site
