@@ -21,5 +21,6 @@ Imports:
   webshot, 
   tufte, 
   mvtnorm,
-  stringr
+  stringr,
+  broom
 Remotes: rstudio/bookdown
