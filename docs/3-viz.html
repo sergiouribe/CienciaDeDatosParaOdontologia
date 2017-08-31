@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>An Introduction to Statistical and Data Sciences via R</title>
   <meta name="description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses.">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="An Introduction to Statistical and Data Sciences via R" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-08-30">
+<meta name="date" content="2017-08-31">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -471,7 +471,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">3.1.2</span> Gapminder</h3>
 <p>In February 2006, a statistician named Hans Rosling gave a TED talk titled <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">“The best stats you’ve ever seen”</a> where he presented global economic, health, and development data from the website <a href="http://www.gapminder.org/tools/#_locale_id=en;&amp;chart-type=bubbles">gapminder.org</a>. For example, from the 1704 countries included from 2007, consider only the first 6 countries when listed alphabetically:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-13">Table 3.1: </span>Gapminder 2007 Data</caption>
+<caption><span id="tab:unnamed-chunk-14">Table 3.1: </span>Gapminder 2007 Data</caption>
 <thead>
 <tr class="header">
 <th align="left">Country</th>
@@ -551,7 +551,7 @@ Figure 3.1: Life Expectancy over GDP per Capita in 2007
 <p>Recall that <code>data</code> here corresponds to each of the variables being in the same <code>data</code> frame and the “data variable” corresponds to a column in a data frame.</p>
 <p>While in this example we are considering one type of <code>geom</code>etric object (of type <code>point</code>), graphics are not limited to just points. Some plots involve lines while others involve bars. Let’s summarize the three essential components of the grammar in a table:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-14">Table 3.2: </span>Summary of Grammar of Graphics for this plot</caption>
+<caption><span id="tab:unnamed-chunk-15">Table 3.2: </span>Summary of Grammar of Graphics for this plot</caption>
 <thead>
 <tr class="header">
 <th align="left">data variable</th>
@@ -829,8 +829,8 @@ Figure 3.6: Hourly Temperature in Newark for January 1-15, 2013
 <div id="histograms" class="section level2">
 <h2><span class="header-section-number">3.5</span> 5NG#3: Histograms</h2>
 <p>Let’s consider the <code>temp</code> variable in the <code>weather</code> data frame once again, but now unlike with the linegraphs in Chapter <a href="3-viz.html#linegraphs">3.4</a>, let’s say we don’t care about the relationship of temperature to time, but rather we care about the <em>(statistical) distribution</em> of temperatures. We could just produce points where each of the different values appear on something similar to a number line:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-24-1.png" alt="Plot of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-25-1.png" alt="Plot of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
 <p class="caption">
 Figure 3.7: Plot of Hourly Temperature Recordings from NYC in 2013
 </p>
@@ -843,8 +843,8 @@ Figure 3.7: Plot of Hourly Temperature Recordings from NYC in 2013
 <span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre></div>
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <pre><code>Warning: Removed 1 rows containing non-finite values (stat_bin).</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-25-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-26-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
 <p class="caption">
 Figure 3.8: Histogram of Hourly Temperature Recordings from NYC in 2013
 </p>
@@ -868,8 +868,8 @@ Figure 3.8: Histogram of Hourly Temperature Recordings from NYC in 2013
 <p>First, we have the power to specify how many bins we would like to put the data into as an argument in the <code>geom_histogram()</code> function. By default, this is chosen to be 30 somewhat arbitrarily; we have received a warning above our plot that this was done.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">60</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-26-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-27-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins" width="\textwidth" />
 <p class="caption">
 Figure 3.9: Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bins
 </p>
@@ -878,8 +878,8 @@ Figure 3.9: Histogram of Hourly Temperature Recordings from NYC in 2013 - 60 Bin
 <p>Second, instead of specifying the number of bins, we can also specify the width of the bins by using the <code>binwidth</code> argument in the <code>geom_histogram</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-27-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-28-1.png" alt="Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10" width="\textwidth" />
 <p class="caption">
 Figure 3.10: Histogram of Hourly Temperature Recordings from NYC in 2013 - Binwidth = 10
 </p>
@@ -995,6 +995,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 )</code></pre></div>
 <p>We see both the <code>fruits</code> and <code>fruits_counted</code> data frames represent the same collection of fruit: three apples and two oranges. However, whereas <code>fruits</code> just lists the fruit:</p>
 <table>
+<caption><span id="tab:unnamed-chunk-41">Table 3.3: </span>Fruits</caption>
 <thead>
 <tr class="header">
 <th align="left">fruit</th>
@@ -1020,7 +1021,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
 </table>
 <p><code>fruits_counted</code> has a variable <code>count</code>, where the counts are pre-tabulated.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-41">Table 3.3: </span>Fruits (Pre-Counted)</caption>
+<caption><span id="tab:unnamed-chunk-42">Table 3.4: </span>Fruits (Pre-Counted)</caption>
 <thead>
 <tr class="header">
 <th align="left">fruit</th>
@@ -1268,7 +1269,7 @@ Figure 3.18: The dreaded pie chart
 </p>
 </div>
 <p>While it is quite easy to look back at the barplot to get the answer to these questions, it’s quite difficult to get the answers correct when looking at the pie graph. Barplots can always present the information in a way that is easier for the eye to determine relative position. There may be one exception from Nathan Yau at <a href="https://flowingdata.com/2008/09/19/pie-i-have-eaten-and-pie-i-have-not-eaten/" title="Pie I Have Eaten and Pie I Have Not Eaten">FlowingData.com</a> but we will leave this for the reader to decide:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-45"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-46"></span>
 <img src="images/Pie-I-have-Eaten.jpg" alt="The only good pie chart" width="\textwidth" />
 <p class="caption">
 Figure 3.19: The only good pie chart
@@ -1294,8 +1295,8 @@ Figure 3.19: The only good pie chart
 <p>After running <code>View(flights_namedports)</code>, we see that <code>name</code> now corresponds to the name of the airport as referenced by the <code>origin</code> variable. We will now plot <code>carrier</code> as the horizontal variable. When we specify <code>geom_bar</code>, it will specify <code>count</code> as being the vertical variable. A new addition here is <code>fill = name</code>. Look over what was produced from the plot to get an idea of what this argument gives.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-48"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-48-1.png" alt="Stacked barplot comparing the number of flights by carrier and airport" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-49"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-49-1.png" alt="Stacked barplot comparing the number of flights by carrier and airport" width="\textwidth" />
 <p class="caption">
 Figure 3.20: Stacked barplot comparing the number of flights by carrier and airport
 </p>
@@ -1317,8 +1318,8 @@ Figure 3.20: Stacked barplot comparing the number of flights by carrier and airp
 <p>Another variation on the stacked barplot is the <em>side-by-side barplot</em>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_namedports, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> name)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-50"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-50-1.png" alt="Side-by-side barplot comparing the number of flights by carrier and airport" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-51"></span>
+<img src="ismaykim_files/figure-html/unnamed-chunk-51-1.png" alt="Side-by-side barplot comparing the number of flights by carrier and airport" width="\textwidth" />
 <p class="caption">
 Figure 3.21: Side-by-side barplot comparing the number of flights by carrier and airport
 </p>
@@ -1419,7 +1420,7 @@ Figure 3.23: Mind map for Data Visualization
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
+require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,

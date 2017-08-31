@@ -88,13 +88,12 @@ if(FALSE){
 
 # Introduction {#intro}
 
+
 ---
 
-<!--
-
-## Important Note
-
-This is the development version (v`r version`) of ModernDive and is currently in the process of being edited. For the latest released version of ModernDive, please go to [ModernDive.com](http://moderndive.com/). 
+```{block, type='learncheck', purl=FALSE}
+**Note: This is the development version of ModernDive and is currently in the process of being edited. For the latest released version of ModernDive, please go to [ModernDive.com](http://moderndive.com/).**
+```
 
 <!--
 ## Important Note
@@ -103,6 +102,7 @@ This is a previous version (v`r version`) of ModernDive and may be out of date. 
 -->
 
 ---
+
 
 <img src="https://cran.r-project.org/Rlogo.svg" alt="Drawing" style="height: 150px;"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
