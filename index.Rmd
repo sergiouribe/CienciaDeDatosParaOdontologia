@@ -11,8 +11,12 @@ bibliography: [bib/books.bib, bib/packages.bib, bib/articles.bib]
 biblio-style: apalike
 link-citations: no
 github-repo: ismayc/moderndiver-book
-description: "An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses."
+description: "An open-source and fully- reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses."
+cover-image: "images/logos/book_cover.png"
+url: 'http\://moderndive.com/'
 ---
+
+
 
 ```{r set-options, include=FALSE}
 # Current version information. date here should match the date in the YAML above.
