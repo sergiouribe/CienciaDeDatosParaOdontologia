@@ -6,20 +6,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>An Introduction to Statistical and Data Sciences via R</title>
-  <meta name="description" content="An open-source and fully- reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses.">
+  <meta name="description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses.">
   <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="An Introduction to Statistical and Data Sciences via R" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://moderndive.com/" />
   <meta property="og:image" content="http://moderndive.com/images/logos/book_cover.png" />
-  <meta property="og:description" content="An open-source and fully- reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses." />
+  <meta property="og:description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses." />
   <meta name="github-repo" content="ismayc/moderndiver-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="An Introduction to Statistical and Data Sciences via R" />
   
-  <meta name="twitter:description" content="An open-source and fully- reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses." />
+  <meta name="twitter:description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses." />
   <meta name="twitter:image" content="http://moderndive.com/images/logos/book_cover.png" />
 
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
@@ -555,7 +555,7 @@ Figure 9.3: Bootstrapped means histogram
 <p>The shape of this resulting distribution may look familiar to you. It resembles the well-known normal (bell-shaped) curve. At this point, we can easily calculate a confidence interval. In fact, we have a couple different options. We will first use the percentiles of the distribution we just created to isolate the middle 95% of values. This will correspond to our 95% confidence interval for the population mean <code>rating</code>, denoted by <span class="math inline">\(\mu\)</span>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(ciq_mean_rating &lt;-<span class="st"> </span><span class="kw">confint</span>(trials, <span class="dt">level =</span> <span class="fl">0.95</span>, <span class="dt">method =</span> <span class="st">&quot;quantile&quot;</span>))</code></pre></div>
 <pre><code>  name lower upper level     method estimate
-1 mean  5.46   6.3  0.95 percentile    5.894</code></pre>
+1 mean  5.46   6.3  0.95 percentile    5.958</code></pre>
 <p>It’s always important at this point to interpret the results of this confidence interval calculation. In this context, we can say something like the following:</p>
 <blockquote>
 <p>Based on the sample data and bootstrapping techniques, we can be 95% “confident” that the true mean rating of <strong>ALL</strong> IMDB ratings is between 5.46 and 6.3.</p>
@@ -581,7 +581,7 @@ Figure 9.4: Confidence interval coverage plot from OpenIntro
 <p>To compute this type of confidence interval, we only need to make a slight modification to the <code>confint</code> function seen above. (The expression after the <span class="math inline">\(\pm\)</span> sign is known as the <strong>margin of error</strong>.)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(cise_mean_rating &lt;-<span class="st"> </span><span class="kw">confint</span>(trials, <span class="dt">level =</span> <span class="fl">0.95</span>, <span class="dt">method =</span> <span class="st">&quot;stderr&quot;</span>))</code></pre></div>
 <pre><code>  name lower upper level method estimate margin.of.error
-1 mean 5.467 6.316  0.95 stderr    5.894          0.4247</code></pre>
+1 mean 5.467 6.316  0.95 stderr    5.958          0.4247</code></pre>
 <blockquote>
 <p>Based on the sample data and bootstrapping techniques, we can be 95% “confident” that the true mean rating of ALL IMDB ratings is between 5.4667 and 6.3161.</p>
 </blockquote>
