@@ -11,8 +11,8 @@
 
   <meta property="og:title" content="An Introduction to Statistical and Data Sciences via R" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://moderndive.com" />
-  <meta property="og:image" content="http://moderndive.com<a href="https://github.com/ismayc/moderndiver-book/blob/master/images/logos/book_cover.png" class="uri">https://github.com/ismayc/moderndiver-book/blob/master/images/logos/book_cover.png</a>" />
+  <meta property="og:url" content="http://moderndive.com/" />
+  <meta property="og:image" content="http://moderndive.com/images/logos/book_cover.png" />
   <meta property="og:description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses." />
   <meta name="github-repo" content="ismayc/moderndiver-book" />
 
@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="An Introduction to Statistical and Data Sciences via R" />
   
   <meta name="twitter:description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses." />
-  <meta name="twitter:image" content="http://moderndive.com<a href="https://github.com/ismayc/moderndiver-book/blob/master/images/logos/book_cover.png" class="uri">https://github.com/ismayc/moderndiver-book/blob/master/images/logos/book_cover.png</a>" />
+  <meta name="twitter:image" content="http://moderndive.com/images/logos/book_cover.png" />
 
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
@@ -482,7 +482,7 @@ Figure 4.1: Tidy data graphic from <a href="http://r4ds.had.co.nz/tidy-data.html
 </div>
 <p>For example, say the following table consists of stock prices:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-55">Table 4.1: </span>Stock Prices (Non-Tidy Format)</caption>
+<caption><span id="tab:unnamed-chunk-56">Table 4.1: </span>Stock Prices (Non-Tidy Format)</caption>
 <thead>
 <tr class="header">
 <th align="left">Date</th>
@@ -508,7 +508,7 @@ Figure 4.1: Tidy data graphic from <a href="http://r4ds.had.co.nz/tidy-data.html
 </table>
 <p>Although the data are neatly organized in a spreadsheet-type format, they are not in tidy format since there are three variables of information (Date, Stock Name, and Stock Price) but there are not three columns. In tidy data format each variable should be its own column, as shown below. Notice that both tables present the same information, but in different formats.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-56">Table 4.2: </span>Stock Prices (Tidy Format)</caption>
+<caption><span id="tab:unnamed-chunk-57">Table 4.2: </span>Stock Prices (Tidy Format)</caption>
 <thead>
 <tr class="header">
 <th align="left">Date</th>
@@ -621,7 +621,7 @@ guat_tidy</code></pre></div>
 <span class="st">  </span><span class="kw">geom_line</span>()</code></pre></div>
 <pre><code>geom_path: Each group consists of only one observation. Do you need to adjust
 the group aesthetic?</code></pre>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-60-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="ismaykim_files/figure-html/unnamed-chunk-61-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <!-- Arg, this is really annoying that gather() doesn't see that these are all numbers.  Do you know a way around this? I usually just go mutate(year = as.numeric(year) but they don't know mutate() yet. -->
 <p>Observe that the <code>year</code> variable in <code>guat_tidy</code> is stored as a character vector since we had to circumvent the naming rules in R by adding backticks around the different year columns in <code>guat_dem</code>. This is leading to <code>ggplot</code> not knowing exactly how to plot a line using a categorical variable. We can fix this by using the <code>parse_number()</code> function in the <code>readr</code> package and then specify the horizontal axis label to be <code>&quot;year&quot;</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> guat_tidy, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">parse_number</span>(year), <span class="dt">y =</span> democracy_score)) <span class="op">+</span>
