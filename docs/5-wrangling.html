@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>An Introduction to Statistical and Data Sciences via R</title>
   <meta name="description" content="An open-source and fully-reproducible electronic textbook bridging the gap between traditional introductory statistics and data science courses.">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="An Introduction to Statistical and Data Sciences via R" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Chester Ismay and Albert Y. Kim">
 
 
-<meta name="date" content="2017-09-05">
+<meta name="date" content="2017-09-09">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,7 +47,7 @@
 
 
 
-<script src="libs/htmlwidgets-0.9/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-0.8/htmlwidgets.js"></script>
 <link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
 <script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
 <script src="libs/moment-2.8.4/moment.js"></script>
@@ -451,7 +451,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>barplots</li>
 </ol>
 <p>We can simply specify what variable/column we would like on one axis, (if applicable) what variable we’d like on the other axis, and what type of plot we’d like to make by specifying the <code>geom</code>etric object in question. We can also vary aesthetic attributes of the geometric objects in question (points, lines, bar), such as the size and color, along the values of another variable in this tidy dataset. Recall the Gapminder example from Figure <a href="3-viz.html#fig:gapminder">3.1</a>.</p>
-<p>Lastly, in a few spots in Chapter <a href="3-viz.html#viz">3</a> and Chapter <a href="4-tidy.html#tidy">4</a>, we hinted at some ways to summarize and wrangle data to suit your needs, using the <code>filter()</code> and <code>inner_join()</code> functions. This chapter expands on these functions by giving a variety of examples using what we term the <em>Five Main Verbs</em> (5MV) in the <code>dplyr</code> package <span class="citation">(Wickham et al. 2017)</span>.</p>
+<p>Lastly, in a few spots in Chapter <a href="3-viz.html#viz">3</a> and Chapter <a href="4-tidy.html#tidy">4</a>, we hinted at some ways to summarize and wrangle data to suit your needs, using the <code>filter()</code> and <code>inner_join()</code> functions. This chapter expands on these functions by giving a variety of examples using what we term the <em>Five Main Verbs</em> (5MV) in the <code>dplyr</code> package <span class="citation">(Wickham and Francois 2016)</span>.</p>
 <div id="needed-packages-2" class="section level3 unnumbered">
 <h3>Needed packages</h3>
 <p>Let’s load all the packages needed for this chapter (this assumes you’ve already installed them). If needed, read Section <a href="2-getting-started.html#packages">2.3</a> for information on how to install and load R packages.</p>
@@ -1497,7 +1497,7 @@ We will focus only on the `dplyr` functions in this book, but you are encouraged
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
+require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
